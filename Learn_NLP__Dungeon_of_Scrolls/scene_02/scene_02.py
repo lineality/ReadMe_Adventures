@@ -414,7 +414,7 @@ typed_print(
     """
 \n
 You walk to the back,
-carying the hot pizza,
+carrying the hot pizza,
 over creaking wooden floor boards.
 \nThe rooms get quieter as you get further from the bar.
 You walk up to a round table in the back up against the wall
