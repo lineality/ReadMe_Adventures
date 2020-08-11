@@ -1,5 +1,5 @@
-# version 006
-# Scene_2
+# version 008
+# Scene_02
 # Witch Map
 
 import os  # for terminal functions etc.
@@ -7,11 +7,41 @@ import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
 
-scene = "Scene_2   Witch Map    "
+scene = "scene_02"
+adventure = "Learn_NLP__Dungeon_of_Scrolls"
+game = "ReadMe_Adventures"
 
 #########################
 # Story Display Funtions
 #########################
+
+
+def check_cd_or_make_cd(folder_name):
+    # check
+    if os.path.exists(folder_name):  # checks if folder or file exists
+        # CD (change directory - move into that folder)
+        os.chdir(folder_name)
+    else:
+        # mkdir (Make a new directory / folder)
+        os.mkdir(folder_name)
+        # CD (change directory - move into that folder)
+        os.chdir(folder_name)
+
+
+def manage_file_pathways():
+    # if adventurea geames is not in the pathway: make all
+    if game not in os.getcwd():
+        check_cd_or_make_cd(game)
+        check_cd_or_make_cd(adventure)
+        check_cd_or_make_cd(scene)
+    else:  # it is...
+        # change director to game, check/make other files
+        while not os.path.isdir(f"../{game}"):
+            # go back a directory
+            os.chdir("..")
+        # then check and make adventure and scene
+        check_cd_or_make_cd(adventure)
+        check_cd_or_make_cd(scene)
 
 
 # in case easier to remember
@@ -77,6 +107,9 @@ def clear_terminal():
 # Setting Up
 #############
 
+# make sure file structure is correct
+manage_file_pathways()
+
 # general_wrong_answer_responces
 responses = [
     "Huh?",
@@ -93,7 +126,6 @@ responses = [
 ]
 
 clear_terminal()
-
 
 ############
 # pronouns #
@@ -157,8 +189,9 @@ readme_text = """
 Scene 2: Witch Map
 
 Instructions:
-1. run .py in terminal
-wget https://raw.githubusercontent.com/lineality/teaching_NLP_basics_1/master/ReadMe_Adventures/test_demo_1/Windows_OS/scene_2/scene_2.py
+1. Open Terminal
+2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_2/scene_2.py
+3. Run file       Command: python3 scene_1.py
 
 
 (Optional)
@@ -439,11 +472,11 @@ one of them is probably a trap, and we have classes on Monday."
 "My Aunt's dog."
 
 "Her Aunt's dog. It's your Aunt's dog?
-\nAnyway, we shouldn't try them both."\n
+Anyway, we shouldn't try them both."\n
 """
 )
 
-typed_print(f'"Hang on...I bet {pronoun} can count...can you count?"\n')
+typed_print(f'"Hang on...I bet {pronoun} can count...Can you count?"\n')
 
 
 typed_print("\nAll voices go silent as everyone turns their gaze to you.\n")
@@ -451,7 +484,7 @@ typed_print("\nAll voices go silent as everyone turns their gaze to you.\n")
 answer_check = False
 # keep asking until answer is correct
 while answer_check is False:
-    answer = input('\n"...can you count?" (yes/no)\n')
+    answer = input('\n"...Can you count?" (yes/no)\n')
     answer = answer.lower()
     if answer == "yes":
         answer_check = True
@@ -475,7 +508,7 @@ I always wondered about that."
 
 "Whatever, map-pamphlets, leaflets,
 can you count how long they are? Like,
-how many characters are typed_printed on each one?
+how many characters are printed on each one?
 Like, letters and numbers and spaces and everything?"
 """
 )

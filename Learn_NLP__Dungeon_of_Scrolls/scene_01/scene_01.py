@@ -1,4 +1,4 @@
-# version 007 - no special typing
+# version 009 - no special typing
 # Scene_1
 # Find Your Friends
 
@@ -7,12 +7,41 @@ import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
 
-scene = "Scene_1"  # scene 1: where you begin
-
+scene = "scene_01"
+adventure = "Learn_NLP__Dungeon_of_Scrolls"
+game = "ReadMe_Adventures"
 
 #########################
 # Story Display Funtions
 #########################
+
+
+def check_cd_or_make_cd(folder_name):
+    # check
+    if os.path.exists(folder_name):  # checks if folder or file exists
+        # CD (change directory - move into that folder)
+        os.chdir(folder_name)
+    else:
+        # mkdir (Make a new directory / folder)
+        os.mkdir(folder_name)
+        # CD (change directory - move into that folder)
+        os.chdir(folder_name)
+
+
+def manage_file_pathways():
+    # if adventurea geames is not in the pathway: make all
+    if game not in os.getcwd():
+        check_cd_or_make_cd(game)
+        check_cd_or_make_cd(adventure)
+        check_cd_or_make_cd(scene)
+    else:  # it is...
+        # change director to game, check/make other files
+        while not os.path.isdir(f"../{game}"):
+            # go back a directory
+            os.chdir("..")
+        # then check and make adventure and scene
+        check_cd_or_make_cd(adventure)
+        check_cd_or_make_cd(scene)
 
 
 # in case easier to remember
@@ -74,6 +103,15 @@ def clear_terminal():
     pass
 
 
+#############
+# Setting Up
+#############
+
+# make sure file structure is correct
+manage_file_pathways()
+
+clear_terminal()
+
 #################
 ### Create Files
 #################
@@ -85,7 +123,7 @@ Scene 1: Find Your Friends
 
 Instructions:
 1. Open Terminal
-2. Get file       wget https://raw.githubusercontent.com/lineality/teaching_NLP_basics_1/master/ReadMe_Adventures/test_demo_1/Windows_OS/scene_1/scene_1.py
+2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_1/scene_1.py
 3. Run file       Command: python3 scene_1.py
 
 
@@ -261,8 +299,6 @@ file_to_create.close()
 # The Action!
 ##############
 
-clear_terminal()
-
 slow_print(scene)
 
 # Main Story
@@ -334,7 +370,7 @@ typed_print(
 They're in the back at table eight.
 Here, their pizza just came out of the oven
 you might as well bring it with you.
-Their tables' just back there."
+Their table's just back there."
 """
 )
 
