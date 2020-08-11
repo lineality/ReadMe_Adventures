@@ -1,4 +1,4 @@
-# version 009 - no special typing
+# version 010
 # Scene_1
 # Find Your Friends
 
@@ -6,9 +6,10 @@ import os  # for terminal functions etc.
 import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
-#import requests
+
 
 scene = "scene_01"
+blurb = "   Find Your Friends "
 adventure = "Learn_NLP__Dungeon_of_Scrolls"
 game = "ReadMe_Adventures"
 
@@ -43,11 +44,13 @@ def manage_file_pathways():
         # then check and make adventure and scene
         check_cd_or_make_cd(adventure)
         check_cd_or_make_cd(scene)
+    # requests not available on termux, wget requires pip...
     # # check .py file
     # py_path = f"https://raw.githubusercontent.com/lineality/{game}/master/{adventure}/{scene}/{scene}.py"
     # if not os.path.exists(f"{scene}.py"):
     #     myfile = requests.get(py_path, allow_redirects=True)
     #     open(f"{scene}.py", 'wb').write(myfile.content)
+
 
 # in case easier to remember
 def pause_seconds(seconds):
@@ -120,7 +123,7 @@ clear_terminal()
 ### Create Files
 #################
 
-# create file:
+# create file: readme_text
 readme_text = """
 Scene 1: Find Your Friends
 
@@ -133,10 +136,13 @@ Instructions:
 
 (Optional)
 Tips:
-1. When given a choice or a question,
+1. If you get lost, or you want to see a discussion of the skills 
+and solutions, check the Content_Map.txt for that scene.
+
+2. When given a choice or a question,
 type in your answer and hit return.
 
-2. Running the .py file will
+3. Running the .py file will
 run the interactive story in the terminal
 and will create new files
 that you can use during the scene.
@@ -153,18 +159,229 @@ the red-nosed innkeeper's question.)
 
 """
 # create, write-to, & save .txt file
-file_to_create = open("ReadMe.txt", "w")
-file_to_create.write(readme_text)
-file_to_create.close()
+file_to_create1 = open("ReadMe.txt", "w")
+file_to_create1.write(readme_text)
+file_to_create1.close()
 
 # #open, read, & print the file
-# file_to_read = open("ReadMe.txt", "r")
-# print(file_to_read.read())
+# file_to_read1 = open("ReadMe.txt", "r")
+# print(file_to_read1.read())
+
+
+# create file: content map
+content_map_text = """
+Content Map
+For scene_01, dungeon of scolls, ReadMe Adventures.
+
+Coding is about communication.
+
+The first goal 
+(in this first lesson of the course) 
+is to open and "print" a file in python 
+so that you can read it
+either in a terminal
+or in a notebook.
+
+There are a few 'computer science' parts to this, such as 'variables.'
+And there are a few python-specific parts to this, the steps.
+
+Step 1: Find the name of the file you want to open
+in this case: inn_guest_log.txt
+
+One thing you will deal with every day is 'folders' or 'directories'
+as they are often called in tech-speak.
+
+For this course, your files will be
+automatically put into a system of folders
+when they are created on your computer
+
+game_folder -> adventure_folder -> scene_folder
+
+in this case:
+ReadMe_Adventures -> Learn_NLP__Dungeon_of_Scrolls -> scene_01
+
+If you look at the .py file (which is a good idea) 
+you will see these same items listed out.
+
+scene = "scene_01"
+blurb = "  Find Your Friends "
+adventure = "Learn_NLP__Dungeon_of_Scrolls"
+game = "ReadMe_Adventures"
+
+using standards names for things makes everything easier
+to find and deal with.
+
+In these folders (game_folder -> adventure_folder -> scene_folder)
+you will find the file you need: inn_guest_log.txt
+
+(Note:
+You can view the text of the inn_guest_log.txt in a text editor
+or by looking at the .py (scene_01.py) file itself in a text editor,
+or maybe in a word processor (depending on your computer),
+and you should try and be able to do all of those in case you need to,
+(to open a file in atom: atom inn_guest_log.txt )
+(to open the whole folder in atom: atom . )
+but other method described here will be using python to disply the text.)
+
+Step 1: Get to the right file location...Where are you now?
+
+Here are some handy python directory functions:
+
+# python directory functions
+os.getcwd()  # pwd pathway to working directory (where you are) (same as python cwd "current" working directory)
+os.chdir("..")  # go back only one directory
+os.listdir()  # lists all files in that directory same as "ls" in posix or "DIR" in windows  
+os.mkdir("target")  # mkdir, create a new folder/directory
+os.chdir("../target")  # "change" move into exsting directory / folder
+os.path.exists("../target")  # checks if folder or file exists
+os.path.isdir("../target")  # checks if x is the directory (not whole path) or are in...
+
+You can do this either in your computer's terminal, or in python
+you may want to practice both. The notation for each is a bit different
+(and windows is differnt from the 'posix' standard that just about 
+every other OS uses)
+
+Notation:
+The terminal sign is (usually) "$", so this means type "pwd" in the terminal
+The python sign is ">>>" so
+
+These commands below will show you where you are (two steps in python)
+in the file-system of the computer, what 'directory' you are 'in'
+in terminal: $ pwd
+in python:  >>> import os
+and then    >>> os.getcwd()
+
+If you don't see any of the folders you need, then either:
+1. you need to find them (using your OS file explorer may be best)
+2. or make them if they do not exist (running the .py will make them for you)
+
+To get into a directory, stepping through each step is often long and boring. 
+When possible, go to that folder in your OS file explorer and open a terminal
+in that directory (windowsOS makes this strange but the idea is the same). 
+
+In the future we will first make a custom python environment,
+usually using pipenv or anaconda (there are many other options too,
+and you should explore as many as you can, eventually).
+
+Step 2: double check
+When you are in the right directory, it is always good to check to see
+where you are. Checking is very fast, 
+and doing something in the wrong directory makes a mess which wastes time
+to clean up. Kind of a "measure twice, cut once" approach. 
+
+posix:    $ ls
+windows:  > dir
+
+(Note: there are many websites and videos on topics like this, 
+and usually a good resource is just a quick search away.)
+
+(Note: this whole process is also part of using github, which hopefully
+we will practice later in this course)
+
+
+Step 3: open the file
+When you see the file you want listed amongst all the other files in 
+that directory...there are 2(?) ways to read the file (in this context):
+1: use a text editor: good to know and you will usually do this:
+    to open a file in atom: atom inn_guest_log.txt 
+    to open the whole folder in atom: atom . 
+    to open a file in vsCode: code inn_guest_log.txt 
+    to open the whole folder in vsCode: code . 
+
+2: use python: you won't do this as often, but very often you will need to
+do this at least once the beginning of a project to get your data loaded:
+
+# to open, read, & print the file
+intermediate_file_variable = open("file_you_pick.txt", "r")
+print(intermediate_file_variable.read())
+
+While clicking on an icon, or typing: $ atom .
+are just one step
+in python we use 2 steps. Why? 
+This is a good example of how coding is about communication and readability.
+You can do this in just one step, but it maybe harder to read:
+>>> print((open("advanced_instructions.txt", "r")).read())
+
+In two steps we save the item as a variable before putting into the print
+function(or 'method'). This is also an important step because sometimes you 
+MUST put a variable into a function (where you cannot cram a lot of other code in)
+1. create an intermediate variable from the file
+2. read and print that intermediate variable
+
+We could have done 3 steps with another item to print variable...
+maybe that would be more clear? is 2 steps clear enough?
+Do whatever you think is clear enough and works. 
+
+# 3 step example:
+# to open, read, & print the file
+
+# Step 1: make an intermediate file in python
+intermediate_file_variable = open("advanced_instructions.txt", "r")
+# Step 2: make an item_to_print by reading the intermediate file
+item_to_print = intermediate_file_variable.read()
+# Step 3: Print the item you want to print
+print(item_to_print)
+
+
+You can do this in just one step, where everything is being done
+all together. Some people say they like "one-liners,"
+but do you think it's a good idea to be unclear? We all make choices.
+
+>>> print((open("advanced_instructions.txt", "r")).read())
+
+Which of the above methods do you like best?
+1 step
+2 steps?
+3 steps?
+
+
+
+Misc:
+
+"Coding is about communication."
+
+Remember, like in real life, there is no such thing as 'cheating' when you are 
+fully understanding code. You want to see and understand everything. 
+
+Study the .py file. Will it 'give you the answers'? It should. 
+You are trying to understand how it works, so look at it. 
+If studying what you want to understand works, you succeeded. 
+
+There is no single way to solve these or nearly any programing problem,
+so try to understand as many ways as you can. 
+
+Look at everyting. Read everything. Try everything. 
+Internet-search questions on everything.
+
+You want your code to be readable, which means it should NOT 
+look completely alien strange and unique to only that one project for you.
+There is no "plagerism" in writing clean code. 
+2+2=4 SHOULD look similar when different people write it. 
+There is no such thing as code 'not being unique enough' to work properly. 
+Your goal is to write code the works very very well and will keep working very
+very well for as many users and realistic situations as possible. 
+
+Your file names and program should not be 100% unique just for the sake of
+being absolutely unique. 
+
+In this lesson you will learn to open a file. You do not need an absolutely 
+unique way of opening a file that is unique to you and unique every time you 
+open a file. That would be a hard to read and understand, 
+and being hard to understand would be a catastrophy. 
+
+"""
+# create, write-to, & save .txt file
+file_to_create2 = open("Content_Map.txt", "w")
+file_to_create2.write(content_map_text)
+file_to_create2.close()
+
+# #open, read, & print the file
+# file_to_read2 = open("Content_Map.txt", "r")
+# print(file_to_read2.read())
 
 
 # create file:
 advanced_instructions = """
-
 "ReadMe Adventures" is a minimal game-system that requires just two files
 to play, and just one of those files to get started, a ReadMe.txt
 
@@ -245,13 +462,13 @@ Run in a terminal:
 """
 
 # create, write-to, & save .txt file
-file_to_create = open("advanced_instructions.txt", "w")
-file_to_create.write(readme_text)
-file_to_create.close()
+file_to_create3 = open("advanced_instructions.txt", "w")
+file_to_create3.write(readme_text)
+file_to_create3.close()
 
 # #open, read, & print the file
-# file_to_read = open("advanced_instructions.txt", "r")
-# print(file_to_read.read())
+# file_to_read3 = open("advanced_instructions.txt", "r")
+# print(file_to_read3.read())
 
 
 # create file
@@ -291,13 +508,13 @@ Items Purchased:
 - a dish towel
 """
 # create, write-to, & save .txt file
-file_to_create = open("inn_guest_log.txt", "w")
-file_to_create.write(inn_guest_log_text)
-file_to_create.close()
+file_to_create4 = open("inn_guest_log.txt", "w")
+file_to_create4.write(inn_guest_log_text)
+file_to_create4.close()
 
 # # open, read, & print the file
-# file_to_read = open("inn_guest_log.txt", "r")
-# print(file_to_read.read())
+# file_to_read4 = open("inn_guest_log.txt", "r")
+# print(file_to_read4.read())
 
 
 
@@ -305,7 +522,7 @@ file_to_create.close()
 # The Action!
 ##############
 
-slow_print(scene)
+slow_print(scene + blurb)
 
 # Main Story
 typed_print(
@@ -381,4 +598,3 @@ Their table's just back there."
 )
 
 slow_print("\nEnd of Scene 1\n\n")
-
