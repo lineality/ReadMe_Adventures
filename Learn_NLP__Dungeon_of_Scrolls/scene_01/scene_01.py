@@ -590,7 +590,7 @@ for person_number in friends_dict:
         friend_name = input(f'\n"What was your {person_number} friend\'s name?"\n')
         friend_name_check = correct_name(person_number, friend_name)
         if friend_name_check is False:
-            typed_print(f'"{random.choice(responses)}"', tip)
+            print(f'"{random.choice(responses)}"', tip)
 
 typed_print(
     """\n
