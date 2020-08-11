@@ -1,4 +1,8 @@
-# version 008
+# TODO add random length to map text?
+# fix .py location...needed? (or all you need is read me?)
+
+
+# version 009
 # Scene_02
 # Witch Map
 
@@ -6,9 +10,10 @@ import os  # for terminal functions etc.
 import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
-#import requests
+
 
 scene = "scene_02"
+blurb = "  Witch Map  "
 adventure = "Learn_NLP__Dungeon_of_Scrolls"
 game = "ReadMe_Adventures"
 
@@ -43,6 +48,7 @@ def manage_file_pathways():
         # then check and make adventure and scene
         check_cd_or_make_cd(adventure)
         check_cd_or_make_cd(scene)
+    # requests not available on termux, wget requires pip...
     # # check .py file
     # py_path = f"https://raw.githubusercontent.com/lineality/{game}/master/{adventure}/{scene}/{scene}.py"
     # if not os.path.exists(f"{scene}.py"):
@@ -192,41 +198,32 @@ elif pronoun == "they":
 
 # create ReadMe.txt file
 readme_text = """
+ReadMe
+
 Scene 2: Witch Map
 
 Instructions:
 1. Open Terminal
 2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_02/scene_02.py
-3. Run file       Command: python3 scene_1.py
+3. Run file       Command: python3 scene_2.py
 
 
-(Optional)
 Tips:
-Steps to check the length of two files in python:
-1. open python:
-    python3
-2. import both files (as different variables)
-3. check the lenth with len()
 
-e.g.
-You could use a word processor to check the length,
-but it is worthwhile to learn in python.
-The easy part is getting the lenth of anything:
-len(x)
-It takes more steps to open the file and copy the contents to a variable,
-but still just a few steps. ( lines that start with # are a comment)
+1. Content Map
+If you get lost, or you want to see a discussion of the skills 
+and solutions, check the Content_Map.txt for that scene.
+(Content_Map.txt will be generated when .py is run)
 
-# import the files as separate variables
-map1_intermediary_file = open("map_1.txt", "r")
-map2_intermediary_file = open("map_2.txt", "r")
+2. Steps to check the length of two files in python:
+  1. open python:
+     $ python3
 
-# file_to_read = open("map_1.txt", "r")
-map1_text = map1_intermediary_file.read()
-map2_text = map2_intermediary_file.read()
+  2. load both files as different variables 
+     (just like loading for printing in the last scene)
+     
+  3. check the lenth with len() e.g. print( len(x) )
 
-# print out the lengths, using len(x)
-print(len(map1_text))
-print(len(map2_text))
 """
 
 # create, write-to, & save .txt file
@@ -234,9 +231,15 @@ file_to_create = open("ReadMe.txt", "w")
 file_to_create.write(readme_text)
 file_to_create.close()
 
-# #open, read, & print the file
-# file_to_read = open("ReadMe.txt", "r")
-# print(file_to_read.read())
+# # #open, read, & print the file
+# # Step 1: make an intermediate file in python
+# intermediate_file_variable = open("ReadMe.txt", "r")
+# # Step 2: make an item_to_print by reading the intermediate file
+# item_to_print = intermediate_file_variable.read()
+# # Step 3: Print the item you want to print
+# print(item_to_print)
+# # You can do this in just one step, but it maybe harder to read:
+# print((open("ReadMe.txt", "r")).read())
 
 # create file:
 advanced_instructions = """
@@ -325,9 +328,100 @@ file_to_create = open("advanced_instructions.txt", "w")
 file_to_create.write(readme_text)
 file_to_create.close()
 
-# #open, read, & print the file
-# file_to_read = open("advanced_instructions.txt", "r")
-# print(file_to_read.read())
+# # #open, read, & print the file
+# # Step 1: make an intermediate file in python
+# intermediate_file_variable = open("advanced_instructions.txt", "r")
+# # Step 2: make an item_to_print by reading the intermediate file
+# item_to_print = intermediate_file_variable.read()
+# # Step 3: Print the item you want to print
+# print(item_to_print)
+# # You can do this in just one step, but it maybe harder to read:
+# print((open("advanced_instructions.txt", "r")).read())
+
+
+# create file: content map
+content_map_text = """
+Content Map
+For scene_02, Dungeon of Scolls, ReadMe Adventures.
+
+The Skill-Ability in scene_02 is: length with len()
+
+simply put the name of the variable, or the raw input
+into the parenthese after len
+
+e.g. 
+word1 = "five"
+len(word1)
+
+or
+
+len("five")
+
+Tip:
+you can print two items in a row, by putting a comma between them
+
+e.g.
+print( item_1, item_2 )
+or
+print( len(map_1.txt), len(map_2.txt) )
+
+
+This is extremely useful and will be use very very often.
+You can get the length of a sentence, but also of other
+"type of data structure."
+
+string e.g. "Hello"
+list e.g. ["H", "e", "o"]
+dictionary e.g. {"hello": "goodbye", "waves": "more waves"}
+set e.g. {"h", "l", "e"}
+tuple e.g. ("h", "o")
+
+This is especially useful when "looping" through something. 
+
+
+More Examples:
+
+e.g.
+You could use a word processor to check the length,
+but it is worthwhile to learn in python.
+The easy part is getting the lenth of anything:
+len(x)
+It takes more steps to open the file and copy the contents to a variable,
+but still just a few steps. ( lines that start with # are a comment)
+
+# import the files as separate variables
+map1_intermediary_file = open("map_1.txt", "r")
+map2_intermediary_file = open("map_2.txt", "r")
+
+# file_to_read = open("map_1.txt", "r")
+map1_text = map1_intermediary_file.read()
+map2_text = map2_intermediary_file.read()
+
+# print out the lengths, using len(x)
+print(len(map1_text))
+print(len(map2_text))
+
+Question:
+Can you see where in the .py file there is code to 
+print the map length which has been "commented out"?
+
+"""
+# create, write-to, & save .txt file
+file_to_create3 = open("Content_Map.txt", "w")
+file_to_create3.write(content_map_text)
+file_to_create3.close()
+
+# # #open, read, & print the file
+# # Step 1: make an intermediate file in python
+# intermediate_file_variable = open("Content_Map.txt", "r")
+# # Step 2: make an item_to_print by reading the intermediate file
+# item_to_print = intermediate_file_variable.read()
+# # Step 3: Print the item you want to print
+# print(item_to_print)
+# # You can do this in just one step, but it maybe harder to read:
+# print((open("Content_Map.txt", "r")).read())
+
+
 
 #################
 # Materials Files
@@ -357,8 +451,14 @@ file_to_create.write(map_1)
 file_to_create.close()
 
 # # #open, read, & print the file
-# map1_file_to_read = open("map_1.txt", "r")
-# print(map1_file_to_read.read())
+# # Step 1: make an intermediate file in python
+# intermediate_file_variable = open("map_1.txt", "r")
+# # Step 2: make an item_to_print by reading the intermediate file
+# item_to_print = intermediate_file_variable.read()
+# # Step 3: Print the item you want to print
+# print(item_to_print)
+# # You can do this in just one step, but it maybe harder to read:
+# print((open("map_1.txt", "r")).read())
 
 # # #count length
 # map1_file_to_read = open("map_1.txt", "r")
@@ -391,8 +491,14 @@ file_to_create.write(map_2)
 file_to_create.close()
 
 # # #open, read, & print the file
-# map2_file_to_read = open("map_2.txt", "r")
-# print(map2_file_to_read.read())
+# # Step 1: make an intermediate file in python
+# intermediate_file_variable = open("map_2.txt", "r")
+# # Step 2: make an item_to_print by reading the intermediate file
+# item_to_print = intermediate_file_variable.read()
+# # Step 3: Print the item you want to print
+# print(item_to_print)
+# # You can do this in just one step, but it maybe harder to read:
+# print((open("map_2.txt", "r")).read())
 
 # # #count length
 # map2_file_to_read = open("map_2.txt", "r")
@@ -407,7 +513,7 @@ file_to_create.close()
 # clear screen (for windows or...everything else)
 os.system("cls" if os.name == "nt" else "clear")
 
-slow_print(scene)
+slow_print(scene + blurb)
 
 # Main Story
 typed_print(
@@ -594,4 +700,3 @@ os.system("cls" if os.name == "nt" else "clear")
 
 if answer == "yes":
     slow_print("\nEnd of Scene 2\n\n")
-
