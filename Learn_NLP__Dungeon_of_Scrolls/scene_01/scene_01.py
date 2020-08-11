@@ -6,7 +6,7 @@ import os  # for terminal functions etc.
 import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
-import requests
+#import requests
 
 scene = "scene_01"
 adventure = "Learn_NLP__Dungeon_of_Scrolls"
