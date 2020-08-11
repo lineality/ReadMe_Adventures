@@ -190,7 +190,7 @@ Scene 2: Witch Map
 
 Instructions:
 1. Open Terminal
-2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_2/scene_2.py
+2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_02/scene_02.py
 3. Run file       Command: python3 scene_1.py
 
 
@@ -588,3 +588,4 @@ os.system("cls" if os.name == "nt" else "clear")
 
 if answer == "yes":
     slow_print("\nEnd of Scene 2\n\n")
+

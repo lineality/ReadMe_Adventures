@@ -4,7 +4,7 @@ Scene 1: Find Your Friends
 
 Instructions:
 1. Open Terminal
-2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_1/scene_1.py
+2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
 3. Run file       Command: python3 scene_1.py
 
 
@@ -21,7 +21,8 @@ Look for these files
 in the directory (folder) that your command terminal is open in.
 (This file may be updated as well.)
 
-3. Since it is lying on the bar-counter in front of you,
+3. (quasi spoiler)
+Since it is lying on the bar-counter in front of you,
 you can 'access' the inn's guest-register.
 Check your file directory again.
 (This will help you to answer
