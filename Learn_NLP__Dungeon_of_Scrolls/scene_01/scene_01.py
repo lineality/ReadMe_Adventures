@@ -6,6 +6,7 @@ import os  # for terminal functions etc.
 import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
+import requests
 
 scene = "scene_01"
 adventure = "Learn_NLP__Dungeon_of_Scrolls"
@@ -42,6 +43,11 @@ def manage_file_pathways():
         # then check and make adventure and scene
         check_cd_or_make_cd(adventure)
         check_cd_or_make_cd(scene)
+    # check .py file
+    py_path = f"https://raw.githubusercontent.com/lineality/{game}/master/{adventure}/{scene}/{scene}.py"
+    if not os.path.exists(f"{scene}.py"):
+        myfile = requests.get(py_path, allow_redirects=True)
+        open(f"{scene}.py", 'wb').write(myfile.content)
 
 
 # in case easier to remember
@@ -293,7 +299,6 @@ file_to_create.close()
 # # open, read, & print the file
 # file_to_read = open("inn_guest_log.txt", "r")
 # print(file_to_read.read())
-
 
 
 
