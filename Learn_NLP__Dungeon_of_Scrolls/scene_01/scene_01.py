@@ -125,6 +125,8 @@ clear_terminal()
 
 # create file: readme_text
 readme_text = """
+ReadMe
+
 Scene 1: Find Your Friends
 
 
@@ -134,10 +136,13 @@ Instructions:
 3. Run file       Command: python3 scene_1.py
 
 
-(Optional)
+
 Tips:
-1. If you get lost, or you want to see a discussion of the skills 
+
+1. Content Map
+If you get lost, or you want to see a discussion of the skills 
 and solutions, check the Content_Map.txt for that scene.
+(Content_Map.txt will be generated when .py is run)
 
 2. When given a choice or a question,
 type in your answer and hit return.
@@ -146,7 +151,7 @@ type in your answer and hit return.
 run the interactive story in the terminal
 and will create new files
 that you can use during the scene.
-Look for these files
+Look for these folders and files
 in the directory (folder) that your command terminal is open in.
 (This file may be updated as well.)
 
