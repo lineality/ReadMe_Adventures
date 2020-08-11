@@ -4,7 +4,7 @@ Scene 1: Find Your Friends
 
 Instructions:
 1. Open Terminal
-2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_1/scene_1.py
+2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
 3. Run file       Command: python3 scene_1.py
 
 
