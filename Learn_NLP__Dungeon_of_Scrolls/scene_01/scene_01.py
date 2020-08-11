@@ -1,35 +1,17 @@
-# version 001
-# Scene_03
-# Witch Map
+# version 010
+# Scene_1
+# Find Your Friends
 
 import os  # for terminal functions etc.
 import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
 
-scene = "scene_03"
-blurb = "  However You Slice It "
+
+scene = "scene_01"
+blurb = "   Find Your Friends "
 adventure = "Learn_NLP__Dungeon_of_Scrolls"
 game = "ReadMe_Adventures"
-
-# removal of arm-band
-# 
-# "sweeden" - made it past locals
-# hear about site
-# 
-# course for next skill point?
-# maybe 'decrypting'
-# a document by changing items?
-# 
-# slicing?...
-# the key word is character...
-# this will tell you the cardinal direction(s) to go in:
-# slice...e.g. [se] or [es] for south east?
-
-
-# TODO add random length to map text?
-# fix .py location...needed? (or all you need is read me?)
-
 
 #########################
 # Story Display Funtions
@@ -128,7 +110,6 @@ def clear_terminal():
     os.system("cls" if os.name == "nt" else "clear")
     pass
 
-
 #############
 # Setting Up
 #############
@@ -136,124 +117,276 @@ def clear_terminal():
 # make sure file structure is correct
 manage_file_pathways()
 
-# general_wrong_answer_responces
-responses = [
-    "Huh?",
-    "What was that?",
-    "Really?",
-    "I didn't catch that...",
-    "Come again?",
-    "Are you sure about that?",
-    "What?",
-    "You're pulling my leg!",
-    "I'm sorry, my mind was wondering. What was that again?",
-    "Ha ha hah ahahahhahahhh, that's a good one.",
-    "You have to be joking.",
-]
-
 clear_terminal()
 
-############
-# pronouns #
+#################
+### Create Files
+#################
 
-# Note: for uppercase, use: pronoun.title()
-
-# setting up question:
-pronoun = input("What is your character's pronoun?\n")
-clear_terminal()
-
-# making user input lower case
-pronoun = pronoun.lower()
-
-# fix (he vs. him etc.)
-# pronoun(1)
-if pronoun == "him" or pronoun == "he":
-    pronoun = "he"
-
-elif pronoun == "her" or pronoun == "she":
-    pronoun = "she"
-
-else:
-    pronoun = "they"
-
-# pronoun2
-if pronoun == "he":
-    pronoun2 = "him"
-
-elif pronoun == "she":
-    pronoun2 = "her"
-
-elif pronoun == "they":
-    pronoun2 = "them"
-
-# pronoun3
-if pronoun == "he":
-    pronoun3 = "his"
-
-elif pronoun == "she":
-    pronoun3 = "hers"
-
-elif pronoun == "they":
-    pronoun3 = "theirs"
-
-# pronoun4
-if pronoun == "he":
-    pronoun4 = "he's"
-
-elif pronoun == "she":
-    pronoun4 = "she's"
-
-elif pronoun == "they":
-    pronoun4 = "they're"
-
-
-
-###############
-# Create Files
-###############
-
-# create ReadMe.txt file
+# create file: readme_text
 readme_text = """
-Scene 3: However You Slice It
+ReadMe
+
+Scene 1: Find Your Friends
+
 
 Instructions:
 1. Open Terminal
-2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_03/scene_03.py
-3. Run file       Command: python3 scene_1.py
+2. Get file     Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
+3. Run file     Command: python3 scene_01.py
+
 
 
 Tips:
-1. If you get lost, or you want to see a discussion of the skills 
-and solutions, check the Content_Map.txt for that scene.
 
-2. 
-Steps to check the length of two files in python:
-  1. open python:
-     $ python3
-  2. load both files as different variables 
-     (just like loading for printing in the last scene)
-  3. check the lenth with len() e.g. print( len(x) )
+1. Content Map
+If you get lost, or you want to see a discussion of the skills 
+and solutions, check the Content_Map.txt for that scene.
+(Content_Map.txt will be generated when .py is run)
+
+2. When given a choice or a question,
+type in your answer and hit return.
+
+3. Running the .py file will
+run the interactive story in the terminal
+and will create new files
+that you can use during the scene.
+Look for these folders and files
+in the directory (folder) that your command terminal is open in.
+(This file may be updated as well.)
+
+3. (quasi spoiler)
+Since it is lying on the bar-counter in front of you,
+you can 'access' the inn's guest-register.
+Check your file directory again.
+(This will help you to answer
+the red-nosed innkeeper's question.)
 
 """
-
 # create, write-to, & save .txt file
-file_to_create = open("ReadMe.txt", "w")
-file_to_create.write(readme_text)
-file_to_create.close()
+file_to_create1 = open("ReadMe.txt", "w")
+file_to_create1.write(readme_text)
+file_to_create1.close()
 
-# # #open, read, & print the file
-# # Step 1: make an intermediate file in python
-# intermediate_file_variable = open("ReadMe.txt", "r")
-# # Step 2: make an item_to_print by reading the intermediate file
-# item_to_print = intermediate_file_variable.read()
-# # Step 3: Print the item you want to print
-# print(item_to_print)
-# # You can do this in just one step, but it maybe harder to read:
-# print((open("ReadMe.txt", "r")).read())
+# #open, read, & print the file
+# file_to_read1 = open("ReadMe.txt", "r")
+# print(file_to_read1.read())
+
+
+# create file: content map
+content_map_text = """
+Content Map
+For scene_01, dungeon of scolls, ReadMe Adventures.
+
+Coding is about communication.
+
+The first goal 
+(in this first lesson of the course) 
+is to open and "print" a file in python 
+so that you can read it
+either in a terminal
+or in a notebook.
+
+There are a few 'computer science' parts to this, such as 'variables.'
+And there are a few python-specific parts to this, the steps.
+
+Step 1: Find the name of the file you want to open
+in this case: inn_guest_log.txt
+
+One thing you will deal with every day is 'folders' or 'directories'
+as they are often called in tech-speak.
+
+For this course, your files will be
+automatically put into a system of folders
+when they are created on your computer
+
+game_folder -> adventure_folder -> scene_folder
+
+in this case:
+ReadMe_Adventures -> Learn_NLP__Dungeon_of_Scrolls -> scene_01
+
+If you look at the .py file (which is a good idea) 
+you will see these same items listed out.
+
+scene = "scene_01"
+blurb = "  Find Your Friends "
+adventure = "Learn_NLP__Dungeon_of_Scrolls"
+game = "ReadMe_Adventures"
+
+using standards names for things makes everything easier
+to find and deal with.
+
+In these folders (game_folder -> adventure_folder -> scene_folder)
+you will find the file you need: inn_guest_log.txt
+
+(Note:
+You can view the text of the inn_guest_log.txt in a text editor
+or by looking at the .py (scene_01.py) file itself in a text editor,
+or maybe in a word processor (depending on your computer),
+and you should try and be able to do all of those in case you need to,
+(to open a file in atom: atom inn_guest_log.txt )
+(to open the whole folder in atom: atom . )
+but other method described here will be using python to disply the text.)
+
+Step 1: Get to the right file location...Where are you now?
+
+Here are some handy python directory functions:
+
+# python directory functions
+os.getcwd()  # pwd pathway to working directory (where you are) (same as python cwd "current" working directory)
+os.chdir("..")  # go back only one directory
+os.listdir()  # lists all files in that directory same as "ls" in posix or "DIR" in windows  
+os.mkdir("target")  # mkdir, create a new folder/directory
+os.chdir("../target")  # "change" move into exsting directory / folder
+os.path.exists("../target")  # checks if folder or file exists
+os.path.isdir("../target")  # checks if x is the directory (not whole path) or are in...
+
+You can do this either in your computer's terminal, or in python
+you may want to practice both. The notation for each is a bit different
+(and windows is differnt from the 'posix' standard that just about 
+every other OS uses)
+
+Notation:
+The terminal sign is (usually) "$", so this means type "pwd" in the terminal
+The python sign is ">>>" so
+
+These commands below will show you where you are (two steps in python)
+in the file-system of the computer, what 'directory' you are 'in'
+in terminal: $ pwd
+in python:  >>> import os
+and then    >>> os.getcwd()
+
+If you don't see any of the folders you need, then either:
+1. you need to find them (using your OS file explorer may be best)
+2. or make them if they do not exist (running the .py will make them for you)
+
+To get into a directory, stepping through each step is often long and boring. 
+When possible, go to that folder in your OS file explorer and open a terminal
+in that directory (windowsOS makes this strange but the idea is the same). 
+
+In the future we will first make a custom python environment,
+usually using pipenv or anaconda (there are many other options too,
+and you should explore as many as you can, eventually).
+
+Step 2: double check
+When you are in the right directory, it is always good to check to see
+where you are. Checking is very fast, 
+and doing something in the wrong directory makes a mess which wastes time
+to clean up. Kind of a "measure twice, cut once" approach. 
+
+posix:    $ ls
+windows:  > dir
+
+(Note: there are many websites and videos on topics like this, 
+and usually a good resource is just a quick search away.)
+
+(Note: this whole process is also part of using github, which hopefully
+we will practice later in this course)
+
+
+Step 3: open the file
+When you see the file you want listed amongst all the other files in 
+that directory...there are 2(?) ways to read the file (in this context):
+1: use a text editor: good to know and you will usually do this:
+    to open a file in atom: atom inn_guest_log.txt 
+    to open the whole folder in atom: atom . 
+    to open a file in vsCode: code inn_guest_log.txt 
+    to open the whole folder in vsCode: code . 
+
+2: use python: you won't do this as often, but very often you will need to
+do this at least once the beginning of a project to get your data loaded:
+
+# to open, read, & print the file
+intermediate_file_variable = open("file_you_pick.txt", "r")
+print(intermediate_file_variable.read())
+
+While clicking on an icon, or typing: $ atom .
+are just one step
+in python we use 2 steps. Why? 
+This is a good example of how coding is about communication and readability.
+You can do this in just one step, but it maybe harder to read:
+>>> print((open("advanced_instructions.txt", "r")).read())
+
+In two steps we save the item as a variable before putting into the print
+function(or 'method'). This is also an important step because sometimes you 
+MUST put a variable into a function (where you cannot cram a lot of other code in)
+1. create an intermediate variable from the file
+2. read and print that intermediate variable
+
+We could have done 3 steps with another item to print variable...
+maybe that would be more clear? is 2 steps clear enough?
+Do whatever you think is clear enough and works. 
+
+# 3 step example:
+# to open, read, & print the file
+
+# Step 1: make an intermediate file in python
+intermediate_file_variable = open("advanced_instructions.txt", "r")
+# Step 2: make an item_to_print by reading the intermediate file
+item_to_print = intermediate_file_variable.read()
+# Step 3: Print the item you want to print
+print(item_to_print)
+
+
+You can do this in just one step, where everything is being done
+all together. Some people say they like "one-liners,"
+but do you think it's a good idea to be unclear? We all make choices.
+
+>>> print((open("advanced_instructions.txt", "r")).read())
+
+Which of the above methods do you like best?
+1 step
+2 steps?
+3 steps?
+
+
+
+Misc:
+
+"Coding is about communication."
+
+Remember, like in real life, there is no such thing as 'cheating' when you are 
+fully understanding code. You want to see and understand everything. 
+
+Study the .py file. Will it 'give you the answers'? It should. 
+You are trying to understand how it works, so look at it. 
+If studying what you want to understand works, you succeeded. 
+
+There is no single way to solve these or nearly any programing problem,
+so try to understand as many ways as you can. 
+
+Look at everyting. Read everything. Try everything. 
+Internet-search questions on everything.
+
+You want your code to be readable, which means it should NOT 
+look completely alien strange and unique to only that one project for you.
+There is no "plagerism" in writing clean code. 
+2+2=4 SHOULD look similar when different people write it. 
+There is no such thing as code 'not being unique enough' to work properly. 
+Your goal is to write code the works very very well and will keep working very
+very well for as many users and realistic situations as possible. 
+
+Your file names and program should not be 100% unique just for the sake of
+being absolutely unique. 
+
+In this lesson you will learn to open a file. You do not need an absolutely 
+unique way of opening a file that is unique to you and unique every time you 
+open a file. That would be a hard to read and understand, 
+and being hard to understand would be a catastrophy. 
+
+"""
+# create, write-to, & save .txt file
+file_to_create2 = open("Content_Map.txt", "w")
+file_to_create2.write(content_map_text)
+file_to_create2.close()
+
+# #open, read, & print the file
+# file_to_read2 = open("Content_Map.txt", "r")
+# print(file_to_read2.read())
+
 
 # create file:
 advanced_instructions = """
-
 "ReadMe Adventures" is a minimal game-system that requires just two files
 to play, and just one of those files to get started, a ReadMe.txt
 
@@ -334,356 +467,139 @@ Run in a terminal:
 """
 
 # create, write-to, & save .txt file
-file_to_create = open("advanced_instructions.txt", "w")
-file_to_create.write(readme_text)
-file_to_create.close()
-
-# # #open, read, & print the file
-# # Step 1: make an intermediate file in python
-# intermediate_file_variable = open("advanced_instructions.txt", "r")
-# # Step 2: make an item_to_print by reading the intermediate file
-# item_to_print = intermediate_file_variable.read()
-# # Step 3: Print the item you want to print
-# print(item_to_print)
-# # You can do this in just one step, but it maybe harder to read:
-# print((open("advanced_instructions.txt", "r")).read())
-
-
-# create file: content map
-content_map_text = """
-Content Map
-For scene_03, Dungeon of Scolls, ReadMe Adventures
-
-The Skill-Ability in scene_03 is: slicing
-
-"slice notation" is basically square brackets -> [ ]
-
-e.g.
-Here is a string of characters: 
-item1 = "Alice & Bob"
-
-You can "slice" item1 with square brackets:
-
-Slice out one character:
-  item1[0] is the first letter "A"
-  item1[-1] is the last letter, "b"
-
-From-To slicing
-  item[:] is all the letters, from the first to the last
-  item[0:-1] also all characters, from the first to the last
-  item[1:-2] is the second character to the next-to-the-last
-  etc.
-  (you can also put a negative number at the beginning,
-  e.g. if you want the last 8 characters but not the last 2
-  e.g. you want to see if "scene_03" contains the word "scene_"
-  
-
-
-Question:
-
-
-
-"""
-# create, write-to, & save .txt file
-file_to_create3 = open("Content_Map.txt", "w")
-file_to_create3.write(content_map_text)
+file_to_create3 = open("advanced_instructions.txt", "w")
+file_to_create3.write(readme_text)
 file_to_create3.close()
 
-# # #open, read, & print the file
-# # Step 1: make an intermediate file in python
-# intermediate_file_variable = open("Content_Map.txt", "r")
-# # Step 2: make an item_to_print by reading the intermediate file
-# item_to_print = intermediate_file_variable.read()
-# # Step 3: Print the item you want to print
-# print(item_to_print)
-# # You can do this in just one step, but it maybe harder to read:
-# print((open("Content_Map.txt", "r")).read())
+# #open, read, & print the file
+# file_to_read3 = open("advanced_instructions.txt", "r")
+# print(file_to_read3.read())
 
 
+# create file
+# .txt file of inn's guest log for user:
+inn_guest_log_text = """
+(*loyal customer)
+- Old Martha McSally
+Items Purchased:
+- capon (stuffed rooster)
+- sauce
+- fortified wine, two gallons
+- one crouton of Bread
 
-#################
-# Materials Files
-#################
+(seasonal traveler)
+- Captn. Wilda Wooster
+Items Purchased:
+- bag of potatoes
+- 1 *live rooster
 
-# create map_1 file
-map_1 = """
-Welcome to the historic dungeons of
-Spring Falls Imperial Forest Reserves,
-home to the most highly reviewed dungeon restaurants
-and a family friendly enchanted forest retreat center.
-From the impasses of blister bay to the seasonal favorite
-'house of blood' that delight family travelers,
-you can also stop by our xylophone emporium for an acoustic mystery
-the family will never forget. (All instruments are made by humans
-on the premises accorded to Imperial law.)
-Fasting, loitering, and pets are prohibited.
-Directions: Head east past the Axis Mountains then follow
-the South Ridge mountains continuing south until you
-get to the third old growth pine forest
-and turn west at the base of the mountain.
+(Those Meddlesome Kids)
+- Friend 1: Baldwin
+- Friend 2: Merln
+- Friend 3: McCavity
+- Friend 4: Q
+Items Purchased:
+- three pizzas
+- 1 gallon of ginger-brew
+- 1 cup of tea
+- 1 book of dubious maps for tourists
+
+(regulars)
+- Four men in Kendal Green (difficult to see)
+Items Purchased:
+- fish'n chips x 4
+- coffee x 8
+- 2 books of crossword puzzles
+- a dish towel
 """
-
 # create, write-to, & save .txt file
-file_to_create = open("map_1.txt", "w")
-file_to_create.write(map_1)
-file_to_create.close()
+file_to_create4 = open("inn_guest_log.txt", "w")
+file_to_create4.write(inn_guest_log_text)
+file_to_create4.close()
 
-# # #open, read, & print the file
-# # Step 1: make an intermediate file in python
-# intermediate_file_variable = open("map_1.txt", "r")
-# # Step 2: make an item_to_print by reading the intermediate file
-# item_to_print = intermediate_file_variable.read()
-# # Step 3: Print the item you want to print
-# print(item_to_print)
-# # You can do this in just one step, but it maybe harder to read:
-# print((open("map_1.txt", "r")).read())
+# # open, read, & print the file
+# file_to_read4 = open("inn_guest_log.txt", "r")
+# print(file_to_read4.read())
 
-# # #count length
-# map1_file_to_read = open("map_1.txt", "r")
-# map1_text = map1_file_to_read.read()
-# print(len(map1_text))
-
-
-# create map_2 file
-map_2 = """
-Here at the Murkland Designated Sites,
-we are proud to have received recognition
-for our 100% magic-free locally grown produce.
-Tours are temporarily behind schedule
-due to a wagon guild strike.
-Information about the fence around the park
-may be obtained with a freedom of information request
-submitted before the next full moon
-to the Bureau of Parks and Sacrifices. May the
-the great empire prevailed over threats of technology.
-Seasonal passes will resume availability
-during the livestock relation season.
-Due to a decrease in demand, trumpet filters will no longer be
-available even with a judicial order on park grounds. All hail the humans.
-Directions: Go to the base of Blossom ridge mountain.
-"""
-
-# create, write-to, & save .txt file
-file_to_create = open("map_2.txt", "w")
-file_to_create.write(map_2)
-file_to_create.close()
-
-# # #open, read, & print the file
-# # Step 1: make an intermediate file in python
-# intermediate_file_variable = open("map_2.txt", "r")
-# # Step 2: make an item_to_print by reading the intermediate file
-# item_to_print = intermediate_file_variable.read()
-# # Step 3: Print the item you want to print
-# print(item_to_print)
-# # You can do this in just one step, but it maybe harder to read:
-# print((open("map_2.txt", "r")).read())
-
-# # #count length
-# map2_file_to_read = open("map_2.txt", "r")
-# map2_text = map2_file_to_read.read()
-# print(len(map2_text))
 
 
 ##############
 # The Action!
 ##############
 
-# clear screen (for windows or...everything else)
-os.system("cls" if os.name == "nt" else "clear")
-
 slow_print(scene + blurb)
 
 # Main Story
-
-# get debriefed on back story
-# slice out direction clue
-# run-in without arm band
-# Jami Baldwin
-# 
-
-
 typed_print(
     """
-\n
-You walk to the back,
-carrying the hot pizza,
-over creaking wooden floor boards.
-\nThe rooms get quieter as you get further from the bar.
-You walk up to a round table in the back up against the wall
-with a small round dusty window overhead.\n
-Something splashes against the window.
-\n"Hey," someone at the table says as they look up.
-"Is that our pizza? I'm starving."\n\n
+\nYou are in The Mos Inn.
+You are standing at the bar.
+The bartender looks down at your arm
+and eyes you suspiciously.
+
+"We don't allow droids in here...", the barman says.
+"Not usually...but...who are you with?
+Who are your friends?"
 """
 )
-
-answer = input("Your Answer: Is this their pizza? (yes/no)\n")
-
-# clear screen (for windows or...everything else)
-os.system("cls" if os.name == "nt" else "clear")
-
-answer = answer.lower()
-if answer == "yes":
-    typed_print(
-        """
-    \n"Yayy!!!!"
-
-    \nYou put the pizza on the table
-    and they start to grab slices and eat.
-    """
-    )
-else:
-    typed_print('"...but it smells so good..."\n')
 
 # Tip
-typed_print(
+print(
     """
-"Ok, everyone, let's focus. What are we going to do
-about these maps?"
-
-"I think THAT one looks longer."
-
-"But it could be off by just one character.
-We need the one with the shorter text."
-
-"I know, I tried counting the letters last night but
-I kept coming up with slightly different numbers."
-
-"Can we just try both maps?"\n
+\n(Tip: Since the inn's guest-register is lying on the bar-counter
+in front of you, you can 'access'it.
+Check your file directory again.)
 """
 )
 
-# press
-input("  ...Press enter to continue...  \n")
+friends_dict = {
+    "first": "Baldwin",
+    "second": "Merln",
+    "third": "McCavity",
+    "fourth": "Q",
+}
 
-clear_terminal()
+tip = """\n\n(Tip: Check the ReadMe file if you are out of ideas.)\n"""
+
+responses = [
+    "Who?",
+    "Hmm...not sure I know anyone by that name..." "What was that?",
+    "I didn't catch that...",
+    "Come again?",
+    "Are you sure about that?",
+    "What?",
+    "I'm sorry, my mind was wondering. What was that again?",
+    "How would you spell that...doesn't sound familiar...",
+    "Ha ha hah ahahahhahahhh, that's a good one.",
+    "Ok, who are your friends, really?",
+]
+
+
+# function to check if the person's name is correct
+def correct_name(person, name):
+    return friends_dict[person] == name
+
+
+# loop through and ask about each person:
+for person_number in friends_dict:
+    # reset flag
+    friend_name_check = False
+
+    # keep asking until the friends' names are given
+    while friend_name_check is False:
+        friend_name = input(f'\n"What was your {person_number} friend\'s name?"\n')
+        friend_name_check = correct_name(person_number, friend_name)
+        if friend_name_check is False:
+            typed_print(f'"{random.choice(responses)}"', tip)
 
 typed_print(
-    """
-"They lead in opposite directions, it takes days to get there,
-one of them is probably a trap, and we have classes on Monday."
-
-"And I have to walk my Dog."
-
-"And Q has to walk her dog."
-
-"My Aunt's dog."
-
-"Her Aunt's dog. It's your Aunt's dog?
-Anyway, we shouldn't try them both."\n
+    """\n
+"Oh, those crazy kids.
+They're in the back at table eight.
+Here, their pizza just came out of the oven
+you might as well bring it with you.
+Their table's just back there."
 """
 )
 
-typed_print(f'"Hang on...I bet {pronoun} can count...Can you count?"\n')
-
-
-typed_print("\nAll voices go silent as everyone turns their gaze to you.\n")
-
-answer_check = False
-# keep asking until answer is correct
-while answer_check is False:
-    answer = input('\n"...Can you count?" (yes/no)\n')
-    answer = answer.lower()
-    if answer == "yes":
-        answer_check = True
-    if answer_check is False:
-        typed_print(f'"{random.choice(responses)}"')
-
-# clear screen (for windows or...everything else)
-os.system("cls" if os.name == "nt" else "clear")
-
-typed_print(
-    """
-"You can? Oh my gosh, ok, which of these is longer?"
-
-"...I was thinking,
-they're almost more like pamphlets than maps, really."
-
-"We could call them...Folded-Publications?"
-
-"We got them from witches, are witches 'publishers'?
-I always wondered about that."
-
-"Whatever, map-pamphlets, leaflets,
-can you count how long they are? Like,
-how many characters are printed on each one?
-Like, letters and numbers and spaces and everything?"
-"""
-)
-
-typed_print("\n(Compare the length of the two files.)")
-
-# lengths
-map1_file_to_read = open("map_1.txt", "r")
-map1_text = map1_file_to_read.read()
-map1_length = len(map1_text)
-
-map2_file_to_read = open("map_2.txt", "r")
-map2_text = map2_file_to_read.read()
-map2_length = len(map2_text)
-
-map_length_dict = {"map_1": map1_length, "map_2": map2_length}
-
-# typed_print(map1_length, map2_length)
-
-answer_check = False
-# keep asking until answer is correct
-while answer_check is False:
-    answer = input('\n"...How long is the first map?"\n')
-    answer = float(answer)
-    answer = int(answer)
-    answer_check = answer == map_length_dict["map_1"]
-    if answer_check is False:
-        typed_print(f'"{random.choice(responses)}"')
-
-answer_check = False
-# keep asking until answer is correct
-while answer_check is False:
-    answer = input('"...How about the second one?"\n')
-    answer = float(answer)
-    answer = int(answer)
-    answer_check = answer == map_length_dict["map_2"]
-    if answer_check is False:
-        typed_print(f'"{random.choice(responses)}"')
-
-# clear screen (for windows or...everything else)
-os.system("cls" if os.name == "nt" else "clear")
-
-typed_print('\n"That was awsome. Ok, quick vote: Should we bring the android?"\n')
-
-typed_print(
-    f"\n\"You can't just bring {pronoun2} if {pronoun} doesn't want to come?\"\n"
-)
-
-typed_print(f'\n"That\'s not what I meant but, whatever. Do we invite {pronoun2}?"\n')
-
-typed_print(f'\n"{pronoun.title()} can hear us...{pronoun4} standing right there."\n')
-
-typed_print(
-    """
-"Yes, awkward, sorry, bad planning here. But, what's the vote?
-Who says yes?"
-"""
-)
-
-time.sleep(2)
-
-typed_print(
-    """
-Everyone immidiately raises their hand.
-
-"Do you want to come find a dungeon?
-We'll tell you all about it on the way.
-Well, we don't know all about it,
-but, do you want to come?"\n
-"""
-)
-
-answer = input("(yes/no)\n")
-
-# clear screen (for windows or...everything else)
-os.system("cls" if os.name == "nt" else "clear")
-
-if answer == "yes":
-    slow_print("\nEnd of Scene 2\n\n")
-
+slow_print("\nEnd of Scene 1\n\n")
