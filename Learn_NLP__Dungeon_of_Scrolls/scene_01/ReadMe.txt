@@ -1,4 +1,3 @@
-
 Scene 1: Find Your Friends
 
 
@@ -10,10 +9,13 @@ Instructions:
 
 (Optional)
 Tips:
-1. When given a choice or a question,
+1. If you get lost, or you want to see a discussion of the skills 
+and solutions, check the Content_Map.txt for that scene.
+
+2. When given a choice or a question,
 type in your answer and hit return.
 
-2. Running the .py file will
+3. Running the .py file will
 run the interactive story in the terminal
 and will create new files
 that you can use during the scene.
@@ -27,4 +29,3 @@ you can 'access' the inn's guest-register.
 Check your file directory again.
 (This will help you to answer
 the red-nosed innkeeper's question.)
-
