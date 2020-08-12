@@ -230,9 +230,9 @@ Tip: Steps to check the length of two files in python:
 """
 
 # create, write-to, & save .txt file
-file_to_create = open("ReadMe.txt", "w")
-file_to_create.write(readme_text)
-file_to_create.close()
+file_to_create1 = open("ReadMe.txt", "w")
+file_to_create1.write(readme_text)
+file_to_create1.close()
 
 # # #open, read, & print the file
 # # Step 1: make an intermediate file in python
@@ -245,7 +245,7 @@ file_to_create.close()
 # print((open("ReadMe.txt", "r")).read())
 
 # create file:
-advanced_instructions = """
+advanced_instructions_text = """
 
 "ReadMe Adventures" is a minimal game-system that requires just two files
 to play, and just one of those files to get started, a ReadMe.txt
@@ -327,9 +327,9 @@ Run in a terminal:
 """
 
 # create, write-to, & save .txt file
-file_to_create = open("advanced_instructions.txt", "w")
-file_to_create.write(readme_text)
-file_to_create.close()
+file_to_create2 = open("advanced_instructions.txt", "w")
+file_to_create2.write(advanced_instructions_text)
+file_to_create2.close()
 
 # # #open, read, & print the file
 # # Step 1: make an intermediate file in python
@@ -461,9 +461,9 @@ and turn west at the base of the mountain.
 """
 
 # create, write-to, & save .txt file
-file_to_create = open("map_1.txt", "w")
-file_to_create.write(map_1)
-file_to_create.close()
+file_to_create4 = open("map_1.txt", "w")
+file_to_create4.write(map_1)
+file_to_create4.close()
 
 # # #open, read, & print the file
 # # Step 1: make an intermediate file in python
@@ -501,9 +501,9 @@ Directions: Go to the base of Blossom ridge mountain.
 """
 
 # create, write-to, & save .txt file
-file_to_create = open("map_2.txt", "w")
-file_to_create.write(map_2)
-file_to_create.close()
+file_to_create5 = open("map_2.txt", "w")
+file_to_create5.write(map_2)
+file_to_create5.close()
 
 # # #open, read, & print the file
 # # Step 1: make an intermediate file in python
