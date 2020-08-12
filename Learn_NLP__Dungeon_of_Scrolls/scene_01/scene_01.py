@@ -1,4 +1,4 @@
-# version 010
+# version 012
 # Scene_1
 # Find Your Friends
 
@@ -62,9 +62,7 @@ def pause_seconds(seconds):
 def slow_print(input_text):
     # staggered times
     random_times = [
-        0.5,
-        0.5,
-        0.6,
+        0.4,
     ]
 
     # stagger each character
@@ -125,45 +123,28 @@ clear_terminal()
 
 # create file: readme_text
 readme_text = """
-ReadMe
-
-Scene 1: Find Your Friends
-
+ReadMe:  Scene_01 Find Your Friends
 
 Instructions:
-1. Open Terminal
 
-2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
-               WindowsOS: wget -Outfile scene_01.py https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
+1. Run The Game
+    1. Open Terminal
+    2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
+    3. Run file      Command: python3 scene_01.py
 
-3. Run file      Command: python3 scene_01.py
+    ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+
+2. Journal
+    Keep a Journal about what you are learning.
+
+3. Lost or Curious
+    Check out the Content_Map.txt for this scene.
+    ( Content_Map.txt will be generated when .py is run )
+
+4. User Manual
+    Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
 
 
-
-Tips:
-
-1. Content Map
-If you get lost, or you want to see a discussion of the skills 
-and solutions, check the Content_Map.txt for that scene.
-(Content_Map.txt will be generated when .py is run)
-
-2. When given a choice or a question,
-type in your answer and hit return.
-
-3. Running the .py file will
-run the interactive story in the terminal
-and will create new files
-that you can use during the scene.
-Look for these folders and files
-in the directory (folder) that your command terminal is open in.
-(This file may be updated as well.)
-
-3. (quasi spoiler)
-Since it is lying on the bar-counter in front of you,
-you can 'access' the inn's guest-register.
-Check your file directory again.
-(This will help you to answer
-the red-nosed innkeeper's question.)
 
 """
 # create, write-to, & save .txt file
@@ -390,8 +371,27 @@ file_to_create2.close()
 
 # create file:
 advanced_instructions = """
+Advanced Instructions for Installing and Setup For ReadMe Adventures
+
 "ReadMe Adventures" is a minimal game-system that requires just two files
 to play, and just one of those files to get started, a ReadMe.txt
+
+For Windows_OS configuration: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing
+
+3. Running the .py file will
+run the interactive story in the terminal
+and will create new files
+that you can use during the scene.
+Look for these folders and files
+in the directory (folder) that your command terminal is open in.
+(This file may be updated as well.)
+
+3. (quasi spoiler)
+Since it is lying on the bar-counter in front of you,
+you can 'access' the inn's guest-register.
+Check your file directory again.
+(This will help you to answer
+the red-nosed innkeeper's question.)
 
 This ReadMe.txt & Scene.py system is flexible and should be workable
 on many operating systems including mobile devices. This make
@@ -467,6 +467,13 @@ Run in a terminal:
   atom . / code .
   wget https://raw.githubusercontent.com/...etc
   python3 scene_x.py
+
+
+in windows powershell
+wget -OutFile filename url
+e.g.
+wget -Outfile scene_01.py https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
+
 """
 
 # create, write-to, & save .txt file
@@ -549,9 +556,13 @@ Who are your friends?"
 # Tip
 print(
     """
-\n(Tip: Since the inn's guest-register is lying on the bar-counter
-in front of you, you can 'access'it.
-Check your file directory again.)
+Tip: 
+Since the inn's guest-register is lying on the bar-counter
+in front of you, you can 'access' it.
+
+Check your file directory: (folders and files)
+ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
+-> scene_01 ->  "inn_guest_log.txt"
 """
 )
 
@@ -590,14 +601,17 @@ for person_number in friends_dict:
 
     # keep asking until the friends' names are given
     while friend_name_check is False:
-        friend_name = input(f'\n"What was your {person_number} friend\'s name?"\n')
+        typed_print(f'\n"What was your {person_number} friend\'s name?"\n')
+        print("(Type in your answer and hit return.)\n")
+        friend_name = input()
         friend_name_check = correct_name(person_number, friend_name)
         if friend_name_check is False:
-            print(f'"{random.choice(responses)}"', tip)
+            typed_print(f'\n"{random.choice(responses)}"')
+            print(tip)
 
 typed_print(
     """\n
-"Oh, those crazy kids.
+"Oh, THOSE crazy kids.
 They're in the back at table eight.
 Here, their pizza just came out of the oven
 you might as well bring it with you.
