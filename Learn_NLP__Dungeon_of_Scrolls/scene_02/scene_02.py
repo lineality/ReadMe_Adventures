@@ -66,9 +66,7 @@ def pause_seconds(seconds):
 def slow_print(input_text):
     # staggered times
     random_times = [
-        0.5,
-        0.5,
-        0.6,
+        0.4,
     ]
 
     # stagger each character
@@ -198,30 +196,35 @@ elif pronoun == "they":
 
 # create ReadMe.txt file
 readme_text = """
-ReadMe
-
-Scene 2: Witch Map
+ReadMe Scene__02 Witch Map
 
 Instructions:
-1. Open Terminal
-2. Get file       wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_02/scene_02.py
-3. Run file       Command: python3 scene_2.py
+
+1. Run The Game
+    1. Open Terminal
+    2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_02/scene_02.py
+    3. Run file      Command: python3 scene_01.py
+
+    ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+
+2. Journal
+    Keep a Journal about what you are learning.
+
+3. Lost or Curious
+    Check out the Content_Map.txt for this scene.
+    ( Content_Map.txt will be generated when .py is run )
+
+4. User Manual
+    Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
 
 
-Tips:
-
-1. Content Map
-If you get lost, or you want to see a discussion of the skills 
-and solutions, check the Content_Map.txt for that scene.
-(Content_Map.txt will be generated when .py is run)
-
-2. Steps to check the length of two files in python:
+Tip: Steps to check the length of two files in python:
   1. open python:
      $ python3
 
   2. load both files as different variables 
      (just like loading for printing in the last scene)
-     
+
   3. check the lenth with len() e.g. print( len(x) )
 
 """
@@ -378,6 +381,9 @@ tuple e.g. ("h", "o")
 
 This is especially useful when "looping" through something. 
 
+Note: while len() is 'simple function' that most people who use it often 
+will remember, the syntax for opening files is something that even people who
+use it regularly probably still need to look up now and then.
 
 More Examples:
 
@@ -404,6 +410,15 @@ print(len(map2_text))
 Question:
 Can you see where in the .py file there is code to 
 print the map length which has been "commented out"?
+
+Examples:
+
+# More readable:
+>>> map1 = (open("map_1.txt", "r")).read()
+>>> print(len(map1))
+
+# Less readable:
+>>> print(len((open("map_1.txt", "r")).read()),len((open("map_2.txt", "r")).read()))
 
 """
 # create, write-to, & save .txt file
@@ -680,7 +695,7 @@ Who says yes?"
 """
 )
 
-time.sleep(2)
+time.sleep(3)
 
 typed_print(
     """
@@ -688,7 +703,7 @@ Everyone immidiately raises their hand.
 
 "Do you want to come find a dungeon?
 We'll tell you all about it on the way.
-Well, we don't know all about it,
+Well, we don't know ALL about it,
 but, do you want to come?"\n
 """
 )
