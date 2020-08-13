@@ -1,4 +1,4 @@
-# version 012
+# version 013
 # Scene_1
 # Find Your Friends
 
@@ -567,17 +567,18 @@ ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
 )
 
 friends_dict = {
-    "first": "Baldwin",
-    "second": "Merln",
-    "third": "McCavity",
-    "fourth": "Q",
+    "first": "jane baldwin",
+    "second": "franklin merln",
+    "third": "lavender mccavity",
+    "fourth": "ada babbage",
 }
 
 tip = """\n\n(Tip: Check the ReadMe file if you are out of ideas.)\n"""
 
 responses = [
     "Who?",
-    "Hmm...not sure I know anyone by that name..." "What was that?",
+    "Hmm...not sure I know anyone by that name...",
+    "What was that?",
     "I didn't catch that...",
     "Come again?",
     "Are you sure about that?",
@@ -591,7 +592,10 @@ responses = [
 
 # function to check if the person's name is correct
 def correct_name(person, name):
-    return friends_dict[person] == name
+    if (len(name) == 0) or (name == " "):
+        return False
+    else:
+        return name in friends_dict[person]
 
 
 # loop through and ask about each person:
@@ -601,11 +605,23 @@ for person_number in friends_dict:
 
     # keep asking until the friends' names are given
     while friend_name_check is False:
-        typed_print(f'\n"What was your {person_number} friend\'s name?"\n')
+        typed_print(f'\n"What is your {person_number} friend\'s name?"\n')
         print("(Type in your answer and hit return.)\n")
+        # get input
         friend_name = input()
-        friend_name_check = correct_name(person_number, friend_name)
-        if friend_name_check is False:
+        friend_name = friend_name.lower()
+        # update flag
+        friend_name_check = correct_name(person_number, friend_name.lower())
+        # check for McSally
+        if ("McSally".lower() in friend_name.lower()) or ("Martha".lower() in friend_name.lower()):
+            typed_print("""\n"I don't know, McSally and I go way back,
+            and she's never talked about you..."\n """)
+            print(tip)
+        elif ("Wilda".lower() in friend_name.lower()) or ("Wooster".lower() in friend_name.lower()):
+            typed_print("""\n"Wilda? Ha! I happen to know she's
+            afraid of droids...sad, really. Oh well..."\n """)
+            print(tip)            
+        elif friend_name_check is False:
             typed_print(f'\n"{random.choice(responses)}"')
             print(tip)
 
