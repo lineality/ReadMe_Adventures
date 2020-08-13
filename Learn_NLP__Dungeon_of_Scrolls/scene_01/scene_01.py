@@ -1,4 +1,4 @@
-# version 013
+# version 014
 # Scene_1
 # Find Your Friends
 
@@ -504,15 +504,15 @@ Items Purchased:
 - 1 *live rooster
 
 (Those Meddlesome Kids)
-- Friend 1: Baldwin
-- Friend 2: Merln
-- Friend 3: McCavity
-- Friend 4: Q
+- Friend 1: Jane Baldwin
+- Friend 2: Franklin Merln
+- Friend 3: Lavender McCavity
+- Friend 4: Gullover Hitch
 Items Purchased:
 - three pizzas
 - 1 gallon of ginger-brew
 - 1 cup of tea
-- 1 book of dubious maps for tourists
+- 1 book of dubious trail maps for tourists
 
 (regulars)
 - Four men in Kendal Green (difficult to see)
@@ -570,7 +570,8 @@ friends_dict = {
     "first": "jane baldwin",
     "second": "franklin merln",
     "third": "lavender mccavity",
-    "fourth": "ada babbage",
+    "fourth": "gullover hitch"
+    "fifth": "",
 }
 
 tip = """\n\n(Tip: Check the ReadMe file if you are out of ideas.)\n"""
