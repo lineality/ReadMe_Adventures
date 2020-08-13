@@ -570,8 +570,7 @@ friends_dict = {
     "first": "jane baldwin",
     "second": "franklin merln",
     "third": "lavender mccavity",
-    "fourth": "gullover hitch"
-    "fifth": "",
+    "fourth": "gullover hitch",
 }
 
 tip = """\n\n(Tip: Check the ReadMe file if you are out of ideas.)\n"""
