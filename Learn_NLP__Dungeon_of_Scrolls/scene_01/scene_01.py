@@ -1,4 +1,4 @@
-# version 014
+# version 015
 # Scene_1
 # Find Your Friends
 
@@ -323,7 +323,23 @@ Which of the above methods do you like best?
 2 steps?
 3 steps?
 
+Experiment:
 
+The default instructions are:
+    >>> name_you_choose = open("inn_guest_log.txt", "r").read()
+    >>> print(name_you_choose)
+
+but what is you didn't say print? Not saying print before a number
+is usually fine, but what happens here?
+    >>> name_you_choose = open("inn_guest_log.txt", "r").read()
+    >>> name_you_choose
+
+or just
+    >>> open("inn_guest_log.txt", "r").read()
+
+Note:
+in posix (linux, ios, bsd, unix, etc) you may need to use
+control shift C/V to cut and paste.
 
 Misc:
 
@@ -531,41 +547,6 @@ file_to_create4.close()
 # file_to_read4 = open("inn_guest_log.txt", "r")
 # print(file_to_read4.read())
 
-
-
-##############
-# The Action!
-##############
-
-slow_print(scene + blurb)
-
-# Main Story
-typed_print(
-    """
-\nYou are in The Mos Inn.
-You are standing at the bar.
-The bartender looks down at your arm
-and eyes you suspiciously.
-
-"We don't allow droids in here...", the barman says.
-"Not usually...but...who are you with?
-Who are your friends?"
-"""
-)
-
-# Tip
-print(
-    """
-Tip: 
-Since the inn's guest-register is lying on the bar-counter
-in front of you, you can 'access' it.
-
-Check your file directory: (folders and files)
-ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
--> scene_01 ->  "inn_guest_log.txt"
-"""
-)
-
 friends_dict = {
     "first": "jane baldwin",
     "second": "franklin merln",
@@ -598,6 +579,36 @@ def correct_name(person, name):
         return name in friends_dict[person]
 
 
+##############
+# The Action!
+##############
+
+slow_print(scene + blurb)
+
+# Main Story
+typed_print(
+    """
+\nYou are in The Mos Inn. 
+You are standing at the bar. 
+The bartender looks down at your arm and eyes you suspiciously.
+ 
+"We don't allow droids in here...", the barman says.
+"Not usually...but...who are you with? Who are your friends?"
+ 
+(Since the inn's guest-register is lying on the bar-counter
+in front of you, you can 'access' it. You could do this in an editor...
+
+    (folders) ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
+    -> scene_01 ->  "inn_guest_log.txt"
+
+Do it in Python!! Open another Terminal in the scene_01 folder. 
+Check you are in the correct directory with $ ls & $ pwd then type:
+      $ python3
+    >>> name_you_choose = open("inn_guest_log.txt", "r").read()
+    >>> print(name_you_choose)
+"""
+)
+
 # loop through and ask about each person:
 for person_number in friends_dict:
     # reset flag
@@ -606,24 +617,31 @@ for person_number in friends_dict:
     # keep asking until the friends' names are given
     while friend_name_check is False:
         typed_print(f'\n"What is your {person_number} friend\'s name?"\n')
-        print("(Type in your answer and hit return.)\n")
+        print("(Type in your answer and hit return.)")
         # get input
         friend_name = input()
         friend_name = friend_name.lower()
         # update flag
         friend_name_check = correct_name(person_number, friend_name.lower())
         # check for McSally
-        if ("McSally".lower() in friend_name.lower()) or ("Martha".lower() in friend_name.lower()):
-            typed_print("""\n"I don't know, McSally and I go way back,
-            and she's never talked about you..."\n """)
-            print(tip)
-        elif ("Wilda".lower() in friend_name.lower()) or ("Wooster".lower() in friend_name.lower()):
-            typed_print("""\n"Wilda? Ha! I happen to know she's
-            afraid of droids...sad, really. Oh well..."\n """)
-            print(tip)            
-        elif friend_name_check is False:
+        if len(friend_name) < 4:
+            friend_name_check = False
             typed_print(f'\n"{random.choice(responses)}"')
-            print(tip)
+        else: 
+            if ("McSally".lower() in friend_name.lower()) or ("Martha".lower() in friend_name.lower()):
+                typed_print("""\n"I don't know... Old McSally and I go way back,
+                and she's never talked about you..."\n """)
+                print(tip)
+            elif ("Wilda".lower() in friend_name.lower()) or ("Wooster".lower() in friend_name.lower()):
+                typed_print("""\n"Wilda? Ha! I happen to know she's
+                afraid of droids...sad, really. Oh well..."\n """)
+                print(tip)          
+            elif friend_name_check is False:
+                typed_print(f'\n"{random.choice(responses)}"')
+                print(tip)
+ 
+
+clear_terminal()
 
 typed_print(
     """\n
