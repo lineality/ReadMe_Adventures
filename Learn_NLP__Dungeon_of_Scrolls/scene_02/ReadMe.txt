@@ -13,7 +13,7 @@ Instructions:
 1. Run The Game
     1. Open Terminal
     2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_02/scene_02.py
-    3. Run file      Command: python3 scene_01.py
+    3. Run file      Command: python3 scene_02.py
 
     ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
 
