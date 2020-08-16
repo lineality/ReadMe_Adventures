@@ -1,12 +1,12 @@
-# version 002
+# version 005
 # Scene_03
 # Any Way You Slice It
-#  _____           _ _____                   
-# | __  |___ ___ _| |     |___               
-# |    -| -_| .'| . | | | | -_|              
-# |__|__|___|__,|___|_|_|_|___|     
-#  _____   _             _                             
-# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _ 
+#  _____           _ _____
+# | __  |___ ___ _| |     |___
+# |    -| -_| .'| . | | | | -_|
+# |__|__|___|__,|___|_|_|_|___|
+#  _____   _             _
+# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _
 # |     | . | | | -_|   |  _| | |  _| -_|_ -|  | . | | |
 # |__|__|___|\_/|___|_|_|_| |___|_| |___|___|()|  _|_  |
 #                                              |_| |___|
@@ -147,13 +147,11 @@ responses = [
     "I didn't catch that...",
     "Come again?",
     "Are you sure about that?",
-    "That just doesn't sound right..."
-    "What?",
+    "That just doesn't sound right..." "What?",
     "You're pulling my leg!",
     "I'm sorry, my mind was wondering. What was that again?",
     "Ha ha hah ahahahhahahhh, that's a good one.",
-    "...Seriously?"
-    "You have to be joking.",
+    "...Seriously?" "You have to be joking.",
 ]
 
 clear_terminal()
@@ -218,12 +216,12 @@ elif pronoun == "they":
 # create ReadMe.txt file
 readme_text = """
 ReadMe Scene__03  Any Way You Slice It
- _____           _ _____                   
-| __  |___ ___ _| |     |___               
-|    -| -_| .'| . | | | | -_|              
-|__|__|___|__,|___|_|_|_|___|                                                     
- _____   _             _                   
-|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___ 
+ _____           _ _____
+| __  |___ ___ _| |     |___
+|    -| -_| .'| . | | | | -_|
+|__|__|___|__,|___|_|_|_|___|
+ _____   _             _
+|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___
 |     | . | | | -_|   |  _| | |  _| -_|_ -|
 |__|__|___|\_/|___|_|_|_| |___|_| |___|___|
 
@@ -391,7 +389,6 @@ file_to_create3.close()
 # print((open("Content_Map.txt", "r")).read())
 
 
-
 #################
 # Materials Files
 #################
@@ -480,131 +477,135 @@ file_to_create5.close()
 ##############
 
 slow_print(f"{scene} {blurb} ")
- 
+
 typed_print(
-"""
+    """
 \nFive pairs of feet crunch the snow in the wood,
 over the tinkling of ice showering frozen leaves,
 and the more periodic popping sounds of frozen birds
 falling and shattering like lightbulbs on marble.
- 
+
 "Nice time for a walk, this is. Scenic."
- 
+
 "Don't mind Hitch."
- 
+
 "Yes, don't mind me. Imagination gets the better of me sometimes.
 It's probably a warm summer day."
- 
+
 "It is the month for that. Odd."
-""")
- 
+"""
+)
+
 # Press Enter to Continue
 input("\n  ...Press enter to continue...  \n")
 clear_terminal()
- 
- 
- 
+
+
 typed_print(
-"""
-Jane crunches her way up next to you 
+    """
+Jane crunches her way up next to you
 and holds something out in front of you.
 
 "There's another piece of this map that needs figuring...
 that witch who gave this to us, she penciled in a code
 for what directions to go in."
- 
-"Yeah, I was looking at that. 
+
+"Yeah, I was looking at that.
 Really annoying trying to figure that out."
- 
+
 "Tedious, I'd say."
- 
+
 "You would say that."
 
 "What's that supposed to mean?"
- 
+
 You feel a tugging on your sleeve.
 """
 )
- 
+
 # Press Enter to Continue
 input("\n  ...Press enter to continue...  \n")
 clear_terminal()
- 
- 
+
+
 typed_print(
-"""
-"Can you help us figure this part out too? 
-The map has this number." 
+    """
+"Can you help us figure this part out too?
+The map has this number."
 
 She points with an unsteady finger at a number scrawled in the top corner.
 
-"The number is how many characters to count along, 
-and that points to the directions we should go in. 
-Each should point to a cardinal-direction-letter, 
+"The number is how many characters to count along,
+and that points to the directions we should go in.
+Each should point to a cardinal-direction-letter,
 like "w" for West or "e" for East...or at least I hope they do."
- 
-"Yeah, but you see those arrows going forwards and backwards? 
+
+"Yeah, but you see those arrows going forwards and backwards?
 We need to count twice: Once forwards and THEN once backwards,
-to get two direction-letters. I nearly went blind last night 
+to get two direction-letters. I nearly went blind last night
 at the inn trying to count that. And that tea didn't help at all,
-thank you very much, whoever suggested that. Every time I tried 
+thank you very much, whoever suggested that. Every time I tried
 counting it by hand I got a different letter. Useless."
- 
+
 "I wouldn't say you're completely useless, Hitch.
 Don't be so hard on yourself."
-""")
- 
+"""
+)
+
 
 # Press Enter to Continue
 input("\n  ...Press enter to continue...  \n")
 clear_terminal()
- 
+
 
 typed_print(
-"""
-"...so can you give us a hand then? 
+    """
+"...so can you give us a hand then?
 Should be easy for you, you know."
- 
+
 "Don't be rude, Hitch."
- 
+
 "What did I say?"
- 
-Jane hands you the crinkled page 
+
+Jane hands you the crinkled page
 with the penciled in number and arrows:
 """
 )
- 
-print("""
+
+print(
+    """
 _______________
 |
-|	-> 
+|	->
 |	699
 |	<-
-""")
+"""
+)
 
 # Press Enter to Continue
 input("\n  ...Press enter to continue...  \n")
 clear_terminal()
 
-print("""
+print(
+    """
  _______________
 |
-|	-> 
+|	->
 |	699
 |	<-
 
 Slice[] the Text[]: Find the 699th letter and -699th Letter
- 
-Read in the map text like before, but this time "Slice" it. 
-"Slice" out the +699th & -699th character, 
-by putting square brackets after what you want to slice. 
- 
-(Note: The forward count starts from ZERO 
+
+Read in the map text like before, but this time "Slice" it.
+"Slice" out the +699th & -699th character,
+by putting square brackets after what you want to slice.
+
+(Note: The forward count starts from ZERO
 BUT counting backward starts from 1.)
 IMPORTANT: Make sure you are clear on this before you go on:
 e.g.  "abc"[0] is "a" / "abc"[1]  is "b" / "abc"[2]  is c
      "abc"[-1] is "c" / "abc"[-2] is "b" / "abc"[-3] is "a"
- 
+
 This is an example of how you would print the 'slice' of a variable:
     >>> print( map1[-699] )
 Or it might work to leave out the 'print()' and just say >>> map1[-699]
@@ -614,36 +615,32 @@ Or it might work to leave out the 'print()' and just say >>> map1[-699]
 # Press Enter to Continue
 input("  ...Press enter to continue...  \n")
 
-steady_print(""" 
-To Start Python: Open another Terminal in the scene_03 folder. 
-(Check you are in the correct directory with $ ls & $ pwd, and type:
-  $ python3
+steady_print(
+    """
+\n\n(You can solve this in a Terminal! You can do it!)
 
-This 'slicing' task is similiar to what you did before.
+1. Open new Terminal in scene_02 folder (right click: 'open in terminal')
+   (folders) ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
+   -> scene_03 ->  ""map_2.txt"
 
-More Sample Code: (Review scene 1) Open, Read, & Print file
-Step 1: make an intermediate file in python
-    >>> file_to_read = open("map_2.txt", "r")
- 
-Step 2: make item_to_print by reading the intermediate file
-    >>> item_to_print = file_to_read.read()
- 
-# Step 3: Print the item you want to print
-    >>> print(item_to_print)
- 
-# (Review Scene 2) Count Length
-    >>> file_to_read = open("map_2.txt", "r")
-    >>> map2_text = file_to_read.read()
-    >>> print(len(map2_text))
+2. Check you are in the correct directory with these commands:
+    $ ls
+    $ pwd
+
+3. Open+Read both map files, and check both of their lengths! Type:
+   (Note: replace the "x" in example code below with real numbers)
+     $ python3
+   >>> name_you_choose = open("map_2.txt", "r").read()
+   >>> name_you_choose[###])
+
 """
 )
 
-# Press Enter to Continue
-input("  ...Press enter to continue...  \n")
- 
 answer1 = 0
 while answer1 != "n":
-    answer1 = input('\n"What is the first letter or cardinal direction from the map?"\n (Scroll Up to see examples.)\n')
+    answer1 = input(
+        '\n"What is the first letter or cardinal direction from the map?"\n (Scroll Up to see examples.)\n'
+    )
     answer1 = answer1.lower()
     if answer1 == "i":
         typed_print('\n"You sure you\'re counting up from 0, and not from 1?"')
@@ -652,21 +649,21 @@ while answer1 != "n":
 
 answer2 = 0
 while answer2 != "e":
-    answer2 = input('\n"What is the second letter or cardinal direction from the map?"\n (Scroll Up to see examples.)\n')
+    answer2 = input(
+        '\n"What is the second letter or cardinal direction from the map?"\n (Scroll Up to see examples.)\n'
+    )
     answer2 = answer2.lower()
     if answer2 != "e":
         typed_print(f'"{random.choice(responses)}"')
 
 
 typed_print(
-"""
-"Excellent... North and East...off we go! 
-That was so much faster than counting letters, 
+    """
+"Excellent... North and East...off we go!
+That was so much faster than counting letters,
 """
 )
-typed_print(f'\nI\'m telling you, {pronoun4} amazing."\n') 
+typed_print(f"\nI'm telling you, {pronoun4} amazing.\"\n")
 
 
 slow_print(f"\n\n End of {scene} {blurb} \n\n")
-
-
