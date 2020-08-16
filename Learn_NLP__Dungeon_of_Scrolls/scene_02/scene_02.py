@@ -1,12 +1,12 @@
-# version 013
+# version 015
 # Scene_02
 # Witch Map
-#  _____           _ _____                   
-# | __  |___ ___ _| |     |___               
-# |    -| -_| .'| . | | | | -_|              
-# |__|__|___|__,|___|_|_|_|___|     
-#  _____   _             _                             
-# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _ 
+#  _____           _ _____
+# | __  |___ ___ _| |     |___
+# |    -| -_| .'| . | | | | -_|
+# |__|__|___|__,|___|_|_|_|___|
+#  _____   _             _
+# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _
 # |     | . | | | -_|   |  _| | |  _| -_|_ -|  | . | | |
 # |__|__|___|\_/|___|_|_|_| |___|_| |___|___|()|  _|_  |
 #                                              |_| |___|
@@ -223,12 +223,12 @@ elif pronoun == "they":
 # create ReadMe.txt file
 readme_text = """
 ReadMe Scene__02 Witch Map
- _____           _ _____                   
-| __  |___ ___ _| |     |___               
-|    -| -_| .'| . | | | | -_|              
-|__|__|___|__,|___|_|_|_|___|                                                     
- _____   _             _                   
-|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___ 
+ _____           _ _____
+| __  |___ ___ _| |     |___
+|    -| -_| .'| . | | | | -_|
+|__|__|___|__,|___|_|_|_|___|
+ _____   _             _
+|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___
 |     | . | | | -_|   |  _| | |  _| -_|_ -|
 |__|__|___|\_/|___|_|_|_| |___|_| |___|___|
 
@@ -376,7 +376,7 @@ The Skill-Ability in scene_02 is: length with len()
 simply put the name of the variable, or the raw input
 into the parenthese after len
 
-e.g. 
+e.g.
 word1 = "five"
 len(word1)
 
@@ -403,9 +403,9 @@ dictionary e.g. {"hello": "goodbye", "waves": "more waves"}
 set e.g. {"h", "l", "e"}
 tuple e.g. ("h", "o")
 
-This is especially useful when "looping" through something. 
+This is especially useful when "looping" through something.
 
-Note: while len() is 'simple function' that most people who use it often 
+Note: while len() is 'simple function' that most people who use it often
 will remember, the syntax for opening files is something that even people who
 use it regularly probably still need to look up now and then.
 
@@ -432,7 +432,7 @@ print(len(map1_text))
 print(len(map2_text))
 
 Question:
-Can you see where in the .py file there is code to 
+Can you see where in the .py file there is code to
 print the map length which has been "commented out"?
 
 Examples:
@@ -459,7 +459,6 @@ file_to_create3.close()
 # print(item_to_print)
 # # You can do this in just one step, but it maybe harder to read:
 # print((open("Content_Map.txt", "r")).read())
-
 
 
 #################
@@ -670,21 +669,22 @@ Like, letters and numbers and spaces and everything?"
 input("\n  ...Press enter to continue...  \n")
 clear_terminal()
 
-steady_print("""
+steady_print(
+    """
 \n\n(You can solve this in a Terminal! You can do it!)
 
-1. Open another Terminal in the scene_02 folder.
+1. Open new Terminal in scene_02 folder (right click: 'open in terminal')
    (folders) ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
    -> scene_02 ->  "map_1.txt" & "map_2.txt"
 
 2. Check you are in the correct directory with these commands:
-    $ ls 
-    $ pwd 
+    $ ls
+    $ pwd
 
 3. Open+Read both map files, and check both of their lengths! Type:
    (Note: replace the "x" in example code below with real numbers)
      $ python3
-   >>> mapx = open("map_x.txt", "r").read()   
+   >>> mapx = open("map_x.txt", "r").read()
    >>> mapx = open("map_x.txt", "r").read()
    >>> print( len(mapx), len(mapx) ]
 
@@ -730,7 +730,7 @@ clear_terminal()
 typed_print('\n"That was awsome. Ok, quick vote: Should we bring the android?"\n')
 
 typed_print(
-    f"\n\"You can't just bring {pronoun2} if {pronoun_phrase_1} want to come?\"\n"
+    f'\n"You can\'t just bring {pronoun2} if {pronoun_phrase_1} want to come?"\n'
 )
 
 typed_print(f'\n"That\'s not what I meant but, whatever. Do we invite {pronoun2}?"\n')
@@ -750,7 +750,7 @@ typed_print(
 Everyone immidiately raises their hands.
 
 "Do you want to come find a dungeon?
-We'll tell you all about it on the way. Well, we don't know ALL about it, 
+We'll tell you all about it on the way. Well, we don't know ALL about it,
 but, do you want to come?"
 """
 )
@@ -765,7 +765,7 @@ while answer_check is False:
     # boolean check
     answer_check = ("yes" in answer) or ("ok" in answer)
     if answer_check is False:
-        typed_print(f'"{random.choice(responses)}"') 
+        typed_print(f'"{random.choice(responses)}"')
 
 if answer_check is True:
 
