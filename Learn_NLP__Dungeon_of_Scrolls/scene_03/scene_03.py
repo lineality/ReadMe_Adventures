@@ -1,6 +1,15 @@
 # version 002
 # Scene_03
 # Any Way You Slice It
+#  _____           _ _____                   
+# | __  |___ ___ _| |     |___               
+# |    -| -_| .'| . | | | | -_|              
+# |__|__|___|__,|___|_|_|_|___|     
+#  _____   _             _                             
+# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _ 
+# |     | . | | | -_|   |  _| | |  _| -_|_ -|  | . | | |
+# |__|__|___|\_/|___|_|_|_| |___|_| |___|___|()|  _|_  |
+#                                              |_| |___|
 
 import os  # for terminal functions etc.
 import random  # for randomized replies etc
@@ -65,17 +74,27 @@ def pause_seconds(seconds):
 # making text print-out look like it is being typed
 def slow_print(input_text):
     # staggered times
-    random_times = [
-        0.4,
-    ]
-
+    random_times = [0.4]
     # stagger each character
     for i in input_text:
         time.sleep(random.choice(random_times))
         print(i, end="")
         # prints each time (before loop is finished)
         sys.stdout.flush()
+    # end
+    pass
 
+
+# making text print-out look like it is being typed
+def steady_print(input_text):
+    # staggered times
+    wait_time = 0.02
+    # stagger each character
+    for i in input_text:
+        time.sleep(wait_time)
+        print(i, end="")
+        # prints each time (before loop is finished)
+        sys.stdout.flush()
     # end
     pass
 
@@ -199,6 +218,14 @@ elif pronoun == "they":
 # create ReadMe.txt file
 readme_text = """
 ReadMe Scene__03  Any Way You Slice It
+ _____           _ _____                   
+| __  |___ ___ _| |     |___               
+|    -| -_| .'| . | | | | -_|              
+|__|__|___|__,|___|_|_|_|___|                                                     
+ _____   _             _                   
+|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___ 
+|     | . | | | -_|   |  _| | |  _| -_|_ -|
+|__|__|___|\_/|___|_|_|_| |___|_| |___|___|
 
 Instructions:
 
@@ -554,6 +581,7 @@ _______________
 |	699
 |	<-
 """)
+
 # Press Enter to Continue
 input("\n  ...Press enter to continue...  \n")
 clear_terminal()
@@ -586,7 +614,7 @@ Or it might work to leave out the 'print()' and just say >>> map1[-699]
 # Press Enter to Continue
 input("  ...Press enter to continue...  \n")
 
-print(""" 
+steady_print(""" 
 To Start Python: Open another Terminal in the scene_03 folder. 
 (Check you are in the correct directory with $ ls & $ pwd, and type:
   $ python3
@@ -640,6 +668,5 @@ typed_print(f'\nI\'m telling you, {pronoun4} amazing."\n')
 
 
 slow_print(f"\n\n End of {scene} {blurb} \n\n")
-
 
 
