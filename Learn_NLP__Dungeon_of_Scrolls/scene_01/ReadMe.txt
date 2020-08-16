@@ -8,6 +8,10 @@ ReadMe:  Scene_01 Find Your Friends
 |     | . | | | -_|   |  _| | |  _| -_|_ -|
 |__|__|___|\_/|___|_|_|_| |___|_| |___|___|
 
+( First time? 
+  - Is python3 installed? Type in terminal: python3 --version
+  - If not installed -> https://www.python.org/downloads/ )
+
 Instructions:
 
 1. Run The Game
