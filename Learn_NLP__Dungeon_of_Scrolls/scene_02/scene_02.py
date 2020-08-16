@@ -1,10 +1,16 @@
-# TODO add random length to map text?
-# fix .py location...needed? (or all you need is read me?)
-
-
-# version 009
+# version 012
 # Scene_02
 # Witch Map
+#  _____           _ _____                   
+# | __  |___ ___ _| |     |___               
+# |    -| -_| .'| . | | | | -_|              
+# |__|__|___|__,|___|_|_|_|___|     
+#  _____   _             _                             
+# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _ 
+# |     | . | | | -_|   |  _| | |  _| -_|_ -|  | . | | |
+# |__|__|___|\_/|___|_|_|_| |___|_| |___|___|()|  _|_  |
+#                                              |_| |___|
+
 
 import os  # for terminal functions etc.
 import random  # for randomized replies etc
@@ -65,17 +71,27 @@ def pause_seconds(seconds):
 # making text print-out look like it is being typed
 def slow_print(input_text):
     # staggered times
-    random_times = [
-        0.4,
-    ]
-
+    random_times = [0.4]
     # stagger each character
     for i in input_text:
         time.sleep(random.choice(random_times))
         print(i, end="")
         # prints each time (before loop is finished)
         sys.stdout.flush()
+    # end
+    pass
 
+
+# making text print-out look like it is being typed
+def steady_print(input_text):
+    # staggered times
+    wait_time = 0.013
+    # stagger each character
+    for i in input_text:
+        time.sleep(wait_time)
+        print(i, end="")
+        # prints each time (before loop is finished)
+        sys.stdout.flush()
     # end
     pass
 
@@ -197,13 +213,21 @@ elif pronoun == "they":
 # create ReadMe.txt file
 readme_text = """
 ReadMe Scene__02 Witch Map
+ _____           _ _____                   
+| __  |___ ___ _| |     |___               
+|    -| -_| .'| . | | | | -_|              
+|__|__|___|__,|___|_|_|_|___|                                                     
+ _____   _             _                   
+|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___ 
+|     | . | | | -_|   |  _| | |  _| -_|_ -|
+|__|__|___|\_/|___|_|_|_| |___|_| |___|___|
 
 Instructions:
 
 1. Run The Game
     1. Open Terminal
     2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_02/scene_02.py
-    3. Run file      Command: python3 scene_01.py
+    3. Run file      Command: python3 scene_02.py
 
     ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
 
@@ -216,16 +240,6 @@ Instructions:
 
 4. User Manual
     Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
-
-
-Tip: Steps to check the length of two files in python:
-  1. open python:
-     $ python3
-
-  2. load both files as different variables 
-     (just like loading for printing in the last scene)
-
-  3. check the lenth with len() e.g. print( len(x) )
 
 """
 
@@ -557,12 +571,12 @@ if answer == "yes":
         """
     \n"Yayy!!!!"
 
-    \nYou put the pizza on the table
+    You put the pizza on the table
     and they start to grab slices and eat.
     """
     )
 else:
-    typed_print('"...but it smells so good..."\n')
+    typed_print('\n"...but it smells so good..."\n')
 
 # Tip
 typed_print(
@@ -583,7 +597,7 @@ I kept coming up with slightly different numbers."
 )
 
 # press
-input("  ...Press enter to continue...  \n")
+input("\n  ...Press enter to continue...  \n")
 
 clear_terminal()
 
@@ -594,16 +608,18 @@ one of them is probably a trap, and we have classes on Monday."
 
 "And I have to walk my Dog."
 
-"And Q has to walk her dog."
+"And Lavender has to walk her dog."
 
 "My Aunt's dog."
 
 "Her Aunt's dog. It's your Aunt's dog?
-Anyway, we shouldn't try them both."\n
+Anyway, we shouldn't try them both.
+So we've got to buckle down and figure this out,
+no matter how long it takes us."\n
 """
 )
 
-typed_print(f'"Hang on...I bet {pronoun} can count...Can you count?"\n')
+typed_print(f'"Hang on...HANG on...I BET {pronoun} can count...Can you count?"\n')
 
 
 typed_print("\nAll voices go silent as everyone turns their gaze to you.\n")
@@ -630,19 +646,42 @@ they're almost more like pamphlets than maps, really."
 
 "We could call them...Folded-Publications?"
 
-"We got them from witches, are witches 'publishers'?
-I always wondered about that."
+"We got them from witches. Can we call witches 'publishers'?
+...I always wondered about that."
 
 "Whatever, map-pamphlets, leaflets,
-can you count how long they are? Like,
+can you count how long these are? Like,
 how many characters are printed on each one?
 Like, letters and numbers and spaces and everything?"
 """
 )
 
-typed_print("\n(Compare the length of the two files.)")
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+clear_terminal()
 
-# lengths
+steady_print("""
+\n\n(You can solve this in a Terminal! You can do it!)
+
+1. Open another Terminal in the scene_02 folder.
+   (folders) ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
+   -> scene_02 ->  "map_1.txt" & "map_2.txt"
+
+2. Check you are in the correct directory with these commands:
+    $ ls 
+    $ pwd 
+
+3. Open+Read both map files, and check both of their lengths! Type:
+   (Note: replace the "x" in example code below with real numbers)
+     $ python3
+   >>> mapx = open("map_x.txt", "r").read()   
+   >>> mapx = open("map_x.txt", "r").read()
+   >>> print( len(mapx), len(mapx) ]
+
+"""
+)
+
+# lengths for answer-checking
 map1_file_to_read = open("map_1.txt", "r")
 map1_text = map1_file_to_read.read()
 map1_length = len(map1_text)
@@ -652,13 +691,14 @@ map2_text = map2_file_to_read.read()
 map2_length = len(map2_text)
 
 map_length_dict = {"map_1": map1_length, "map_2": map2_length}
-
 # typed_print(map1_length, map2_length)
+
+# Check the Player's Answer
 
 answer_check = False
 # keep asking until answer is correct
 while answer_check is False:
-    answer = input('\n"...How long is the first map?"\n')
+    answer = input('\n"...How long is map one?"\n')
     answer = float(answer)
     answer = int(answer)
     answer_check = answer == map_length_dict["map_1"]
@@ -668,15 +708,14 @@ while answer_check is False:
 answer_check = False
 # keep asking until answer is correct
 while answer_check is False:
-    answer = input('"...How about the second one?"\n')
+    answer = input('\n"...Now, how about map two?"\n')
     answer = float(answer)
     answer = int(answer)
     answer_check = answer == map_length_dict["map_2"]
     if answer_check is False:
         typed_print(f'"{random.choice(responses)}"')
 
-# clear screen (for windows or...everything else)
-os.system("cls" if os.name == "nt" else "clear")
+clear_terminal()
 
 typed_print('\n"That was awsome. Ok, quick vote: Should we bring the android?"\n')
 
@@ -690,28 +729,36 @@ typed_print(f'\n"{pronoun.title()} can hear us...{pronoun4} standing right there
 
 typed_print(
     """
-"Yes, awkward, sorry, bad planning here. But, what's the vote?
-Who says yes?"
+"Yes, awkward, sorry, bad planning here. But, what's the vote? Who says yes?"
 """
 )
 
-time.sleep(3)
+time.sleep(2.5)
 
 typed_print(
     """
-Everyone immidiately raises their hand.
+Everyone immidiately raises their hands.
 
 "Do you want to come find a dungeon?
-We'll tell you all about it on the way.
-Well, we don't know ALL about it,
-but, do you want to come?"\n
+We'll tell you all about it on the way. Well, we don't know ALL about it, 
+but, do you want to come?"
 """
 )
 
-answer = input("(yes/no)\n")
+typed_print(f'\n"Oh, I hope {pronoun} says yes..."')
 
-# clear screen (for windows or...everything else)
-os.system("cls" if os.name == "nt" else "clear")
+answer_check = False
 
-if answer == "yes":
-    slow_print("\nEnd of Scene 2\n\n")
+while answer_check is False:
+    answer = input("\n(yes/no)")
+    answer = answer.lower()
+    # boolean check
+    answer_check = ("yes" in answer) or ("ok" in answer)
+    if answer_check is False:
+        typed_print(f'"{random.choice(responses)}"') 
+
+if answer_check is True:
+
+    typed_print('\n"Yes!!!"')
+
+    slow_print("\n\nEnd of Scene 2\n\n")
