@@ -1,4 +1,4 @@
-# version 012
+# version 013
 # Scene_02
 # Witch Map
 #  _____           _ _____                   
@@ -205,6 +205,16 @@ elif pronoun == "she":
 
 elif pronoun == "they":
     pronoun4 = "they're"
+
+# pronoun_phrase_1
+if pronoun == "he":
+    pronoun_phrase_1 = "he doesn't "
+
+elif pronoun == "she":
+    pronoun_phrase_1 = "she doesn't "
+
+elif pronoun == "they":
+    pronoun_phrase_1 = "they don't "
 
 ###############
 # Create Files
@@ -720,7 +730,7 @@ clear_terminal()
 typed_print('\n"That was awsome. Ok, quick vote: Should we bring the android?"\n')
 
 typed_print(
-    f"\n\"You can't just bring {pronoun2} if {pronoun} doesn't want to come?\"\n"
+    f"\n\"You can't just bring {pronoun2} if {pronoun_phrase_1} want to come?\"\n"
 )
 
 typed_print(f'\n"That\'s not what I meant but, whatever. Do we invite {pronoun2}?"\n')
