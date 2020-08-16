@@ -1,3 +1,4 @@
+
 ReadMe Scene__02 Witch Map
  _____           _ _____                   
 | __  |___ ___ _| |     |___               
@@ -26,13 +27,3 @@ Instructions:
 
 4. User Manual
     Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
-
-
-Tip: Steps to check the length of two files in python:
-  1. open python:
-     $ python3
-
-  2. load both files as different variables 
-     (just like loading for printing in the last scene)
-
-  3. check the lenth with len() e.g. print( len(x) )
