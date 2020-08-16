@@ -1,4 +1,5 @@
-ReadMe Scene__02 Witch Map
+
+ReadMe:  Scene_04 Head's Down, Head's Up
  _____           _ _____                   
 | __  |___ ___ _| |     |___               
 |    -| -_| .'| . | | | | -_|              
@@ -12,27 +13,18 @@ Instructions:
 
 1. Run The Game
     1. Open Terminal
-    2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_02/scene_02.py
-    3. Run file      Command: python3 scene_01.py
+    2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_04/scene_04.py
+    3. Run file      Command: python3 scene_04.py
 
-    ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+       ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
 
 2. Journal
     Keep a Journal about what you are learning.
 
 3. Lost or Curious
     Check out the Content_Map.txt for this scene.
-    ( Content_Map.txt will be generated when .py is run )
+    ( Content_Map.txt will be generated in scene folder when .py is run. )
 
 4. User Manual
     Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
 
-
-Tip: Steps to check the length of two files in python:
-  1. open python:
-     $ python3
-
-  2. load both files as different variables 
-     (just like loading for printing in the last scene)
-
-  3. check the lenth with len() e.g. print( len(x) )
