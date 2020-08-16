@@ -1,6 +1,15 @@
 # version 003
 # Scene_04
 # Heads Down, Heads Up
+#  _____           _ _____                   
+# | __  |___ ___ _| |     |___               
+# |    -| -_| .'| . | | | | -_|              
+# |__|__|___|__,|___|_|_|_|___|     
+#  _____   _             _                             
+# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _ 
+# |     | . | | | -_|   |  _| | |  _| -_|_ -|  | . | | |
+# |__|__|___|\_/|___|_|_|_| |___|_| |___|___|()|  _|_  |
+#                                              |_| |___|
 
 import os  # for terminal functions etc.
 import random  # for randomized replies etc
@@ -79,7 +88,7 @@ def slow_print(input_text):
 # making text print-out look like it is being typed
 def steady_print(input_text):
     # staggered times
-    wait_time = 0.015
+    wait_time = 0.016
     # stagger each character
     for i in input_text:
         time.sleep(wait_time)
@@ -841,4 +850,3 @@ We'll dry them out for when she gets back."
 
 slow_print(f"\n\n End of {scene} {blurb} \n\n")
 clear_terminal()
-
