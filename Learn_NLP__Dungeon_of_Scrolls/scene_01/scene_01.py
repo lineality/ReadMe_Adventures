@@ -1,12 +1,12 @@
-# version 016
+# version 018
 # Scene_1
 # Find Your Friends
-#  _____           _ _____                   
-# | __  |___ ___ _| |     |___               
-# |    -| -_| .'| . | | | | -_|              
-# |__|__|___|__,|___|_|_|_|___|     
-#  _____   _             _                             
-# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _ 
+#  _____           _ _____
+# | __  |___ ___ _| |     |___
+# |    -| -_| .'| . | | | | -_|
+# |__|__|___|__,|___|_|_|_|___|
+#  _____   _             _
+# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _
 # |     | . | | | -_|   |  _| | |  _| -_|_ -|  | . | | |
 # |__|__|___|\_/|___|_|_|_| |___|_| |___|___|()|  _|_  |
 #                                              |_| |___|
@@ -127,6 +127,7 @@ def clear_terminal():
     os.system("cls" if os.name == "nt" else "clear")
     pass
 
+
 #############
 # Setting Up
 #############
@@ -143,14 +144,18 @@ clear_terminal()
 # create file: readme_text
 readme_text = """
 ReadMe:  Scene_01 Find Your Friends
- _____           _ _____                   
-| __  |___ ___ _| |     |___               
-|    -| -_| .'| . | | | | -_|              
-|__|__|___|__,|___|_|_|_|___|                                                     
- _____   _             _                   
-|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___ 
+ _____           _ _____
+| __  |___ ___ _| |     |___
+|    -| -_| .'| . | | | | -_|
+|__|__|___|__,|___|_|_|_|___|
+ _____   _             _
+|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___
 |     | . | | | -_|   |  _| | |  _| -_|_ -|
 |__|__|___|\_/|___|_|_|_| |___|_| |___|___|
+
+( First time?
+  - Is python3 installed? Type in terminal: python3 --version
+  - If not installed -> https://www.python.org/downloads/ )
 
 Instructions:
 
@@ -189,9 +194,9 @@ For scene_01, dungeon of scolls, ReadMe Adventures.
 
 Coding is about communication.
 
-The first goal 
-(in this first lesson of the course) 
-is to open and "print" a file in python 
+The first goal
+(in this first lesson of the course)
+is to open and "print" a file in python
 so that you can read it
 either in a terminal
 or in a notebook.
@@ -214,7 +219,7 @@ game_folder -> adventure_folder -> scene_folder
 in this case:
 ReadMe_Adventures -> Learn_NLP__Dungeon_of_Scrolls -> scene_01
 
-If you look at the .py file (which is a good idea) 
+If you look at the .py file (which is a good idea)
 you will see these same items listed out.
 
 scene = "scene_01"
@@ -244,7 +249,7 @@ Here are some handy python directory functions:
 # python directory functions
 os.getcwd()  # pwd pathway to working directory (where you are) (same as python cwd "current" working directory)
 os.chdir("..")  # go back only one directory
-os.listdir()  # lists all files in that directory same as "ls" in posix or "DIR" in windows  
+os.listdir()  # lists all files in that directory same as "ls" in posix or "DIR" in windows
 os.mkdir("target")  # mkdir, create a new folder/directory
 os.chdir("../target")  # "change" move into exsting directory / folder
 os.path.exists("../target")  # checks if folder or file exists
@@ -252,7 +257,7 @@ os.path.isdir("../target")  # checks if x is the directory (not whole path) or a
 
 You can do this either in your computer's terminal, or in python
 you may want to practice both. The notation for each is a bit different
-(and windows is differnt from the 'posix' standard that just about 
+(and windows is differnt from the 'posix' standard that just about
 every other OS uses)
 
 Notation:
@@ -269,9 +274,9 @@ If you don't see any of the folders you need, then either:
 1. you need to find them (using your OS file explorer may be best)
 2. or make them if they do not exist (running the .py will make them for you)
 
-To get into a directory, stepping through each step is often long and boring. 
+To get into a directory, stepping through each step is often long and boring.
 When possible, go to that folder in your OS file explorer and open a terminal
-in that directory (windowsOS makes this strange but the idea is the same). 
+in that directory (windowsOS makes this strange but the idea is the same).
 
 In the future we will first make a custom python environment,
 usually using pipenv or anaconda (there are many other options too,
@@ -279,14 +284,14 @@ and you should explore as many as you can, eventually).
 
 Step 2: double check
 When you are in the right directory, it is always good to check to see
-where you are. Checking is very fast, 
+where you are. Checking is very fast,
 and doing something in the wrong directory makes a mess which wastes time
-to clean up. Kind of a "measure twice, cut once" approach. 
+to clean up. Kind of a "measure twice, cut once" approach.
 
 posix:    $ ls
 windows:  > dir
 
-(Note: there are many websites and videos on topics like this, 
+(Note: there are many websites and videos on topics like this,
 and usually a good resource is just a quick search away.)
 
 (Note: this whole process is also part of using github, which hopefully
@@ -294,13 +299,13 @@ we will practice later in this course)
 
 
 Step 3: open the file
-When you see the file you want listed amongst all the other files in 
+When you see the file you want listed amongst all the other files in
 that directory...there are 2(?) ways to read the file (in this context):
 1: use a text editor: good to know and you will usually do this:
-    to open a file in atom: atom inn_guest_log.txt 
-    to open the whole folder in atom: atom . 
-    to open a file in vsCode: code inn_guest_log.txt 
-    to open the whole folder in vsCode: code . 
+    to open a file in atom: atom inn_guest_log.txt
+    to open the whole folder in atom: atom .
+    to open a file in vsCode: code inn_guest_log.txt
+    to open the whole folder in vsCode: code .
 
 2: use python: you won't do this as often, but very often you will need to
 do this at least once the beginning of a project to get your data loaded:
@@ -311,20 +316,20 @@ print(intermediate_file_variable.read())
 
 While clicking on an icon, or typing: $ atom .
 are just one step
-in python we use 2 steps. Why? 
+in python we use 2 steps. Why?
 This is a good example of how coding is about communication and readability.
 You can do this in just one step, but it maybe harder to read:
 >>> print((open("advanced_instructions.txt", "r")).read())
 
 In two steps we save the item as a variable before putting into the print
-function(or 'method'). This is also an important step because sometimes you 
+function(or 'method'). This is also an important step because sometimes you
 MUST put a variable into a function (where you cannot cram a lot of other code in)
 1. create an intermediate variable from the file
 2. read and print that intermediate variable
 
 We could have done 3 steps with another item to print variable...
 maybe that would be more clear? is 2 steps clear enough?
-Do whatever you think is clear enough and works. 
+Do whatever you think is clear enough and works.
 
 # 3 step example:
 # to open, read, & print the file
@@ -370,34 +375,34 @@ Misc:
 
 "Coding is about communication."
 
-Remember, like in real life, there is no such thing as 'cheating' when you are 
-fully understanding code. You want to see and understand everything. 
+Remember, like in real life, there is no such thing as 'cheating' when you are
+fully understanding code. You want to see and understand everything.
 
-Study the .py file. Will it 'give you the answers'? It should. 
-You are trying to understand how it works, so look at it. 
-If studying what you want to understand works, you succeeded. 
+Study the .py file. Will it 'give you the answers'? It should.
+You are trying to understand how it works, so look at it.
+If studying what you want to understand works, you succeeded.
 
 There is no single way to solve these or nearly any programing problem,
-so try to understand as many ways as you can. 
+so try to understand as many ways as you can.
 
-Look at everyting. Read everything. Try everything. 
+Look at everyting. Read everything. Try everything.
 Internet-search questions on everything.
 
-You want your code to be readable, which means it should NOT 
+You want your code to be readable, which means it should NOT
 look completely alien strange and unique to only that one project for you.
-There is no "plagerism" in writing clean code. 
-2+2=4 SHOULD look similar when different people write it. 
-There is no such thing as code 'not being unique enough' to work properly. 
+There is no "plagerism" in writing clean code.
+2+2=4 SHOULD look similar when different people write it.
+There is no such thing as code 'not being unique enough' to work properly.
 Your goal is to write code the works very very well and will keep working very
-very well for as many users and realistic situations as possible. 
+very well for as many users and realistic situations as possible.
 
 Your file names and program should not be 100% unique just for the sake of
-being absolutely unique. 
+being absolutely unique.
 
-In this lesson you will learn to open a file. You do not need an absolutely 
-unique way of opening a file that is unique to you and unique every time you 
-open a file. That would be a hard to read and understand, 
-and being hard to understand would be a catastrophy. 
+In this lesson you will learn to open a file. You do not need an absolutely
+unique way of opening a file that is unique to you and unique every time you
+open a file. That would be a hard to read and understand,
+and being hard to understand would be a catastrophy.
 
 """
 # create, write-to, & save .txt file
@@ -613,10 +618,10 @@ slow_print(scene + blurb)
 # Main Story
 typed_print(
     """
-\nYou are in The Mos Inn. 
-You are standing at the bar. 
+\nYou are in The Mos Inn.
+You are standing at the bar.
 The bartender looks down at your arm and eyes you suspiciously.
- 
+
 "We don't allow droids in here...", the barman says.
 "Not usually...but...who are you with? Who are your friends?"
 \n"""
@@ -625,12 +630,12 @@ The bartender looks down at your arm and eyes you suspiciously.
 steady_print(
     """
 (Since the inn's guest-register is lying on the bar-counter
-in front of you, you can 'access' it. You could do this in an editor...)
+in front of you, you can 'access' it. Try to do this using Python!!)
 
     (folders) ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
     -> scene_01 ->  "inn_guest_log.txt"
 
-Do it in Python!! Open another Terminal in the scene_01 folder. 
+Open a new Terminal in the scene_01 folder (right click: open in termial)
 Check you are in the correct directory with $ ls & $ pwd then type:
       $ python3
     >>> name_you_choose = open("inn_guest_log.txt", "r").read()
@@ -656,19 +661,27 @@ for person_number in friends_dict:
         if len(friend_name) < 4:
             friend_name_check = False
             typed_print(f'\n"{random.choice(responses)}"')
-        else: 
-            if ("McSally".lower() in friend_name.lower()) or ("Martha".lower() in friend_name.lower()):
-                typed_print("""\n"I don't know... Old McSally and I go way back,
-                and she's never talked about you..."\n """)
+        else:
+            if ("McSally".lower() in friend_name.lower()) or (
+                "Martha".lower() in friend_name.lower()
+            ):
+                typed_print(
+                    """\n"I don't know... Old McSally and I go way back,
+                and she's never talked about you..."\n """
+                )
                 print(tip)
-            elif ("Wilda".lower() in friend_name.lower()) or ("Wooster".lower() in friend_name.lower()):
-                typed_print("""\n"Wilda? Ha! I happen to know she's
-                afraid of droids...sad, really. Oh well..."\n """)
-                print(tip)          
+            elif ("Wilda".lower() in friend_name.lower()) or (
+                "Wooster".lower() in friend_name.lower()
+            ):
+                typed_print(
+                    """\n"Wilda? Ha! I happen to know she's
+                afraid of droids...sad, really. Oh well..."\n """
+                )
+                print(tip)
             elif friend_name_check is False:
                 typed_print(f'\n"{random.choice(responses)}"')
                 print(tip)
- 
+
 
 clear_terminal()
 
