@@ -1,6 +1,15 @@
-# version 015
+# version 016
 # Scene_1
 # Find Your Friends
+#  _____           _ _____                   
+# | __  |___ ___ _| |     |___               
+# |    -| -_| .'| . | | | | -_|              
+# |__|__|___|__,|___|_|_|_|___|     
+#  _____   _             _                             
+# |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___    ___ _ _ 
+# |     | . | | | -_|   |  _| | |  _| -_|_ -|  | . | | |
+# |__|__|___|\_/|___|_|_|_| |___|_| |___|___|()|  _|_  |
+#                                              |_| |___|
 
 import os  # for terminal functions etc.
 import random  # for randomized replies etc
@@ -61,17 +70,27 @@ def pause_seconds(seconds):
 # making text print-out look like it is being typed
 def slow_print(input_text):
     # staggered times
-    random_times = [
-        0.4,
-    ]
-
+    random_times = [0.4]
     # stagger each character
     for i in input_text:
         time.sleep(random.choice(random_times))
         print(i, end="")
         # prints each time (before loop is finished)
         sys.stdout.flush()
+    # end
+    pass
 
+
+# making text print-out look like it is being typed
+def steady_print(input_text):
+    # staggered times
+    wait_time = 0.015
+    # stagger each character
+    for i in input_text:
+        time.sleep(wait_time)
+        print(i, end="")
+        # prints each time (before loop is finished)
+        sys.stdout.flush()
     # end
     pass
 
@@ -124,6 +143,14 @@ clear_terminal()
 # create file: readme_text
 readme_text = """
 ReadMe:  Scene_01 Find Your Friends
+ _____           _ _____                   
+| __  |___ ___ _| |     |___               
+|    -| -_| .'| . | | | | -_|              
+|__|__|___|__,|___|_|_|_|___|                                                     
+ _____   _             _                   
+|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___ 
+|     | . | | | -_|   |  _| | |  _| -_|_ -|
+|__|__|___|\_/|___|_|_|_| |___|_| |___|___|
 
 Instructions:
 
@@ -132,19 +159,17 @@ Instructions:
     2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
     3. Run file      Command: python3 scene_01.py
 
-    ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+       ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
 
 2. Journal
     Keep a Journal about what you are learning.
 
 3. Lost or Curious
     Check out the Content_Map.txt for this scene.
-    ( Content_Map.txt will be generated when .py is run )
+    ( Content_Map.txt will be generated in scene folder when .py is run. )
 
 4. User Manual
     Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
-
-
 
 """
 # create, write-to, & save .txt file
@@ -520,7 +545,7 @@ Items Purchased:
 - 1 *live rooster
 
 (Those Meddlesome Kids)
-- Friend 1: Jane Baldwin
+- Friend 1: Jane Adams
 - Friend 2: Franklin Merln
 - Friend 3: Lavender McCavity
 - Friend 4: Gullover Hitch
@@ -548,7 +573,7 @@ file_to_create4.close()
 # print(file_to_read4.read())
 
 friends_dict = {
-    "first": "jane baldwin",
+    "first": "jane adams",
     "second": "franklin merln",
     "third": "lavender mccavity",
     "fourth": "gullover hitch",
@@ -594,9 +619,13 @@ The bartender looks down at your arm and eyes you suspiciously.
  
 "We don't allow droids in here...", the barman says.
 "Not usually...but...who are you with? Who are your friends?"
- 
+\n"""
+)
+
+steady_print(
+    """
 (Since the inn's guest-register is lying on the bar-counter
-in front of you, you can 'access' it. You could do this in an editor...
+in front of you, you can 'access' it. You could do this in an editor...)
 
     (folders) ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
     -> scene_01 ->  "inn_guest_log.txt"
