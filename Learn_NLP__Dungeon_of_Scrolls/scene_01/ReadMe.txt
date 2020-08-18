@@ -29,4 +29,4 @@ Instructions:
     See: the_game_folder -> the_adventure_folder -> the_scene_folder -> Content_Map.txt
 
 4. User Manual
-    Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
+    https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
