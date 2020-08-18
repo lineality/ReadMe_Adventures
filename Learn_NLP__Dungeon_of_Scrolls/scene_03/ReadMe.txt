@@ -18,8 +18,8 @@ Instructions:
 
     ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
 
-2. Journal
-    Keep a Journal about what you are learning.
+2. Journal & Buddy
+    Journal about what you are learning. Learn with a study-buddy.
 
 3. Lost or Curious
     Check out the Content_Map.txt for this scene.
