@@ -26,7 +26,7 @@ Instructions:
 
 3. Lost or Curious
     Check out the Content_Map.txt for this scene.
-    ( Content_Map.txt will be generated when .py is run )
+    ( Content_Map.txt will be generated in scene folder when .py is run. )
 
 4. User Manual
     Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
