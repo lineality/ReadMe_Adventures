@@ -25,8 +25,8 @@ Instructions:
     Journal about what you are learning. Learn with a study-buddy.
 
 3. Lost or Curious
-    Check out the Content_Map.txt for this scene.
-    ( Content_Map.txt will be generated in scene folder when .py is run. )
+    Check out the Content_Map.txt for this scene. 
+    See: the_game_folder -> the_adventure_folder -> the_scene_folder -> Content_Map.txt
 
 4. User Manual
     Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
