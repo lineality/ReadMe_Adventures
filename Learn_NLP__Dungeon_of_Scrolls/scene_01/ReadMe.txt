@@ -19,7 +19,7 @@ Instructions:
     2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
     3. Run file      Command: python3 scene_01.py
 
-    ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+    ( For Windows_OS: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
 
 2. Journal & Buddy
     Journal about what you are learning. Learn with a study-buddy.
