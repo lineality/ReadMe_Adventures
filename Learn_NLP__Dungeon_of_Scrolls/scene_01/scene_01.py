@@ -1,4 +1,4 @@
-# version 018
+# version 019
 # Scene_1
 # Find Your Friends
 #  _____           _ _____
@@ -82,6 +82,20 @@ def slow_print(input_text):
 
 
 # making text print-out look like it is being typed
+def fast_print(input_text):
+    # staggered times
+    random_times = [0.005]
+    # stagger each character
+    for i in input_text:
+        time.sleep(random.choice(random_times))
+        print(i, end="")
+        # prints each time (before loop is finished)
+        sys.stdout.flush()
+    # end
+    pass
+
+
+# making text print-out look like it is being typed
 def steady_print(input_text):
     # staggered times
     wait_time = 0.015
@@ -148,33 +162,32 @@ ReadMe:  Scene_01 Find Your Friends
 | __  |___ ___ _| |     |___
 |    -| -_| .'| . | | | | -_|
 |__|__|___|__,|___|_|_|_|___|
- _____   _             _
-|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___
-|     | . | | | -_|   |  _| | |  _| -_|_ -|
-|__|__|___|\_/|___|_|_|_| |___|_| |___|___|
-
-( First time?
-  - Is python3 installed? Type in terminal: python3 --version
-  - If not installed -> https://www.python.org/downloads/ )
+ _____   _               _
+|  _  |_| |_ _ ___ ___ _| |_ _ _ ___ ___ ___
+|     | . | | | -_|   |_   _| | |  _| -_|_ -|
+|__|__|___|\_/|___|_|_| |_| |___|_| |___|___|
 
 Instructions:
 
 1. Run The Game
-    1. Open Terminal
-    2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py
-    3. Run file      Command: python3 scene_01.py
+    Step 1. Cut & Past into Terminal
+          curl -O https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py ; python3 scene_01.py
 
-       ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+    Step 2. Hit Enter
+          (No python? -> https://www.python.org/downloads/ )
 
-2. Journal
-    Keep a Journal about what you are learning.
 
-3. Lost or Curious
-    Check out the Content_Map.txt for this scene.
-    ( Content_Map.txt will be generated in scene folder when .py is run. )
+2. Journal & Buddy
+    Journal about what you are learning. Learn together with a study-buddy.
+
+
+3. Lost or Curious?
+    Check out the Content_Map.txt for this scene. 
+    (See: the_game_folder -> the_adventure_folder -> the_scene_folder -> Content_Map.txt)
+
 
 4. User Manual
-    Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
+    https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
 
 """
 # create, write-to, & save .txt file
@@ -612,6 +625,35 @@ def correct_name(person, name):
 ##############
 # The Action!
 ##############
+
+clear_terminal()
+
+fast_print(
+    """
+  ______                                     
+  |  _  \                                    
+  | | | |_   _ _ __   __ _  ___  ___  _ __   
+  | | | | | | | '_ \ / _` |/ _ \/ _ \| '_ \  
+  | |/ /| |_| | | | | (_| |  __/ (_) | | | | 
+  |___/  \__,_|_| |_|\__, |\___|\___/|_| |_| 
+                      __/ |                  
+                     |___/                   
+          __   _____                _ _      
+         / _| /  ___|              | | |     
+    ___ | |_  \ `--.  ___ _ __ ___ | | |___  
+   / _ \|  _|  `--. \/ __| '__/ _ \| | / __| 
+  | (_) | |   /\__/ / (__| | | (_) | | \__ \ 
+   \___/|_|   \____/ \___|_|  \___/|_|_|___/
+
+"""
+)
+
+slow_print("...")
+
+pause_seconds(4)
+
+clear_terminal()
+
 
 slow_print(scene + blurb)
 
