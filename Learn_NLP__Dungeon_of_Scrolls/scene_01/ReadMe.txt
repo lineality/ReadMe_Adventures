@@ -14,7 +14,7 @@ Instructions:
     Step 1. Open a Terminal
 
     Step 2. Cut & Past into Terminal
-          curl -O https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py ; python3 scene_01.py
+         curl -O scene_01.py https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py ; python3 scene_01.py
 
     Step 3. Hit Enter
           (No python? -> https://www.python.org/downloads/ )
