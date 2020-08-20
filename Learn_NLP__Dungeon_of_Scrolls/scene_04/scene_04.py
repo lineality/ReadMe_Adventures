@@ -1,6 +1,6 @@
-# version 005
+# version 006
 # Scene_04
-# Heads Down, Heads Up
+# Any Way You Slice It
 #  _____           _ _____
 # | __  |___ ___ _| |     |___
 # |    -| -_| .'| . | | | | -_|
@@ -16,8 +16,8 @@ import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
 
-scene = "scene_04"
-blurb = " Heads Down, Heads Up "
+scene = "scene_03"
+blurb = " Any Way You Slice It "
 adventure = "Learn_NLP__Dungeon_of_Scrolls"
 game = "ReadMe_Adventures"
 
@@ -88,7 +88,7 @@ def slow_print(input_text):
 # making text print-out look like it is being typed
 def steady_print(input_text):
     # staggered times
-    wait_time = 0.016
+    wait_time = 0.02
     # stagger each character
     for i in input_text:
         time.sleep(wait_time)
@@ -154,15 +154,6 @@ responses = [
     "...Seriously?" "You have to be joking.",
 ]
 
-# general_wrong_answer_responces
-urgent_responses = [
-    "Huh?",
-    "What? Can you hurry that up?",
-    "Oh, we don't have time for this...",
-    "Come again? Quick! Quick!",
-    "That doesn't sound right..." "What? Give it another quick look.",
-]
-
 clear_terminal()
 
 ############
@@ -224,34 +215,41 @@ elif pronoun == "they":
 
 # create ReadMe.txt file
 readme_text = """
-ReadMe:  Scene_04 Head's Down, Head's Up
+
+ReadMe: Scene_04, Dungeon of Scrolls 
  _____           _ _____
 | __  |___ ___ _| |     |___
 |    -| -_| .'| . | | | | -_|
 |__|__|___|__,|___|_|_|_|___|
- _____   _             _
-|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___
-|     | . | | | -_|   |  _| | |  _| -_|_ -|
-|__|__|___|\_/|___|_|_|_| |___|_| |___|___|
+ _____   _               _
+|  _  |_| |_ _ ___ ___ _| |_ _ _ ___ ___ ___
+|     | . | | | -_|   |_   _| | |  _| -_|_ -|
+|__|__|___|\_/|___|_|_| |_| |___|_| |___|___|
+
 
 Instructions:
 
 1. Run The Game
-    1. Open Terminal
-    2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_04/scene_04.py
-    3. Run file      Command: python3 scene_04.py
+    Step 1. Open a Terminal
 
-       ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+    Step 2. Cut & Past one of these into Terminal
+          (macOS / Linux / etc ->) curl -O https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_04/scene_04.py ; python3 scene_04.py 
+          (windows ->) curl -O scene_04.py https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_04/scene_04.py ; python3 scene_04.py
 
-2. Journal
-    Keep a Journal about what you are learning.
+    Step 3. Hit Enter
+          (No python? -> https://www.python.org/downloads/ )
+
+    ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+    ( For MAC_OS, see: https:... )
+
+2. Journal & Buddy
+    Journal about what you are learning. Study with a study-buddy.
 
 3. Lost or Curious
-    Check out the Content_Map.txt for this scene.
-    ( Content_Map.txt will be generated in scene folder when .py is run. )
+    Content_Map.txt !
 
 4. User Manual
-    Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
+    https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
 
 """
 
@@ -481,46 +479,27 @@ file_to_create5.close()
 # print(len(map2_text))
 
 
-# create papers_in_cart_tracks.txt file
-papers_in_cart_tracks_text = """
-According to the proceedings of the bureau for the documentation and certifications of actions and correspondences herewith and forthwith in great solemnity and for the purposes of future accord, right actions, and cetera, it is hereby published with full permissions from, and in the furtherance of the purposes and prosperances of, the aforementioned governing bodies or bodies that the contents of this document be held in regards consistent with expected standards. This frontmatter certifies not only the authenticity of the date, contents, and seal of notice, but also the sanctity of the paper on which this decree was published, namely that this paper was produced entirely with subjugated labor, using no contact or input from base service creatures or unholy machines and dangerous numerical comparisons of unsanctified symbols. Furthermore the reclaimed labor from hostile foreign lands work indefinitely without food. By virtue of the declarations of this administration there will be an Imperial Temple Guard action consistent with "restraint by conflagration" for all Universities, and those guilty by however indirect an association, found not to be in compliance with his Most Supreme and Highest Pinnacle of Absolute Top Utmostness, the Universal Eternal Emperor.
-"""
-# create, write-to, & save .txt file
-file_to_create4 = open("papers_in_cart_tracks.txt", "w")
-file_to_create4.write(papers_in_cart_tracks_text)
-file_to_create4.close()
-
-# # open, read, & print the file
-# file_to_read4 = open("papers_in_cart_tracks.txt", "r")
-# print(papers_in_cart_tracks_text.read())
-
-
 ##############
 # The Action!
 ##############
 
 slow_print(f"{scene} {blurb} ")
 
-...
 typed_print(
     """
-"\n\nOk. We're off. We know where we're going...
-and so, about time for introductions then?"
+\nFive pairs of feet crunch the snow in the wood,
+over the tinkling of ice showering frozen leaves,
+and the more periodic popping sounds of frozen birds
+falling and shattering like lightbulbs on marble.
 
-"Yes, that's hitch. We call him hitch, he is Gullover Hitch.
-Or something like that."
+"Nice time for a walk, this is. Scenic."
 
-"Or something like that? Or something like that?"
+"Don't mind Hitch."
 
-"Isn't your real name Hitchcock?"
+"Yes, don't mind me. Imagination gets the better of me sometimes.
+It's probably a warm summer day."
 
-"...maybe it is..."
-
-"So we call him Hitch."
-
-"At your services." Hitch takes his hat off and bows deeply,
-plowing a slice through the snow with his hat.
-
+"It is the month for that. Odd."
 """
 )
 
@@ -528,24 +507,26 @@ plowing a slice through the snow with his hat.
 input("\n  ...Press enter to continue...  \n")
 clear_terminal()
 
+
 typed_print(
     """
-"I'm Jane Adams."
+Jane crunches her way up next to you
+and holds something out in front of you.
 
-"Is it proper to do your own introduction?"
+"There's another piece of this map that needs figuring...
+that witch who gave this to us, she penciled in a code
+for what directions to go in."
 
-"Don't mind him. And that is Lavender over there. Lavender McCavity."
+"Yeah, I was looking at that.
+Really annoying trying to figure that out."
 
-"We'll all be turning lavender if we don't find a windbreak. Oh good,
-there's something up there. I think...I can't really make it out..."
+"Tedious, I'd say."
 
-"And that's Franklin back there."
+"You would say that."
 
-"Hello! Franklin Merln. Pleased to make your acquaintance."
-The smallest of them, under a huge racoon skin cap, waves and bounces.
+"What's that supposed to mean?"
 
-"But what should we call you? ...Hang on,
-I think we're coming up on...is that a cart...?"
+You feel a tugging on your sleeve.
 """
 )
 
@@ -553,325 +534,143 @@ I think we're coming up on...is that a cart...?"
 input("\n  ...Press enter to continue...  \n")
 clear_terminal()
 
+
 typed_print(
     """
-"And what's this?" Jane reaches down
-and pulls up a pile of pages out of the cart tracks in the snow.
-"Official papers? Oh no..."
+"Can you help us figure this part out too?
+The map has this number."
 
-She runs up to you, eyes wide. "Ok,
-can you check this really quickly
-for what it says about 1000 characters in?
-The first 1000 characters are always...just fluff.
-This may be important and we don't have time to read it all.
-Just skip ahead 1000 characters
-and then read me the next 30 or so characters,
-the next few words, right...
-Can you do that? Quickly?"
+She points with an unsteady finger at a number scrawled in the top corner.
 
-She keeps looking back and forth between you and the cart.
+"The number is how many characters to count along,
+and that points to the directions we should go in.
+Each should point to a cardinal-direction-letter,
+like "w" for West or "e" for East...or at least I hope they do."
+
+"Yeah, but you see those arrows going forwards and backwards?
+We need to count twice: Once forwards and THEN once backwards,
+to get two direction-letters. I nearly went blind last night
+at the inn trying to count that. And that tea didn't help at all,
+thank you very much, whoever suggested that. Every time I tried
+counting it by hand I got a different letter. Useless."
+
+"I wouldn't say you're completely useless, Hitch.
+Don't be so hard on yourself."
 """
 )
 
-answer_check = False
 
-while answer_check is False:
-    answer0 = input('\n"Can you check?" (yes/no)')
-    answer0 = answer0.lower()
-    # boolean check
-    answer_check = "yes" in answer0
-    if answer_check is False:
-        typed_print(f'"{random.choice(urgent_responses)}"')
-
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
 clear_terminal()
 
-# Activity:
+
+typed_print(
+    """
+"...so can you give us a hand then?
+Should be easy for you, you know."
+
+"Don't be rude, Hitch."
+
+"What did I say?"
+
+Jane hands you the crinkled page
+with the penciled in number and arrows:
+"""
+)
+
+print(
+    """
+_______________
+|
+|	->
+|	699
+|	<-
+"""
+)
+
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+clear_terminal()
+
+print(
+    """
+ _______________
+|
+|	->
+|	699
+|	<-
+
+Slice[] the Text[]: Find the 699th letter and -699th Letter
+
+Read in the map text like before, but this time "Slice" it.
+"Slice" out the +699th & -699th character,
+by putting square brackets after what you want to slice.
+
+(Note: The forward count starts from ZERO
+BUT counting backward starts from 1.)
+IMPORTANT: Make sure you are clear on this before you go on:
+e.g.  "abc"[0] is "a" / "abc"[1]  is "b" / "abc"[2]  is c
+     "abc"[-1] is "c" / "abc"[-2] is "b" / "abc"[-3] is "a"
+
+This is an example of how you would print the 'slice' of a variable:
+    >>> print( map1[-699] )
+Or it might work to leave out the 'print()' and just say >>> map1[-699]
+"""
+)
+
+# Press Enter to Continue
+input("  ...Press enter to continue...  \n")
 
 steady_print(
     """
-(Task!) Learn a new way to slice from index 1000 to index ~1030
+\n\n(You can solve this in a Terminal! You can do it!)
 
-Previously, you sliced one item >>> file[number]
-Now, slice out a RANGE of items >>> file[start_here : end_BEFORE_here]
-IMPORTANT: Remember positive numbers count from ZERO,
-AND the end-point goes UP TO but does NOT include that end-point.
-
-Example: "abc" has indexes 0,1,2, start at index [0], stop BEFORE index [2]
-This range-slice produces "ab"
-  >>> file = "abc"
-  >>> file[0:2]
-
-1. Open new Terminal in scene_04 folder (right click: 'open in terminal')
+1. Open new Terminal in scene_02 folder (right click: 'open in terminal')
    (folders) ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
-   -> scene_04 ->  "papers_in_cart_tracks.txt"
-2. Check you are in the correct directory with $ ls & $ pwd then type:
+   -> scene_03 ->  ""map_2.txt"
+
+2. Check you are in the correct directory with these commands:
+    $ ls
+    $ pwd
+
+3. Open+Read both map files, and check both of their lengths! Type:
+   (Note: replace the "x" in example code below with real numbers)
      $ python3
-   >>> name_you_choose = open("papers_in_cart_tracks.txt", "r").read()
-   >>> print(name_you_choose[###:####])
+   >>> name_you_choose = open("map_2.txt", "r").read()
+   >>> name_you_choose[###])
+
 """
 )
 
-
-answer_check = False
-
-while answer_check is False:
-    answer = input("\n(What is AFTER 1000 characters in papers_in_cart_tracks.txt?)\n")
-    answer = answer.lower()
-    # boolean check
-    answer_check = "temple guard" in answer
-    if answer_check is False:
+answer1 = 0
+while answer1 != "n":
+    answer1 = input(
+        '\n"What is the first letter or cardinal direction from the map?"\n (Scroll Up to see examples.)\n'
+    )
+    answer1 = answer1.lower()
+    if answer1 == "i":
+        typed_print('\n"You sure you\'re counting up from 0, and not from 1?"')
+    if answer1 != "n":
         typed_print(f'"{random.choice(responses)}"')
 
-clear_terminal()
+answer2 = 0
+while answer2 != "e":
+    answer2 = input(
+        '\n"What is the second letter or cardinal direction from the map?"\n (Scroll Up to see examples.)\n'
+    )
+    answer2 = answer2.lower()
+    if answer2 != "e":
+        typed_print(f'"{random.choice(responses)}"')
+
 
 typed_print(
     """
-"Oh, dear. This is...this is bad. That a Temple Guard."
-
-"A TG? Out here? What's going on?"
-
-"Keep it down. Ok...first, take off that arm band.
-Yes, I know, just take it off. McCavity, get this off her. Fast."
-
-You feel a slight brushing against the back of your arm,
-and the once band falls onto the snow in four pieces.
-What used to be the circular cog symbol now a scatter
-of arches and bars on clean cut strips of canvas.
-
-"Grab that all up, we can burn it properly later."
-
-"Take this," you hear Jane say, as you feel something warm placed
-on top of your head. "And keep your head down."
-
+"Excellent... North and East...off we go!
+That was so much faster than counting letters,
 """
 )
+typed_print(f"\nI'm telling you, {pronoun4} amazing.\"\n")
 
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-
-"You! What you doing out here?" Comes the loud bark of the cartman's voice.
-
-No one moves.
-
-"Oh, you're just a bunch of kids. You scared the daylights out of me.
-Say, you are just kids right? Blasted snow, I can't see anything straight."
-
-The round misty figure by the cart raises his hand to his forehead.
-
-"Yes, yes we are. We are just a bunch of kids, heading...to school."
-
-"In the snow. Towards a mountain. On the weekend."
-
-"Shut up, Hitch."
-
-"""
-)
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-
-"Thank goodness for that. You're not, you're not...working for anyone, right?"
-
-"Nope, we are just students. Yes we are." And as Jane says this
-she preemptively sticks her gloved hand
-into Hitch's mouth.
-
-"Well in that case...well in THAT case I was wondering, I was wondering
-if you'd like to buy...if YOU would like...to buy..."
-he was looking carefully all around as he spoke,
-"some books?"
-
-"You're not going to say that part twice as well?" says hitch,
-spitting out glove-lint.
-
-"Shut up, Hitch."
-
-"What kind of books?"
-
-"""
-)
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-
-"Well...you know they're, uh...
-oh all right, I'll just tell you. The Emperor,
-Save His Royalness, the Emperor's Guard just, uh, Reclaimed two
-Universities, that weren't, you know, following commands right.
-And we was told to burn it all properly.
-But, I MEAN, some of those books,
-I says to myself, they must be worth something to someone, right?
-But I've got to get rid of the lot, fast."
-
-"How about 10 Pyrians?"
-
-"Ten?...Just Ten?"
-
-"Eleven. Eleven Pyrians, we take them all right now, and you're clean."
-
-"Uh...uh..." The cartman frowns, looking around on all sides.
-"""
-)
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-After a moment of only the sound of ice crystals singing down,
-another bird explodes with a pop just behind the cartman,
-and he jumps.
-
-"Oh all right." He says, "You have that with you now, do you?"
-
-A small cloth sack arcs through the air and lands in the cartman's hands.
-
-"Done." Comes Lavender's voice.
-
-"Yes, nice doing business with you. May the Humans Prevail.
-Save His Royalness." As the cartman's arm shoots up in a solute,
-you see for the first time his uniform. And with that he runs off
-into the snow towards the inn. "Keep your head's up! Enjoy the books!
-I hope..." he calls out but his voice and his visage
-both melt away into the glittering clouds of ice.
-"""
-)
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-"McCavity, where did you get eleven Pyrians?"
-
-"WHAT are we supposed to do with this cart?
-We are walking to a mountain,
-in a freak storm,
-with a, now, fugitive,
-why exactly did we just buy a cart of stolen books?"
-
-"The Pyrians", says Lavender as she crunches slowly
-through the snow up to the cart, "are from The Mos."
-
-"You stole from the inn?"
-
-"Sort of. Long Story. But that same fat rogue is running to the inn now
-to spend it all back again. And probably tell some fabulous lies..."
-"""
-)
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-"And why did we buy that cart?"
-
-"We bought silence."
-
-"We bought what?"
-
-"Lavender's right...Even if he isn't a true believer there's still the bounty,
-and I'm not sure there's anything that one wouldn't do
-for a few pyrians."
-
-"Who'd have thought we'd run into an Imperial.
-Out here...in the nowheres,
-I haven't seen one in months."
-"""
-)
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-"And if he saw our new friend here,
-he'd probably leave us ALL hanging
-from tree branches...probably in pieces just to make sure, like they do.
-Like strange frozen fruits. But we know he's a theif,
-and now he owes us for getting him out of trouble.
-And most importantly he was completely distracted from our friend.
-And...speaking of you,
-we still need to give you a name."
-
-"I know!", says Franklin. "I was just reading
-about these wonderful old machines.
-"""
-)
-typed_print(f'"We can call {pronoun2} Babbage!"')
-
-typed_print(
-    """
-\n"....Well...sounds kind of like Cabbage...doesn't it..."
-
-"No objections? Anyone? Ok, welcome to the gatherings, Babbage!"
-"""
-)
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-"You know..." Frankin says. "We should at least tell
-Old John that rascal is a TG, you think?.
-
-Jane turns to Lavender. "McCavity, sorry to ask twice
-in one day. Could you fly back and warn him?"
-
-"I probably can't do a third and come back any time today.
-Ok if I find you all in the morning?"
-
-"Yeah that works."
-
-"Worth a try," she says, and McCavity seemed to
-explode in a billow of snow, or like two bursting
-pillows in a pillow fight. And you see a large snow goose
-fly out of the churning cloud and back
-in the direction of the inn.
-
-"""
-)
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-typed_print(
-    """
-
-"Dead useful she is."
-
-"Yeah, well she shouldn't change so many times in one day,
-you know that, Hitch."
-
-"Yeah I know. It's not far to fly though."
-
-"You're probably right. Grab her clothes, will you.
-We'll dry them out for when she gets back."
-
-"Just hope there's no off season hunters wandering around..."
-
-"""
-)
 
 slow_print(f"\n\n End of {scene} {blurb} \n\n")
-clear_terminal()
