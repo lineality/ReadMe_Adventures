@@ -1,5 +1,5 @@
-# version 005
-# Scene_04
+# version 006
+# Scene_05
 # Heads Down, Heads Up
 #  _____           _ _____
 # | __  |___ ___ _| |     |___
@@ -224,34 +224,40 @@ elif pronoun == "they":
 
 # create ReadMe.txt file
 readme_text = """
-ReadMe:  Scene_04 Head's Down, Head's Up
+ReadMe: Scene_05, Dungeon of Scrolls 
  _____           _ _____
 | __  |___ ___ _| |     |___
 |    -| -_| .'| . | | | | -_|
 |__|__|___|__,|___|_|_|_|___|
- _____   _             _
-|  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ___
-|     | . | | | -_|   |  _| | |  _| -_|_ -|
-|__|__|___|\_/|___|_|_|_| |___|_| |___|___|
+ _____   _               _
+|  _  |_| |_ _ ___ ___ _| |_ _ _ ___ ___ ___
+|     | . | | | -_|   |_   _| | |  _| -_|_ -|
+|__|__|___|\_/|___|_|_| |_| |___|_| |___|___|
+
 
 Instructions:
 
 1. Run The Game
-    1. Open Terminal
-    2. Get file      Command: wget https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_04/scene_04.py
-    3. Run file      Command: python3 scene_04.py
+    Step 1. Open a Terminal
 
-       ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+    Step 2. Cut & Past one of these into Terminal
+          (macOS / Linux / etc ->) curl -O https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_05/scene_05.py ; python3 scene_05.py 
+          (windows ->) curl -O scene_05.py https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_05/scene_05.py ; python3 scene_05.py
 
-2. Journal
-    Keep a Journal about what you are learning.
+    Step 3. Hit Enter
+          (No python? -> https://www.python.org/downloads/ )
+
+    ( For Windows_OS, see: https://docs.google.com/document/d/1p6R2LpBZtgs9IO349W1Zrx8u_Zy_5kgCxbJ64toOJXI/edit?usp=sharing )
+    ( For MAC_OS, see: https:... )
+
+2. Journal & Buddy
+    Journal about what you are learning. Study with a study-buddy.
 
 3. Lost or Curious
-    Check out the Content_Map.txt for this scene.
-    ( Content_Map.txt will be generated in scene folder when .py is run. )
+    Content_Map.txt !
 
 4. User Manual
-    Advanced Instructions: https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
+    https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
 
 """
 
