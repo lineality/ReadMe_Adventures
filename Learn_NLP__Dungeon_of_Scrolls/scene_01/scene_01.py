@@ -407,8 +407,6 @@ Instructions to Run Game:
 
     Step 3. Hit Enter
           (No python? -> https://www.python.org/downloads/ )
-
-
 """
 # create, write-to, & save .txt file
 file_to_create1 = open("ReadMe.txt", "w")
