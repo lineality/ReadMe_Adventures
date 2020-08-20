@@ -1,4 +1,4 @@
-# version 019
+# version 020
 # Scene_1
 # Find Your Friends
 #  _____           _ _____
@@ -158,10 +158,227 @@ def clear_terminal():
 # Setting Up
 #############
 
+# for the first two scenes,
+# the game will be designed to be super-slim
+# the needed files will be put into whatever directory
+# then deleted afterwards
+# though a folder will be created at the end
+
+
+# Before setting up folders, save copy of ~inn_guests.txt
+# in the 
+
+
+friends_dict = {
+    "first": "jane adams",
+    "second": "franklin merln",
+    "third": "lavender mccavity",
+    "fourth": "gullover hitch",
+}
+
+tip = """\n\n(Tip: Check the ReadMe file if you are out of ideas.)\n"""
+
+responses = [
+    "Who?",
+    "Hmm...not sure I know anyone by that name...",
+    "What was that?",
+    "I didn't catch that...",
+    "Come again?",
+    "Are you sure about that?",
+    "What?",
+    "I'm sorry, my mind was wondering. What was that again?",
+    "How would you spell that...doesn't sound familiar...",
+    "Ha ha hah ahahahhahahhh, that's a good one.",
+    "Ok, who are your friends, really?",
+]
+
+
+# function to check if the person's name is correct
+def correct_name(person, name):
+    if (len(name) == 0) or (name == " "):
+        return False
+    else:
+        return name in friends_dict[person]
+
+
+
+# create file
+# .txt file of inn's guest log for user:
+inn_guest_log_text = """
+(*loyal customer)
+- Old Martha McSally
+Items Purchased:
+- capon (stuffed rooster)
+- sauce
+- fortified wine, two gallons
+- one crouton of Bread
+
+(seasonal traveler)
+- Captn. Wilda Wooster
+Items Purchased:
+- bag of potatoes
+- 1 *live rooster
+
+(Those Meddlesome Kids)
+- Friend 1: Jane Adams
+- Friend 2: Franklin Merln
+- Friend 3: Lavender McCavity
+- Friend 4: Gullover Hitch
+Items Purchased:
+- three pizzas
+- 1 gallon of ginger-brew
+- 1 cup of tea
+- 1 book of dubious trail maps for tourists
+
+(regulars)
+- Four men in Kendal Green (difficult to see)
+Items Purchased:
+- fish'n chips x 4
+- coffee x 8
+- 2 books of crossword puzzles
+- a dish towel
+"""
+# create, write-to, & save .txt file
+file_to_create4 = open("inn_guest_log.txt", "w")
+file_to_create4.write(inn_guest_log_text)
+file_to_create4.close()
+
+# # open, read, & print the file
+# file_to_read4 = open("inn_guest_log.txt", "r")
+# print(file_to_read4.read())
+
+
+
+##############
+# The Action!
+##############
+
+clear_terminal()
+
+pause_seconds(1)
+
+steady_print(
+    """
+
+     __             __   ___  __ 
+    |  \ |  | |\ | / _` |__  /  \ |\ |
+    |__/ \__/ | \| \__| |___ \__/ | \|
+     __   ___
+    /  \ |__ 
+    \__/ |
+     __   __   __   __             __
+    /__` /  ` |__) /  \ |    |    /__`
+    .__/ \__, |  \ \__/ |___ |___ .__/
+
+"""
+)
+
+
+
+
+medium_print("""
+    .....................................
+""")
+
+pause_seconds(1)
+
+clear_terminal()
+
+
+slow_print(scene + blurb)
+
+# Main Story
+typed_print(
+    """
+\nYou are in The Mos Inn.
+You are standing at the bar.
+The bartender looks down at your arm and eyes you suspiciously.
+
+"We don't allow droids in here...", the barman says.
+"Not usually...but...who are you with? Who are your friends?"
+\n"""
+)
+
+steady_print(
+    """
+(Since the inn's guest-register is lying on the bar-counter
+in front of you, you can 'access' it. Try to do this using Python!!)
+
+Step 1. Open a new Terminal 
+Step 2. Type: (don't type '$' or '>' signs.  Press Enter after each line.)
+      $ python3
+    >>> name_you_choose = open("inn_guest_log.txt", "r").read()
+    >>> print(name_you_choose)
+
+"""
+)
+
+# loop through and ask about each person:
+for person_number in friends_dict:
+    # reset flag
+    friend_name_check = False
+
+    # keep asking until the friends' names are given
+    while friend_name_check is False:
+        typed_print(f'\n"What is your {person_number} friend\'s name?"\n')
+        print("(Type in your answer and hit return.)")
+        # get input
+        friend_name = input()
+        friend_name = friend_name.lower()
+        # update flag
+        friend_name_check = correct_name(person_number, friend_name.lower())
+        # check for McSally
+        if len(friend_name) < 4:
+            friend_name_check = False
+            typed_print(f'\n"{random.choice(responses)}"')
+        else:
+            if ("McSally".lower() in friend_name.lower()) or (
+                "Martha".lower() in friend_name.lower()
+            ):
+                typed_print(
+                    """\n"I don't know... Old McSally and I go way back,
+                and she's never talked about you..."\n """
+                )
+                print(tip)
+            elif ("Wilda".lower() in friend_name.lower()) or (
+                "Wooster".lower() in friend_name.lower()
+            ):
+                typed_print(
+                    """\n"Wilda? Ha! I happen to know she's
+                afraid of droids...sad, really. Oh well..."\n """
+                )
+                print(tip)
+            elif friend_name_check is False:
+                typed_print(f'\n"{random.choice(responses)}"')
+                print(tip)
+
+
+clear_terminal()
+
+typed_print(
+    """\n
+"Oh, THOSE crazy kids.
+They're in the back at table eight.
+Here, their pizza just came out of the oven
+you might as well bring it with you.
+Their table's just back there."
+"""
+)
+
+slow_print("\nEnd of Scene 1\n\n")
+
+################
+# Specific to first lesson or two
+# remove inn file from working directory
+###############
+
+
+os.remove("inn_guest_log.txt")
+
+
 # make sure file structure is correct
 manage_file_pathways()
 
-clear_terminal()
 
 #################
 ### Create Files
@@ -169,7 +386,7 @@ clear_terminal()
 
 # create file: readme_text
 readme_text = """
-ReadMe:  Scene_01 Find Your Friends
+ReadMe: Scene_01, Dungeon of Scrolls 
  _____           _ _____
 | __  |___ ___ _| |     |___
 |    -| -_| .'| . | | | | -_|
@@ -179,27 +396,18 @@ ReadMe:  Scene_01 Find Your Friends
 |     | . | | | -_|   |_   _| | |  _| -_|_ -|
 |__|__|___|\_/|___|_|_| |_| |___|_| |___|___|
 
-Instructions:
 
-1. Run The Game
-    Step 1. Cut & Past into Terminal
-          curl -O https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py ; python3 scene_01.py
+Instructions to Run Game:
 
-    Step 2. Hit Enter
+    Step 1. Open a Terminal
+
+    Step 2. Cut & Past one of these into Terminal
+          (macOS / Linux / etc ->) curl -O https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py ; python3 scene_01.py 
+          (windows ->) curl -O scene_01.py https://raw.githubusercontent.com/lineality/ReadMe_Adventures/master/Learn_NLP__Dungeon_of_Scrolls/scene_01/scene_01.py ; python3 scene_01.py
+
+    Step 3. Hit Enter
           (No python? -> https://www.python.org/downloads/ )
 
-
-2. Journal & Buddy
-    Journal about what you are learning. Learn together with a study-buddy.
-
-
-3. Lost or Curious?
-    Check out the Content_Map.txt for this scene. 
-    (See: the_game_folder -> the_adventure_folder -> the_scene_folder -> Content_Map.txt)
-
-
-4. User Manual
-    https://docs.google.com/document/d/1q2AiDPM0BpQal7ltm3sWk0suxLJSS7uX6S9yH44F_ZA/edit?usp=sharing
 
 """
 # create, write-to, & save .txt file
@@ -602,154 +810,3 @@ file_to_create4.close()
 # file_to_read4 = open("inn_guest_log.txt", "r")
 # print(file_to_read4.read())
 
-friends_dict = {
-    "first": "jane adams",
-    "second": "franklin merln",
-    "third": "lavender mccavity",
-    "fourth": "gullover hitch",
-}
-
-tip = """\n\n(Tip: Check the ReadMe file if you are out of ideas.)\n"""
-
-responses = [
-    "Who?",
-    "Hmm...not sure I know anyone by that name...",
-    "What was that?",
-    "I didn't catch that...",
-    "Come again?",
-    "Are you sure about that?",
-    "What?",
-    "I'm sorry, my mind was wondering. What was that again?",
-    "How would you spell that...doesn't sound familiar...",
-    "Ha ha hah ahahahhahahhh, that's a good one.",
-    "Ok, who are your friends, really?",
-]
-
-
-# function to check if the person's name is correct
-def correct_name(person, name):
-    if (len(name) == 0) or (name == " "):
-        return False
-    else:
-        return name in friends_dict[person]
-
-
-##############
-# The Action!
-##############
-
-clear_terminal()
-
-pause_seconds(1)
-
-steady_print(
-    """
-
-     __             __   ___  __ 
-    |  \ |  | |\ | / _` |__  /  \ |\ |
-    |__/ \__/ | \| \__| |___ \__/ | \|
-     __   ___
-    /  \ |__ 
-    \__/ |
-     __   __   __   __             __
-    /__` /  ` |__) /  \ |    |    /__`
-    .__/ \__, |  \ \__/ |___ |___ .__/
-
-"""
-)
-
-
-
-
-medium_print("""
-    .....................................
-""")
-
-pause_seconds(1)
-
-clear_terminal()
-
-
-slow_print(scene + blurb)
-
-# Main Story
-typed_print(
-    """
-\nYou are in The Mos Inn.
-You are standing at the bar.
-The bartender looks down at your arm and eyes you suspiciously.
-
-"We don't allow droids in here...", the barman says.
-"Not usually...but...who are you with? Who are your friends?"
-\n"""
-)
-
-steady_print(
-    """
-(Since the inn's guest-register is lying on the bar-counter
-in front of you, you can 'access' it. Try to do this using Python!!)
-
-    (folders) ReadMe_Adventures ->  Learn_NLP__Dungeon_of_Scrolls ->
-    -> scene_01 ->  "inn_guest_log.txt"
-
-Open a new Terminal in the scene_01 folder (right click: open in termial)
-Check you are in the correct directory with $ ls & $ pwd then type:
-      $ python3
-    >>> name_you_choose = open("inn_guest_log.txt", "r").read()
-    >>> print(name_you_choose)
-"""
-)
-
-# loop through and ask about each person:
-for person_number in friends_dict:
-    # reset flag
-    friend_name_check = False
-
-    # keep asking until the friends' names are given
-    while friend_name_check is False:
-        typed_print(f'\n"What is your {person_number} friend\'s name?"\n')
-        print("(Type in your answer and hit return.)")
-        # get input
-        friend_name = input()
-        friend_name = friend_name.lower()
-        # update flag
-        friend_name_check = correct_name(person_number, friend_name.lower())
-        # check for McSally
-        if len(friend_name) < 4:
-            friend_name_check = False
-            typed_print(f'\n"{random.choice(responses)}"')
-        else:
-            if ("McSally".lower() in friend_name.lower()) or (
-                "Martha".lower() in friend_name.lower()
-            ):
-                typed_print(
-                    """\n"I don't know... Old McSally and I go way back,
-                and she's never talked about you..."\n """
-                )
-                print(tip)
-            elif ("Wilda".lower() in friend_name.lower()) or (
-                "Wooster".lower() in friend_name.lower()
-            ):
-                typed_print(
-                    """\n"Wilda? Ha! I happen to know she's
-                afraid of droids...sad, really. Oh well..."\n """
-                )
-                print(tip)
-            elif friend_name_check is False:
-                typed_print(f'\n"{random.choice(responses)}"')
-                print(tip)
-
-
-clear_terminal()
-
-typed_print(
-    """\n
-"Oh, THOSE crazy kids.
-They're in the back at table eight.
-Here, their pizza just came out of the oven
-you might as well bring it with you.
-Their table's just back there."
-"""
-)
-
-slow_print("\nEnd of Scene 1\n\n")
