@@ -547,6 +547,8 @@ pause_seconds(1)
 
 clear_terminal()
 
+slow_print(scene + blurb)
+
 typed_print(
     """
 \nFive pairs of feet crunch the snow in the wood,
