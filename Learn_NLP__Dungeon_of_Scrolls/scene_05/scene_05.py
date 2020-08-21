@@ -696,7 +696,7 @@ clear_terminal()
 
 typed_print(
     """
-"Oh, dear. This is...this is bad. That a Temple Guard."
+"Oh, dear. This is...this is bad. That's a Temple Guard."
 
 "A TG? Out here? What's going on?"
 
