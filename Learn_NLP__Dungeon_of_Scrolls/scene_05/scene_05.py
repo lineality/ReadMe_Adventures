@@ -1,4 +1,4 @@
-# version 006
+# version 008
 # Scene_05
 # Heads Down, Heads Up
 #  _____           _ _____
@@ -16,7 +16,7 @@ import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
 
-scene = "scene_04"
+scene = "scene_05"
 blurb = " Heads Down, Heads Up "
 adventure = "Learn_NLP__Dungeon_of_Scrolls"
 game = "ReadMe_Adventures"
@@ -71,10 +71,38 @@ def pause_seconds(seconds):
     pass
 
 
+
+
 # making text print-out look like it is being typed
 def slow_print(input_text):
     # staggered times
     random_times = [0.4]
+    # stagger each character
+    for i in input_text:
+        time.sleep(random.choice(random_times))
+        print(i, end="")
+        # prints each time (before loop is finished)
+        sys.stdout.flush()
+    # end
+    pass
+
+# making text print-out look like it is being typed
+def medium_print(input_text):
+    # staggered times
+    random_times = [0.08]
+    # stagger each character
+    for i in input_text:
+        time.sleep(random.choice(random_times))
+        print(i, end="")
+        # prints each time (before loop is finished)
+        sys.stdout.flush()
+    # end
+    pass
+
+# making text print-out look like it is being typed
+def fast_print(input_text):
+    # staggered times
+    random_times = [0.002]
     # stagger each character
     for i in input_text:
         time.sleep(random.choice(random_times))
@@ -176,6 +204,10 @@ clear_terminal()
 
 # making user input lower case
 pronoun = pronoun.lower()
+
+# default to 'she'
+if len(pronoun) == 0:
+    pronoun = "she"
 
 # fix (he vs. him etc.)
 # pronoun(1)
@@ -505,7 +537,39 @@ file_to_create4.close()
 # The Action!
 ##############
 
-slow_print(f"{scene} {blurb} ")
+
+clear_terminal()
+
+pause_seconds(1)
+
+steady_print(
+    """
+
+     __             __   ___  __ 
+    |  \ |  | |\ | / _` |__  /  \ |\ |
+    |__/ \__/ | \| \__| |___ \__/ | \|
+     __   ___
+    /  \ |__ 
+    \__/ |
+     __   __   __   __             __
+    /__` /  ` |__) /  \ |    |    /__`
+    .__/ \__, |  \ \__/ |___ |___ .__/
+
+"""
+)
+
+
+
+
+medium_print("""
+    ...................................
+""")
+
+pause_seconds(1)
+
+clear_terminal()
+
+slow_print(scene + blurb)
 
 ...
 typed_print(
