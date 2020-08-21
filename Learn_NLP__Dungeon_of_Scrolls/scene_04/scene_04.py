@@ -1,4 +1,4 @@
-# version 006
+# version 008
 # Scene_04
 # Any Way You Slice It
 #  _____           _ _____
@@ -16,7 +16,7 @@ import random  # for randomized replies etc
 import sys  # for realistic printing
 import time  # for pauses
 
-scene = "scene_03"
+scene = "scene_04"
 blurb = " Any Way You Slice It "
 adventure = "Learn_NLP__Dungeon_of_Scrolls"
 game = "ReadMe_Adventures"
@@ -71,10 +71,38 @@ def pause_seconds(seconds):
     pass
 
 
+
+
 # making text print-out look like it is being typed
 def slow_print(input_text):
     # staggered times
     random_times = [0.4]
+    # stagger each character
+    for i in input_text:
+        time.sleep(random.choice(random_times))
+        print(i, end="")
+        # prints each time (before loop is finished)
+        sys.stdout.flush()
+    # end
+    pass
+
+# making text print-out look like it is being typed
+def medium_print(input_text):
+    # staggered times
+    random_times = [0.08]
+    # stagger each character
+    for i in input_text:
+        time.sleep(random.choice(random_times))
+        print(i, end="")
+        # prints each time (before loop is finished)
+        sys.stdout.flush()
+    # end
+    pass
+
+# making text print-out look like it is being typed
+def fast_print(input_text):
+    # staggered times
+    random_times = [0.002]
     # stagger each character
     for i in input_text:
         time.sleep(random.choice(random_times))
@@ -167,6 +195,10 @@ clear_terminal()
 
 # making user input lower case
 pronoun = pronoun.lower()
+
+# default to 'she'
+if len(pronoun) == 0:
+    pronoun = "she"
 
 # fix (he vs. him etc.)
 # pronoun(1)
@@ -483,7 +515,37 @@ file_to_create5.close()
 # The Action!
 ##############
 
-slow_print(f"{scene} {blurb} ")
+
+clear_terminal()
+
+pause_seconds(1)
+
+steady_print(
+    """
+
+     __             __   ___  __ 
+    |  \ |  | |\ | / _` |__  /  \ |\ |
+    |__/ \__/ | \| \__| |___ \__/ | \|
+     __   ___
+    /  \ |__ 
+    \__/ |
+     __   __   __   __             __
+    /__` /  ` |__) /  \ |    |    /__`
+    .__/ \__, |  \ \__/ |___ |___ .__/
+
+"""
+)
+
+
+
+
+medium_print("""
+    ...................................
+""")
+
+pause_seconds(1)
+
+clear_terminal()
 
 typed_print(
     """
@@ -510,7 +572,7 @@ clear_terminal()
 
 typed_print(
     """
-Jane crunches her way up next to you
+The girl in the green hat crunches her way up next to you
 and holds something out in front of you.
 
 "There's another piece of this map that needs figuring...
@@ -574,7 +636,7 @@ Should be easy for you, you know."
 
 "What did I say?"
 
-Jane hands you the crinkled page
+The girl in the green hat hands you the crinkled page
 with the penciled in number and arrows:
 """
 )
@@ -670,7 +732,7 @@ typed_print(
 That was so much faster than counting letters,
 """
 )
-typed_print(f"\nI'm telling you, {pronoun4} amazing.\"\n")
+typed_print(f"I'm telling you, {pronoun4} amazing.\"\n")
 
 
 slow_print(f"\n\n End of {scene} {blurb} \n\n")
