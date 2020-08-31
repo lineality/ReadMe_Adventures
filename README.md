@@ -3,5 +3,5 @@
 
 ## Instructions
 1. Pick an Adventure
-2. Start with "Scene 1"
+2. Start with Scene 1
 3. Open the ReadMe.txt
