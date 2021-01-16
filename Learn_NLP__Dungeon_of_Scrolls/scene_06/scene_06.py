@@ -1,4 +1,4 @@
-# version 001
+# version 002
 # Scene_06
 # Unscrambled Eggs
 #  _____           _ _____
@@ -598,7 +598,7 @@ clear_terminal()
 
 typed_print(
     """
-"But what if...maybe because numbers are used in spellcasting...but 
+"But what if...maybe because numbers are used in spellcasting... 
 what if those numbers are the vowels? 
 Babbage, can you test out that idea? 
 Can you print this, switching the numbers for vowels?"
@@ -674,7 +674,7 @@ steady_print(
     """
 (Task!) Make a dictionary
 
-A dictionary hold a very fast 'look-up' for a one-way relationship.
+A dictionary holds a very fast 'look-up' for a one-way relationship.
 
 The standard terms are "key" and "value"
 Using a normal word-dictionary as an example, the 'key' is the word, 
