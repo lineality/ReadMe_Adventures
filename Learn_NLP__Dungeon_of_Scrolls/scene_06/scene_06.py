@@ -815,5 +815,18 @@ while answer_check is False:
         typed_print(f'"{random.choice(responses)}"')
 
 
+clear_terminal()
+
+typed_print(
+    """
+
+"Amazing!" says Franklin, "We've got our spell list now! 
+Thank's Babbage, you're the best." 
+
+"""
+)
+
+
+
 slow_print(f"\n\n End of {scene} {blurb} \n\n")
 clear_terminal()
