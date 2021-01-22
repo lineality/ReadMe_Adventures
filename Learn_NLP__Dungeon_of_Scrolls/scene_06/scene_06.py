@@ -598,7 +598,7 @@ clear_terminal()
 
 typed_print(
     """
-"But what if...maybe because numbers are used in spellcasting... 
+"But what if...maybe because numbers are part of this kind of spellcasting... 
 what if those numbers are the vowels? 
 Babbage, can you test out that idea? 
 Can you print this, switching the numbers for vowels?"
@@ -640,7 +640,7 @@ Example:
 1. Open new Terminal
 2. $ python
 3. Use .replace to replace "2" with "e"
-   "sl22p".replace("number_here","letter_here")
+   >>> "sl22p".replace("number_here","letter_here")
 
 """
 )
@@ -683,10 +683,11 @@ and the 'value' is the definition.
 You "look up" a word, and you get the definition.
 You "look up" the "key" and you get the "value."
 
-The structure of a "dictionary" uses curly brackets "{}" and a colon ":"
-and a comma "," between items. 
-When you make the dictionary, 
-and square brackets when you use the dictionary. 
+When you make the dictionary a "dictionary" 
+use curly brackets "{}" and a colon ":"
+and then a comma "," between items. 
+ 
+When you use the dictionary you use square brackets. 
 
 """
 )
@@ -771,12 +772,11 @@ in Franklin's list of spells:
   (You should see "list_of_spells.txt" in that folder.)
 2. Check you are in the correct directory with $ ls & $ pwd then type:
     $ python3
-  >>> name_you_choose = open("papers_in_cart_tracks.txt", "r").read()
-  >>> print(name_you_choose[###:####])
+3. >>> vowel_change_dict = {"1": "a", "2": "e", "3": "i", "4": "o", "5": "u", "6": "y"} 
 4. >>> spells = open("list_of_spells.txt", "r").read()
 5. >>> for number in vowel_change_dict:
-           spells = word.replace(number, str(vowel_change_dict[number]))
-5. >>> print(spells)
+           spells = spells.replace(number, str(vowel_change_dict[number]))
+6. >>> print(spells)
 
 """
 )
@@ -794,6 +794,8 @@ typed_print(
 """
 )
 
+
+# Check the first spell
 answer_check = False
 
 while answer_check is False:
@@ -804,6 +806,8 @@ while answer_check is False:
     if answer_check is False:
         typed_print(f'"{random.choice(responses)}"')
 
+
+# Check the second spell
 answer_check = False
 
 while answer_check is False:
