@@ -1,4 +1,4 @@
-# version 002
+# version 003
 # Scene_06
 # Unscrambled Eggs
 #  _____           _ _____
@@ -789,7 +789,6 @@ typed_print(
     """
 
 "Ok, let's look at this spell list," says Franklin. "This looks a lot better."
-"What is the name of the last spell?"
 
 """
 )
@@ -825,7 +824,7 @@ typed_print(
     """
 
 "Amazing!" says Franklin, "We've got our spell list now! 
-Thank's Babbage, you're the best." 
+Thank you, Babbage. Thank you kindly." 
 
 """
 )
