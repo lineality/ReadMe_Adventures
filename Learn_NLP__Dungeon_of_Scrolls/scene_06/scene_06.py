@@ -1,4 +1,4 @@
-# version 003
+# version 004
 # Scene_06
 # Unscrambled Eggs
 #  _____           _ _____
@@ -763,7 +763,7 @@ and we can see if it makes any sense," says Franklin.
 steady_print(
     """
 
-use .replace to change all the vowels back to letters 
+Use .replace to change all the vowels back to letters 
 in Franklin's list of spells:
 
 1. Open new Terminal in scene_06 folder (right click: 'open in terminal')
@@ -823,7 +823,7 @@ clear_terminal()
 typed_print(
     """
 
-"Amazing!" says Franklin, "We've got our spell list now! 
+"Amazing!" says Franklin, "We've got the spell list now! 
 Thank you, Babbage. Thank you kindly." 
 
 """
