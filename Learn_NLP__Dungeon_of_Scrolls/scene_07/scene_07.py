@@ -1531,11 +1531,21 @@ Let's run it and see what it says at the end. Maybe we can see
 where it came from."
 
 In terminal, in scene_07 folder:
+$ pipenv shell
+or
 $ python3 -m venv this_environment; source this_environment/bin/activate
+
+Then:
+$ pip install jupyter
 $ jupyter notebook
+or
+$ pip install jupyterlab
+$ jupyter
 
+For Lab:
 Under the "Run" menu tab at the top, select: "Run All Cells"
-
+For Notebook:
+Under the "Cell" menu tab at the top, select: "Run All"
 """
 )
 
