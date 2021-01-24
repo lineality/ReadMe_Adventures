@@ -264,7 +264,7 @@ clear_terminal()
 
 # create ReadMe.txt file
 readme_text = """
-ReadMe: Scene_06, Dungeon of Scrolls 
+ReadMe: Scene_07, Dungeon of Scrolls 
  _____           _ _____
 | __  |___ ___ _| |     |___
 |    -| -_| .'| . | | | | -_|
