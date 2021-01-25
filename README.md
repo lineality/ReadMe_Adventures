@@ -7,4 +7,4 @@
 3. Open the ReadMe.txt
 
 
-#### A story guides the player from situation to situation. Each situation has a puzzle that is part of the story. Each puzzle requires a new skill. Each new skill is explained and guided. As you move through the story you learn new skills. As you learn new skills you also practice your old skills. 
+#### A story guides the player from situation to situation. Each situation has a puzzle that is part of the story. Each puzzle requires a new skill. Each new skill is explained and guided. As you move through the story you learn new skills. As you learn new skills you also practice old skills. 
