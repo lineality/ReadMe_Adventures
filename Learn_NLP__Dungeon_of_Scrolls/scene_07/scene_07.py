@@ -1748,9 +1748,15 @@ clear_terminal()
 # Second Dialogue
 typed_print(
     """
-"That's a weird fire. What are you burning."
 
-"Those bits of frozen birds."
+"You're not usually followed by other birds like that are you?"
+
+"Setting asside that reference to me as 'a bird,'" Lavender said, 
+sweeping her hand to the side, "I think that was something I did by accident. 
+Something new. Maybe useful?
+That is a very weird fire. What are you burning?"
+
+"Those bits of frozen...birds."
 
 "You're burning frozen birds?"
 
@@ -1760,7 +1766,7 @@ typed_print(
 
 "Oh...right."
 
-"Old John sends his thanks." 
+"By the way, Old John sends his thanks." 
 """
 )
 
