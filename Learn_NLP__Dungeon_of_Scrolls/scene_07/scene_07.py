@@ -1440,7 +1440,7 @@ A_Notebook = {
         "id": "Njw_1w-B7vGv"
       },
       "source": [
-        "spells = \"Pr4p2rt6 4f P3n6 H3lls Un3v2rs3t36\"\r\n",
+        "spells = \"Pr4p2rt6 4f P3n26 H3lls Un3v2rs3t6\"\r\n",
         "\r\n",
         "# make a dictionary\r\n",
         "vowel_change_dict = {\"1\": \"a\", \"2\": \"e\", \"3\": \"i\", \"4\": \"o\", \"5\": \"u\", \"6\": \"y\"} \r\n",
