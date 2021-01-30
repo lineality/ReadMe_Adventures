@@ -1627,6 +1627,8 @@ Goal: Open a Jupyter Notebook File in a Virtual Environment
 Virtual environments can be tricky to set up at first, 
 (or they may be already set up and ready to use easily)
 but virtual environments are very important and useful.
+Rule of thumb: Do NOT pip install anything outside of a virtual environment.
+(Of course you may need to pip install the virtual environment to start with.) 
 
 What do you have installed?
 Start by seeing what your current setup is:
@@ -1646,15 +1648,26 @@ steady_print("""
 
 Step 1. Check to see if you have pipenv or venv installed already:
   $ pipenv --version
+  $ virtualenv --version
 
 and/or
   $ pip list
   (then look to see if pipenv and or virtualenv are listed)
 
+""")
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+# ...Challenge
+steady_print("""
+
+Step 2: Install if you don't already have pipenv or venv
+
+If you do have either, you can move ahead. If you do not then you will 
+need to install one. venv(or virtualenv) is probably easiest...maybe.
+
 https://python-docs.readthedocs.io/en/latest/dev/virtualenvs.html
 
-If you do not 
-install on debian etc
+To installvenv on debian etc.
 	$ sudo apt install python3 python3-venv
 
 """)
@@ -1678,12 +1691,22 @@ steady_print("""
 
 Step 3. Install & Run Jupyterlab or Jupyter Notebook
 
-Then:
+Then for pipenv:
 $ pipenv install jupyter
 $ pipenv run jupyter notebook
 or
 $ pipenv install jupyterlab
 $ pipenv run jupyter lab
+
+Then for venv: (Make sure you see the name of 
+your virtual environment in the command line)
+e.g. (env_name) [user_name@localhost scene_07]$ 
+
+$ pip install jupyter
+$ pip run jupyter notebook
+or
+$ pip install jupyterlab
+$ pip run jupyter lab
 
 """)
 # Press Enter to Continue
