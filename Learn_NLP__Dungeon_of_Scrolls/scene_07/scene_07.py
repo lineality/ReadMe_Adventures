@@ -1628,10 +1628,11 @@ Virtual environments can be tricky to set up at first,
 (or they may be already set up and ready to use easily)
 but virtual environments are very important and useful.
 
+What do you have installed?
 Start by seeing what your current setup is:
 - Do you have pip?
 - Do you have pipenv?
-- Do you have virtualenv / venv?
+- Do you have venv / virtualenv?
 
 Ideally you should be able to use both/either, 
 pipenv and/or venv depending on the task.
