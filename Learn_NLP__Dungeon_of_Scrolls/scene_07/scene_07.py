@@ -1606,8 +1606,9 @@ clear_terminal()
 # Dialogue
 typed_print("""
 
-"It's a Code Notebook," says Franklin. "Try and opening it.
-Let's run it and see what it says at the end. Maybe we can see
+"It's a Code Notebook!" says Franklin, gesturing generously with both hand. 
+"I can't believe this. Try and opening it!
+Let's run it and see what it says at the end. Maybe we can find out
 where it came from. Open it up and let's see!"
 
 """
