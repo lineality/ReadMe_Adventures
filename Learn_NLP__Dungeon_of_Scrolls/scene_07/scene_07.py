@@ -1,4 +1,4 @@
-# version 004
+# version 006
 # Scene_07
 # Here Is A Notebook
 #  _____           _ _____
@@ -451,926 +451,1007 @@ null = 0
 
 # create ReadMe.txt file
 A_Notebook = {
- "cells": [
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "Ljc8eY5cAGVe"
-   },
-   "source": [
-    "set to no dupe"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "hu1K53Je6gBd"
-   },
-   "source": [
-    "# This is a \"Notebook\"\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "9RWKFekBAMIk"
-   },
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "ucdw01Bb9s0V"
-   },
-   "source": [
-    "## About python Notebooks:\n",
-    "These text \"cells\" use formatting called \"markdown\"\n",
-    "\n",
-    "Double click on one to *see* the formatting."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "qOtnmROk99x_"
-   },
-   "source": [
-    "### Those code cells below are python code. Each cell can be \"run\" as a separate cell."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "dX_fcxCX-K-H"
-   },
-   "source": [
-    "#### Or all the cells in the whole Notebook can be run together.\n",
-    "(See controls at the top of the page.)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "JxN_Zn-7-JFp"
-   },
-   "outputs": [],
-   "source": [
-    "# Text in a code cell starting with a '#' sign is not run. It's just text."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "zoF6P_7E-pqi"
-   },
-   "outputs": [],
-   "source": [
-    "\"\"\"\n",
-    "Same for text-blocks in triple quotes, but these can be harder to use.\n",
-    "\"\"\""
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "F-4zZAIi-zKS"
-   },
-   "source": [
-    "# Some Python Basics:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
     "colab": {
-     "base_uri": "https://localhost:8080/"
+      "name": "A_Notebook.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "toc_visible": true
     },
-    "id": "D-_5d9Z06kr8",
-    "outputId": "e092f04c-71c7-4500-af73-0a7b6286bb7a"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "4"
-      ]
-     },
-     "execution_count": 1,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
     }
-   ],
-   "source": [
-    "2+2"
-   ]
   },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "uBC5Mkhq6oH3",
-    "outputId": "d748aa85-6779-4474-e9f3-705b217003ca"
-   },
-   "outputs": [
+  "cells": [
     {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Hello_World\n"
-     ]
-    }
-   ],
-   "source": [
-    "print(\"Hello_World\")"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "obI95ZcF-159"
-   },
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "babE4j2F67Ro"
-   },
-   "outputs": [],
-   "source": [
-    "message = \"\"\"hello world\"\"\""
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "C-sgVxqZ7Bvd",
-    "outputId": "aad597fc-3a71-4bad-a572-fabea47b24a3"
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "hello world\n"
-     ]
-    }
-   ],
-   "source": [
-    "print(message)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/",
-     "height": 35
-    },
-    "id": "hAKFfnki7EAv",
-    "outputId": "c21d83ca-6b32-4d19-e641-5388cae90c83"
-   },
-   "outputs": [
-    {
-     "data": {
-      "application/vnd.google.colaboratory.intrinsic+json": {
-       "type": "string"
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hu1K53Je6gBd"
       },
-      "text/plain": [
-       "'hello world'"
+      "source": [
+        "# This is a \"Notebook\"\n"
       ]
-     },
-     "execution_count": 12,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "message"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "45Bv8_qf6r70"
-   },
-   "outputs": [],
-   "source": [
-    "message = \"\"\"hello \n",
-    "world\"\"\""
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
     },
-    "id": "tbJzKN1V6vNl",
-    "outputId": "f52cb788-9daa-44f2-b61c-cc5d9f14a125"
-   },
-   "outputs": [
     {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "hello \n",
-      "world\n"
-     ]
-    }
-   ],
-   "source": [
-    "print(message)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/",
-     "height": 35
-    },
-    "id": "PN2F8BHR-4Kl",
-    "outputId": "668f6c85-0065-423e-fbf0-cd77446a9105"
-   },
-   "outputs": [
-    {
-     "data": {
-      "application/vnd.google.colaboratory.intrinsic+json": {
-       "type": "string"
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ucdw01Bb9s0V"
       },
-      "text/plain": [
-       "'wolftree!'"
+      "source": [
+        "## About python Notebooks:\n",
+        "These text \"cells\" use formatting called \"markdown\"\n",
+        "\n",
+        "Double click on one to *see* the formatting.\n",
+        "\n",
+        "e.g.\n",
+        "\n",
+        "```\n",
+        "## About python Notebooks:\n",
+        "These text \"cells\" use formatting called \"markdown\"\n",
+        "\n",
+        "Double click on one to *see* the formatting.\n",
+        "```"
       ]
-     },
-     "execution_count": 20,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "animal = \"wolf\"\n",
-    "\n",
-    "plant = \"tree\"\n",
-    "\n",
-    "animal + plant + \"!\""
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "alpC6H277Sgp"
-   },
-   "source": [
-    "## Note the \\n new line 'escape character' in the raw print."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/",
-     "height": 35
     },
-    "id": "dAyg44Fu7FlQ",
-    "outputId": "688674f2-d75c-4c48-828c-3c86d6cf4906"
-   },
-   "outputs": [
     {
-     "data": {
-      "application/vnd.google.colaboratory.intrinsic+json": {
-       "type": "string"
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ptb-BoiIca2u"
       },
-      "text/plain": [
-       "'hello \\nworld'"
+      "source": [
+        "A python notebook file has the suffix .ipynb"
       ]
-     },
-     "execution_count": 17,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "message"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "kjsZbbEp_U8F"
-   },
-   "source": [
-    "# Review"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "kE5S0T7O6k6c"
-   },
-   "source": [
-    "## Scene_01\n",
-    "## opening files\n",
-    "## printing files"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
     },
-    "id": "gZhu-KCY7hNr",
-    "outputId": "896cd6b1-eecf-44d2-c7f8-e2287f072fe8"
-   },
-   "outputs": [
     {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "\n",
-      "Sample \n",
-      "Text\n",
-      "\n",
-      "\n",
-      "Sample \n",
-      "Text\n"
-     ]
-    }
-   ],
-   "source": [
-    "# create file: readme_text\n",
-    "text_to_add_to_file = \"\"\"\n",
-    "Sample \n",
-    "Text\n",
-    "\"\"\"\n",
-    "\n",
-    "# create, write-to, & save .txt file\n",
-    "file_to_create1 = open(\"example.txt\", \"w\")\n",
-    "file_to_create1.write(text_to_add_to_file)\n",
-    "file_to_create1.close()\n",
-    "\n",
-    "# #open, read, & print the file\n",
-    "\n",
-    "file_to_read1 = open(\"example.txt\", \"r\")\n",
-    "print(file_to_read1.read())\n",
-    "file_to_read1.close()\n",
-    "\n",
-    "# Another way to print a file in a terminal\n",
-    "!cat example.txt"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "vyloYNxA1OK1"
-   },
-   "source": [
-    "## \"with\" method\n",
-    "### This is the recommended best practice for opening and closing files...at least according to some people. The idea is to ensure that files are closed properly...I think.\n",
-    "\n",
-    "https://www.python.org/dev/peps/pep-0343/"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "A6qnxTrm2qP9",
-    "outputId": "e75e6c91-b808-4c03-c4bc-6d53d0bcd64d"
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "\n",
-      "Sample \n",
-      "Text\n",
-      "\n"
-     ]
-    }
-   ],
-   "source": [
-    "with open('example.txt') as f:\n",
-    "    print(f.read())"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "9pSTIz9Jyv-A"
-   },
-   "source": [
-    "## note: a notebooks is *like* a terminal but they are not exactly the same. \n",
-    "\n",
-    "### e.g.\n",
-    "### some terminal commands need a \"!\" in front in order to work."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "Hddmi-zQzEGq",
-    "outputId": "0ceb6bb1-4a07-4bd5-e1a7-e07dbea44e71"
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "/content\n",
-      "example.txt  ReadMe.txt  sample_data\n",
-      ".  ..  .config\texample.txt  ReadMe.txt  sample_data\n",
-      "60\t./.config/logs/2021.01.20\n",
-      "64\t./.config/logs\n",
-      "8\t./.config/configurations\n",
-      "100\t./.config\n",
-      "55508\t./sample_data\n",
-      "55620\t.\n",
-      "\n",
-      "Sample \n",
-      "Text\n"
-     ]
-    }
-   ],
-   "source": [
-    "# pathway to current working directory\n",
-    "!pwd\n",
-    "\n",
-    "# list files in directory\n",
-    "!ls\n",
-    "\n",
-    "# list files including hidden files\n",
-    "!ls -a\n",
-    "\n",
-    "# show file 'ownership'\n",
-    "!du\n",
-    "\n",
-    "# print file\n",
-    "!cat example.txt"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "6kSnXbLp7hNp"
-   },
-   "source": [
-    "## Scene_02\n",
-    "## len()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "CiKL9X-T_WaF",
-    "outputId": "7b6399f3-9151-4c91-eba9-34e1a213c7ff"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "4"
-      ]
-     },
-     "execution_count": 12,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "example = \"abcd\"\n",
-    "\n",
-    "len(example)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "ybjtToi47nky"
-   },
-   "source": [
-    "## Scene_03\n",
-    "### Navigating Folders (Directories)\n",
-    "### Note: real terminals and notebooks work differently here..."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "A_hQEE3m9iIG",
-    "outputId": "0091a523-b926-47c2-f9b6-32e7e95ea95a"
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "/content\n"
-     ]
-    }
-   ],
-   "source": [
-    "# where are we?\n",
-    "!pwd"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "DtKzHVod6YG7"
-   },
-   "outputs": [],
-   "source": [
-    "# make a new place\n",
-    "!mkdir testing"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "U4CqKoI_7bfP",
-    "outputId": "723395b9-62e2-48dc-fe34-2e677fbff699"
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "example.txt  ReadMe.txt  sample_data  testing\n"
-     ]
-    }
-   ],
-   "source": [
-    "# check all the places\n",
-    "!ls"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "iMu4yKxC9qPG"
-   },
-   "outputs": [],
-   "source": [
-    "# moving to a new directory\n",
-    "!cd testing"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "Tv0b0La6-M-M"
-   },
-   "outputs": [],
-   "source": [
-    "# go back on space\n",
-    "! cd ..\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "FcFyew7o9vfu",
-    "outputId": "8d9a349c-6866-4dd4-c73e-519a0d9530f7"
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "/content\n"
-     ]
-    }
-   ],
-   "source": [
-    "# check were you are agian\n",
-    "!pwd"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "-wT4a2Yt7vGM"
-   },
-   "source": [
-    "## Scene_04\n",
-    "## Slicing"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/",
-     "height": 35
-    },
-    "id": "TmWxliI57vGt",
-    "outputId": "1e660d93-86c8-42a5-842d-5618182fb2ff"
-   },
-   "outputs": [
-    {
-     "data": {
-      "application/vnd.google.colaboratory.intrinsic+json": {
-       "type": "string"
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qOtnmROk99x_"
       },
-      "text/plain": [
-       "'a'"
+      "source": [
+        "### Those code cells below are python code. Each cell can be \"run\" as a separate cell.\n",
+        "\n",
+        "Tip: Rerun your cells in-order often with a restarted/refreshed kernal/runtime."
       ]
-     },
-     "execution_count": 25,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "# slice a string\n",
-    "sample_string = \"abc\"\n",
-    "sample_string[0]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/",
-     "height": 35
     },
-    "id": "tBdnPPq-_Pf2",
-    "outputId": "b91f7877-c62e-4220-bef3-02ff55995054"
-   },
-   "outputs": [
     {
-     "data": {
-      "application/vnd.google.colaboratory.intrinsic+json": {
-       "type": "string"
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dX_fcxCX-K-H"
       },
-      "text/plain": [
-       "'a'"
+      "source": [
+        "#### Or you can run all the cells in the whole Notebook\n",
+        "(See controls at the top of the page: ~\"Run all\")"
       ]
-     },
-     "execution_count": 29,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "# slice a list/array\n",
-    "sample_array = [\"a\", \"b\", \"c\", \"d\", \"e\"]\n",
-    "\n",
-    "sample_array[0]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
     },
-    "id": "BLs_wvrW_h7K",
-    "outputId": "8be0dcb5-78fe-47a8-e195-7efb95330d50"
-   },
-   "outputs": [
     {
-     "data": {
-      "text/plain": [
-       "['e', 'd', 'c', 'b', 'a']"
-      ]
-     },
-     "execution_count": 30,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "# reverse slice!\n",
-    "sample_array[::-1]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "NjrSy7Xx7vGu"
-   },
-   "source": [
-    "## Scene_05\n",
-    "## Slice From Here & To There\n",
-    "## [here,there]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/"
-    },
-    "id": "Lqreknb9ASwg",
-    "outputId": "5d511f21-d20e-4bf9-839f-c827b70f102d"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "['b', 'c']"
-      ]
-     },
-     "execution_count": 32,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "# slice from and to\n",
-    "sample_array[1:3]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "27u9lnvSAiNo"
-   },
-   "outputs": [],
-   "source": [
-    "# count backwards"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "colab": {
-     "base_uri": "https://localhost:8080/",
-     "height": 35
-    },
-    "id": "D-B5YZ3yAfPW",
-    "outputId": "76eb1523-e7b1-4209-ae39-a3e82b22fd02"
-   },
-   "outputs": [
-    {
-     "data": {
-      "application/vnd.google.colaboratory.intrinsic+json": {
-       "type": "string"
+      "cell_type": "code",
+      "metadata": {
+        "id": "JxN_Zn-7-JFp"
       },
-      "text/plain": [
-       "'d'"
+      "source": [
+        "# Text in a code cell starting with a '#' sign is not run. It's just text."
+      ],
+      "execution_count": 51,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zoF6P_7E-pqi",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "d1add304-0a5d-40ab-e878-d563c1fb0746"
+      },
+      "source": [
+        "\"\"\"\n",
+        "Same for text-blocks in triple quotes, but these can be harder to use.\n",
+        "\"\"\""
+      ],
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'\\nSame for text-blocks in triple quotes, but these can be harder to use.\\n'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 52
+        }
       ]
-     },
-     "execution_count": 33,
-     "metadata": {
-      "tags": []
-     },
-     "output_type": "execute_result"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "F-4zZAIi-zKS"
+      },
+      "source": [
+        "# Some Python Basics:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D-_5d9Z06kr8",
+        "outputId": "901a36ac-a7ac-4480-d405-af90cb2ae74b"
+      },
+      "source": [
+        "2+2"
+      ],
+      "execution_count": 53,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 53
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uBC5Mkhq6oH3",
+        "outputId": "7a81590c-5ff8-4783-8136-2eb7391718d0"
+      },
+      "source": [
+        "print(\"Hello_World\")"
+      ],
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Hello_World\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "babE4j2F67Ro"
+      },
+      "source": [
+        "message = \"\"\"hello world\"\"\""
+      ],
+      "execution_count": 55,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "C-sgVxqZ7Bvd",
+        "outputId": "33fc1c13-4159-4834-f53f-08adb48feeac"
+      },
+      "source": [
+        "print(message)"
+      ],
+      "execution_count": 56,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "hello world\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "hAKFfnki7EAv",
+        "outputId": "62a0972d-7fe5-4064-a4f9-f04a37085a09"
+      },
+      "source": [
+        "message"
+      ],
+      "execution_count": 57,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'hello world'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 57
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "45Bv8_qf6r70"
+      },
+      "source": [
+        "message = \"\"\"hello \n",
+        "world\"\"\""
+      ],
+      "execution_count": 58,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tbJzKN1V6vNl",
+        "outputId": "8851351b-2af4-4db0-f8b7-f8305c92250e"
+      },
+      "source": [
+        "print(message)"
+      ],
+      "execution_count": 59,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "hello \n",
+            "world\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "PN2F8BHR-4Kl",
+        "outputId": "aab35b15-22a1-4fdf-c7e4-c3408fad090a"
+      },
+      "source": [
+        "animal = \"wolf\"\n",
+        "\n",
+        "plant = \"tree\"\n",
+        "\n",
+        "animal + plant + \"!\""
+      ],
+      "execution_count": 60,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'wolftree!'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 60
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "alpC6H277Sgp"
+      },
+      "source": [
+        "## Note the \\n new line 'escape character' in the raw print."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "dAyg44Fu7FlQ",
+        "outputId": "ae5dc1e0-ab83-40e3-99ef-839d28de2eba"
+      },
+      "source": [
+        "message"
+      ],
+      "execution_count": 61,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'hello \\nworld'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 61
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kjsZbbEp_U8F"
+      },
+      "source": [
+        "# Review Past Scenes"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kE5S0T7O6k6c"
+      },
+      "source": [
+        "## Scene_01\r\n",
+        "## opening files\r\n",
+        "## printing files"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "gZhu-KCY7hNr",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4c965b9f-6a17-4e9e-f689-92f02ad84ad1"
+      },
+      "source": [
+        "# create file: readme_text\r\n",
+        "text_to_add_to_file = \"\"\"\r\n",
+        "Sample \r\n",
+        "Text\r\n",
+        "\"\"\"\r\n",
+        "\r\n",
+        "# create, write-to, & save .txt file\r\n",
+        "file_to_create1 = open(\"example.txt\", \"w\")\r\n",
+        "file_to_create1.write(text_to_add_to_file)\r\n",
+        "file_to_create1.close()\r\n",
+        "\r\n",
+        "# #open, read, & print the file\r\n",
+        "\r\n",
+        "file_to_read1 = open(\"example.txt\", \"r\")\r\n",
+        "print(file_to_read1.read())\r\n",
+        "file_to_read1.close()\r\n",
+        "\r\n"
+      ],
+      "execution_count": 62,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "Sample \n",
+            "Text\n",
+            "\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AqRio51Sd-an",
+        "outputId": "857307a6-73f3-43c7-e4df-48e49b36ae88"
+      },
+      "source": [
+        "# Another quick way to print a file in a terminal\n",
+        "!cat example.txt"
+      ],
+      "execution_count": 63,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "Sample \n",
+            "Text\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vyloYNxA1OK1"
+      },
+      "source": [
+        "## \"with\" method\r\n",
+        "### This is the recommended best practice for opening and closing files...at least according to some people. The idea is to ensure that files are closed properly...I think.\r\n",
+        "\r\n",
+        "https://www.python.org/dev/peps/pep-0343/"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A6qnxTrm2qP9",
+        "outputId": "480571a8-3eef-4e4c-912d-34a398497207"
+      },
+      "source": [
+        "with open('example.txt') as f:\r\n",
+        "    print(f.read())"
+      ],
+      "execution_count": 64,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "Sample \n",
+            "Text\n",
+            "\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9pSTIz9Jyv-A"
+      },
+      "source": [
+        "## note: a notebooks is *like* a terminal but they are not exactly the same. \r\n",
+        "\r\n",
+        "### e.g.\r\n",
+        "### some terminal commands need a \"!\" in front in order to work."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Hddmi-zQzEGq",
+        "outputId": "990df3ad-427d-4c0d-ab14-a3fa7803173e"
+      },
+      "source": [
+        "# pathway to current working directory\r\n",
+        "!pwd\r\n",
+        "\r\n",
+        "# list files in directory\r\n",
+        "!ls\r\n",
+        "\r\n",
+        "# list files including hidden files\r\n",
+        "!ls -a\r\n",
+        "\r\n",
+        "# show file 'ownership'\r\n",
+        "!du\r\n",
+        "\r\n",
+        "# print file\r\n",
+        "!cat example.txt"
+      ],
+      "execution_count": 65,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "/content\n",
+            "example.txt  sample_data  testing\n",
+            ".  ..  .config\texample.txt  sample_data  testing\n",
+            "8\t./.config/configurations\n",
+            "60\t./.config/logs/2021.01.20\n",
+            "64\t./.config/logs\n",
+            "100\t./.config\n",
+            "4\t./testing\n",
+            "55508\t./sample_data\n",
+            "55620\t.\n",
+            "\n",
+            "Sample \n",
+            "Text\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6kSnXbLp7hNp"
+      },
+      "source": [
+        "## Scene_02\r\n",
+        "### len()\r\n",
+        "#### How long is a string, list, dictionary, etc.?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "CiKL9X-T_WaF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "be4a5076-1285-4316-ee56-89e8f84cd4c2"
+      },
+      "source": [
+        "example_string = \"abcd\"\r\n",
+        "\r\n",
+        "len(example_string)"
+      ],
+      "execution_count": 66,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 66
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IhaPuvmSbU_K",
+        "outputId": "b70c5ae4-aeb6-4cb6-eeba-b89454c7f40f"
+      },
+      "source": [
+        "number_list = [1,'2','3']\n",
+        "len(number_list)"
+      ],
+      "execution_count": 67,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 67
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eMah_PX4bpN1",
+        "outputId": "79b2132f-c783-4de8-e15a-81031a1e8a65"
+      },
+      "source": [
+        "number_dictionary = {1:'a','2':'b','3':'c'}\n",
+        "len(number_dictionary)"
+      ],
+      "execution_count": 68,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 68
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ybjtToi47nky"
+      },
+      "source": [
+        "## Scene_03\r\n",
+        "### Navigating Folders (Directories)\r\n",
+        "### Note: real terminals and notebooks work differently here..."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A_hQEE3m9iIG",
+        "outputId": "6629ecb8-f287-4d30-fcaa-c6b50d92a2be"
+      },
+      "source": [
+        "# where are we?\r\n",
+        "!pwd"
+      ],
+      "execution_count": 69,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "/content\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "DtKzHVod6YG7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5c5a90b6-adb0-4a95-8075-cef6fd71d457"
+      },
+      "source": [
+        "# make a new place\r\n",
+        "!mkdir testing"
+      ],
+      "execution_count": 70,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "mkdir: cannot create directory ‘testing’: File exists\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "U4CqKoI_7bfP",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "07de2557-06c0-4996-e571-548c99790abf"
+      },
+      "source": [
+        "# check all the places\r\n",
+        "!ls"
+      ],
+      "execution_count": 71,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "example.txt  sample_data  testing\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "iMu4yKxC9qPG"
+      },
+      "source": [
+        "# moving to a new directory\r\n",
+        "!cd testing"
+      ],
+      "execution_count": 72,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Tv0b0La6-M-M"
+      },
+      "source": [
+        "# go back on space\r\n",
+        "! cd ..\r\n"
+      ],
+      "execution_count": 73,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FcFyew7o9vfu",
+        "outputId": "d42e55f7-7fa4-45b2-e007-b3e287317a83"
+      },
+      "source": [
+        "# check were you are agian\r\n",
+        "!pwd"
+      ],
+      "execution_count": 74,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "/content\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-wT4a2Yt7vGM"
+      },
+      "source": [
+        "## Scene_04\r\n",
+        "## Slicing"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "TmWxliI57vGt",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "f4d6c8ec-151a-42b9-cb48-23d8f34dd3cb"
+      },
+      "source": [
+        "# slice a string\r\n",
+        "sample_string = \"abc\"\r\n",
+        "sample_string[0]"
+      ],
+      "execution_count": 75,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'a'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 75
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "tBdnPPq-_Pf2",
+        "outputId": "90853cda-0933-41d6-8430-c63109750ae7"
+      },
+      "source": [
+        "# slice a list/array\r\n",
+        "sample_array = [\"a\", \"b\", \"c\", \"d\", \"e\"]\r\n",
+        "\r\n",
+        "sample_array[0]"
+      ],
+      "execution_count": 76,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'a'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 76
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BLs_wvrW_h7K",
+        "outputId": "94d60aff-5269-4e1a-8762-475cb1e7ea56"
+      },
+      "source": [
+        "# reverse slice!\r\n",
+        "sample_array[::-1]"
+      ],
+      "execution_count": 77,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['e', 'd', 'c', 'b', 'a']"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 77
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NjrSy7Xx7vGu"
+      },
+      "source": [
+        "## Scene_05\r\n",
+        "## Slice From Here & To There\r\n",
+        "## [here,there]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Lqreknb9ASwg",
+        "outputId": "e13ec0c3-15a1-4922-fb27-ac6055ab5af3"
+      },
+      "source": [
+        "# slice from and to\r\n",
+        "sample_array[1:3]"
+      ],
+      "execution_count": 78,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['b', 'c']"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 78
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "27u9lnvSAiNo"
+      },
+      "source": [
+        "# count backwards"
+      ],
+      "execution_count": 79,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "D-B5YZ3yAfPW",
+        "outputId": "dfcae988-0773-4682-c81b-1f09f8b15f48"
+      },
+      "source": [
+        "sample_array[-2]"
+      ],
+      "execution_count": 80,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'d'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 80
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rEWMwGjp7vGv"
+      },
+      "source": [
+        "## Scene_06\r\n",
+        "## .replace()\r\n",
+        "## Make a Dictionary\r\n",
+        "## Dictionary + For Loop"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Njw_1w-B7vGv"
+      },
+      "source": [
+        "spells = \"Pr4p2rt6 4f P3n6 H3lls Un3v2rs3t6\"\r\n",
+        "\r\n",
+        "# make a dictionary\r\n",
+        "vowel_change_dict = {\"1\": \"a\", \"2\": \"e\", \"3\": \"i\", \"4\": \"o\", \"5\": \"u\", \"6\": \"y\"} \r\n",
+        "\r\n",
+        "# user a for loop\r\n",
+        "for number in vowel_change_dict:\r\n",
+        "           # safe the changes each time\r\n",
+        "           spells = spells.replace(number, str(vowel_change_dict[number]))\r\n",
+        "\r\n",
+        "print(spells)\r\n"
+      ],
+      "execution_count": null,
+      "outputs": []
     }
-   ],
-   "source": [
-    "sample_array[-2]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "CvmlOp4B7vGu"
-   },
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "id": "rEWMwGjp7vGv"
-   },
-   "source": [
-    "## Scene_06\n",
-    "## .replace()\n",
-    "## Make a Dictionary\n",
-    "## Dictionary + For Loop"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "id": "Njw_1w-B7vGv"
-   },
-   "outputs": [],
-   "source": [
-    "spells = \"Pr4p2rt6 4f P3n6 H3lls Un3v2rs3t6\"\n",
-    "\n",
-    "# make a dictionary\n",
-    "vowel_change_dict = {\"1\": \"a\", \"2\": \"e\", \"3\": \"i\", \"4\": \"o\", \"5\": \"u\", \"6\": \"y\"} \n",
-    "\n",
-    "# user a for loop\n",
-    "for number in vowel_change_dict:\n",
-    "           # safe the changes each time\n",
-    "           spells = spells.replace(number, str(vowel_change_dict[number]))\n",
-    "\n",
-    "print(spells)\n"
-   ]
-  }
- ],
- "metadata": {
-  "colab": {
-   "collapsed_sections": [
-    "vyloYNxA1OK1",
-    "9pSTIz9Jyv-A",
-    "6kSnXbLp7hNp",
-    "ybjtToi47nky"
-   ],
-   "name": "A_Notebook.ipynb",
-   "provenance": []
-  },
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.9.0b5"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 1
+  ]
 }
 
 # Save notebook as json file:
@@ -1482,12 +1563,12 @@ he tosses his other blanket over the goose.
 The blanket floats down 
 over the shape moving beneath the surface,
 and then pulls back around Lavender's head 
-as she shakes out her hair in the blowing show.
+as she shakes out her hair in the blowing snow.
 
-"You should put some boots on, it's cold out," he says,  
+"You should put some boots on, it's cold out," Hitch says,  
 "What's happened to your hair?"
 
-"Babbage", Lavender calls out.
+"Hey, Babbage", Lavender calls out.
 "Look in that bag. Present from Old John."
 
 """
@@ -1499,53 +1580,131 @@ clear_terminal()
 
 # Dialogue
 typed_print("""
-
-Turning back to Hitch she asks, "Thanks for the blanket. 
+Turning back to Hitch she says, "Thanks for the blanket. 
 Do you have my snow boots? I'm starving. Did you make tea?"
 
-As you pick up the bundle and reach inside
-Franklin somes over to look
-"What is it?"
-"Wo! A Notebook? Where did they find that?
+As you reach down into the snow and pick up the bundle 
+that had been tied around the gooses leg and you reach inside,
+Franklin somes over to look.
+"What is it?" he asks, "Wo! A Notebook? Where did they find that?
 Those have been banned for years."
 
-Jane comes over as Hitch curries McCavities boots and 
-other clothes back over to her.
+Jane comes over too as Hitch curries McCavities boots and other clothes.
 
-"It's a what?" asks Jane
+"It's a what?" asks Jane.
 
 "It's a notebook," says Franklin. 
 
-"Are you sure? It doesn't look like a book."
-
+"Are you sure? That doesn't look like any sort of book I've ever seen."
 """
 )
 
-
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+clear_terminal()
 
 # Dialogue
 typed_print("""
 
 "It's a Code Notebook," says Franklin. "Try and opening it.
 Let's run it and see what it says at the end. Maybe we can see
-where it came from."
+where it came from. Open it up and let's see!"
+
+"""
+)
+
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+clear_terminal()
+
+
+# Challenge
+steady_print("""
+
+Goal: Open a Jupyter Notebook File in a Virtual Environment
+
+Virtual environments can be tricky to set up at first, 
+(or they may be already set up and ready to use easily)
+but virtual environments are very important and useful.
+
+Start by seeing what your current setup is:
+- Do you have pip?
+- Do you have pipenv?
+- Do you have virtualenv / venv?
+
+Ideally you should be able to use both/either, 
+pipenv and/or venv depending on the task.
+
+
+""")
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+# ...Challenge
+steady_print("""
+
+Step 1. Check to see if you have pipenv or venv installed already:
+  $ pipenv --version
+
+and/or
+  $ pip list
+  (then look to see if pipenv and or virtualenv are listed)
+
+https://python-docs.readthedocs.io/en/latest/dev/virtualenvs.html
+
+If you do not 
+install on debian etc
+	$ sudo apt install python3 python3-venv
+
+""")
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+# ...Challenge
+steady_print("""
+ 
+Step 2. Make/Enter/Use a Virtual Environment
 
 In terminal, in scene_07 folder:
 $ pipenv shell
 or
 $ python3 -m venv this_environment; source this_environment/bin/activate
 
-Then:
-$ pip install jupyter
-$ jupyter notebook
-or
-$ pip install jupyterlab
-$ jupyter
+""")
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+# ...Challenge
+steady_print("""
 
-For Lab:
+Step 3. Install & Run Jupyterlab or Jupyter Notebook
+
+Then:
+$ pipenv install jupyter
+$ pipenv run jupyter notebook
+or
+$ pipenv install jupyterlab
+$ pipenv run jupyter lab
+
+""")
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+# ...Challenge
+steady_print("""
+
+Step 4. Open the jupyter notebook & run all code cells
+
+For Jupyter Lab:
 Under the "Run" menu tab at the top, select: "Run All Cells"
-For Notebook:
+
+For Jupyter Notebook:
 Under the "Cell" menu tab at the top, select: "Run All"
+
+Now read what it says at the very bottom.
+
+(Note: This notebook should contain code such as you studied 
+in each of the past scenes. Notebooks are a useful way to record, share,
+run, experiment with, and use code. Some people use python directly
+in the command line (as you have been doing), but often people use python 
+inside a notebook. It is useful to be able to use python both ways.)
+
 """
 )
 
@@ -1634,7 +1793,8 @@ typed_print(
 # Add "pipenv" to paths (so that it works in the command line)
 # $ export PATH="$PATH:$HOME/.local/bin"
 
-
+# Save the change:
+# $ source ~/. bash_profile
 
 # """
 # )
