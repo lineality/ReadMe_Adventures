@@ -1627,8 +1627,12 @@ Goal: Open a Jupyter Notebook File in a Virtual Environment
 Virtual environments can be tricky to set up at first, 
 (or they may be already set up and ready to use easily)
 but virtual environments are very important and useful.
-Rule of thumb: Do NOT pip install anything outside of a virtual environment.
-(Of course you may need to pip install the virtual environment to start with.) 
+Rules of thumb: 
+1. Do NOT pip install anything outside of a virtual environment.
+2. Always make a new folder(directory) and use a virtual environment inside.
+
+(Of course you may need to pip install the virtual environment package
+in your hope directory to start with.) 
 
 What do you have installed?
 Start by seeing what your current setup is:
@@ -1637,7 +1641,8 @@ Start by seeing what your current setup is:
 - Do you have venv / virtualenv?
 
 Ideally you should be able to use both/either, 
-pipenv and/or venv depending on the task.
+pipenv and/or venv depending on the task
+(e.g. AWS projects may require venv).
 
 
 """)
@@ -1645,14 +1650,19 @@ pipenv and/or venv depending on the task.
 input("\n  ...Press enter to continue...  \n")
 # ...Challenge
 steady_print("""
+
+Once you are set up, using a virtual environment can be a simple as running 
+these two commands in your terminal:
+    $ pipenv install jupyterlab
+    $ pipenv run jupyter lab
 
 Step 1. Check to see if you have pipenv or venv installed already:
-  $ pipenv --version
-  $ virtualenv --version
+    $ pipenv --version
+    $ virtualenv --version
 
-and/or
-  $ pip list
-  (then look to see if pipenv and or virtualenv are listed)
+and/or:
+   $ pip list
+   (Then look to see if pipenv and or virtualenv are listed.)
 
 """)
 # Press Enter to Continue
@@ -1660,9 +1670,9 @@ input("\n  ...Press enter to continue...  \n")
 # ...Challenge
 steady_print("""
 
-Step 2: Install if you don't already have pipenv or venv
+Step 2: Install (if you do not already have pipenv or venv)
 
-If you do have either, you can move ahead. If you do not then you will 
+If you do have either, you can move ahead. If you do not, then you will 
 need to install one. venv(or virtualenv) is probably easiest...maybe.
 
 https://python-docs.readthedocs.io/en/latest/dev/virtualenvs.html
@@ -1676,7 +1686,7 @@ input("\n  ...Press enter to continue...  \n")
 # ...Challenge
 steady_print("""
  
-Step 2. Make/Enter/Use a Virtual Environment
+Step 3. Make/Enter/Use a Virtual Environment
 
 In terminal, in scene_07 folder:
 $ pipenv shell
@@ -1689,7 +1699,7 @@ input("\n  ...Press enter to continue...  \n")
 # ...Challenge
 steady_print("""
 
-Step 3. Install & Run Jupyterlab or Jupyter Notebook
+Step 4. Install & Run Jupyterlab or Jupyter Notebook
 
 Then for pipenv:
 $ pipenv install jupyter
@@ -1714,7 +1724,7 @@ input("\n  ...Press enter to continue...  \n")
 # ...Challenge
 steady_print("""
 
-Step 4. Open the jupyter notebook & run all code cells
+Step 5. Open the jupyter notebook & run all code cells
 
 For Jupyter Lab:
 Under the "Run" menu tab at the top, select: "Run All Cells"
