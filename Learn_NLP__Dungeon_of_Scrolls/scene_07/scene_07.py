@@ -446,8 +446,12 @@ file_to_create3.close()
 # that has a ".ipynb" suffix
 # so the file must be created as a json file.
 
+# .ipynb cludge notes
 # this cludge stops 'null' in notebook json from messing up python
 null = 0
+# items like                  "toc_visible": true 
+# may need to be changed to   "toc_visible": True
+# which appears to run fine
 
 # create ReadMe.txt file
 A_Notebook = {
@@ -458,7 +462,7 @@ A_Notebook = {
       "name": "A_Notebook.ipynb",
       "provenance": [],
       "collapsed_sections": [],
-      "toc_visible": true
+      "toc_visible": True
     },
     "kernelspec": {
       "name": "python3",
@@ -1554,7 +1558,7 @@ clear_terminal()
 typed_print("""
 
 After the bundle's tether is undone
-Hitch stands back up, and glances over at the fire.
+Hitch stands back up and glances over at the fire.
 
 "All right, up on the rug then," he says,
 and when the bird steps into the middle of the wool
@@ -1675,8 +1679,22 @@ Step 2: Install (if you do not already have pipenv or venv)
 If you do have either, you can move ahead. If you do not, then you will 
 need to install one. venv(or virtualenv) is probably easiest...maybe.
 
-https://python-docs.readthedocs.io/en/latest/dev/virtualenvs.html
+pipenv https://pypi.org/project/pipenv/
+  $ pip install pipenv
 
+
+""")
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+# ...Challenge
+steady_print("""
+
+https://python-docs.readthedocs.io/en/latest/dev/virtualenvs.html
+If you have pip (maybe called pip3)
+this ~may work on any system:
+  $ pip install virtualenv
+
+If you don't have pip:
 To installvenv on debian etc.
 	$ sudo apt install python3 python3-venv
 
@@ -1734,7 +1752,7 @@ Under the "Cell" menu tab at the top, select: "Run All"
 
 Now read what it says at the very bottom.
 
-(Note: This notebook should contain code such as you studied 
+(Note: This notebook should contain the code you studied 
 in each of the past scenes. Notebooks are a useful way to record, share,
 run, experiment with, and use code. Some people use python directly
 in the command line (as you have been doing), but often people use python 
@@ -1756,29 +1774,7 @@ while answer_check is False:
     if answer_check is False:
         typed_print(f'"{random.choice(responses)}"')
 
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
-
 # https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
-
-# # Dialogue
-# typed_print("""
-
-
-
-# See files listed in jupyter notbook
-
-# """
-# )
-
-
-
-# Press Enter to Continue
-input("\n  ...Press enter to continue...  \n")
-clear_terminal()
-
 
 # Second Dialogue
 typed_print(
@@ -1842,4 +1838,5 @@ That is a very weird fire. What are you burning?"
 
 
 slow_print(f"\n\n End of {scene} {blurb} \n\n")
+pause_seconds(5)
 clear_terminal()
