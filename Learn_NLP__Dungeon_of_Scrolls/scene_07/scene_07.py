@@ -1588,12 +1588,12 @@ Turning back to Hitch she says, "Thanks for the blanket.
 Do you have my snow boots? I'm starving. Did you make tea?"
 
 As you reach down into the snow and pick up the bundle 
-that had been tied around the gooses leg and you reach inside,
+that had been tied around the goose's leg and you reach inside,
 Franklin somes over to look.
 "What is it?" he asks, "Wo! A Notebook? Where did they find that?
 Those have been banned for years."
 
-Jane comes over too as Hitch curries McCavities boots and other clothes.
+Jane comes over too as Hitch curries McCavity's boots and other clothes.
 
 "It's a what?" asks Jane.
 
@@ -1610,7 +1610,7 @@ clear_terminal()
 # Dialogue
 typed_print("""
 
-"It's a Code Notebook!" says Franklin, gesturing generously with both hand. 
+"It's a Code Notebook!" says Franklin, gesturing generously with both hands. 
 "I can't believe this. Try and open it!
 Let's run it and see what it says at the end. Maybe we can find out
 where it came from. Open it up and let's see!"
@@ -1844,7 +1844,8 @@ That is a very weird fire you have there. What are you burning?"
 
 # """
 # )
-
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
 
 slow_print(f"\n\n End of {scene} {blurb} \n\n")
 pause_seconds(5)
