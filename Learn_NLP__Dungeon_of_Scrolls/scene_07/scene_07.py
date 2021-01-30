@@ -1675,11 +1675,13 @@ steady_print("""
 Step 2: Install (if you do not already have pipenv or venv)
 
 If you do have either, you can move ahead. If you do not, then you will 
-need to install one. venv(or virtualenv) is probably easiest...maybe.
+need to install one. 
 
-pipenv https://pypi.org/project/pipenv/
+For pipenv:  
   $ pip install pipenv
 
+Read more here:
+https://pypi.org/project/pipenv/
 
 """)
 # Press Enter to Continue
@@ -1687,7 +1689,8 @@ input("\n  ...Press enter to continue...  \n")
 # ...Challenge
 steady_print("""
 
-https://python-docs.readthedocs.io/en/latest/dev/virtualenvs.html
+For venv (or virtualenv):
+
 If you have pip (maybe called pip3)
 this ~may work on any system:
   $ pip install virtualenv
@@ -1695,6 +1698,9 @@ this ~may work on any system:
 If you don't have pip:
 To installvenv on debian etc.
 	$ sudo apt install python3 python3-venv
+
+Read more here:
+https://python-docs.readthedocs.io/en/latest/dev/virtualenvs.html
 
 """)
 # Press Enter to Continue
@@ -1748,13 +1754,14 @@ Under the "Run" menu tab at the top, select: "Run All Cells"
 For Jupyter Notebook:
 Under the "Cell" menu tab at the top, select: "Run All"
 
-Now read what it says at the very bottom.
-
 (Note: This notebook should contain the code you studied 
 in each of the past scenes. Notebooks are a useful way to record, share,
 run, experiment with, and use code. Some people use python directly
 in the command line (as you have been doing), but often people use python 
 inside a notebook. It is useful to be able to use python both ways.)
+
+Back to the story:
+Now you can read what your notebook file says at the very bottom.
 
 """
 )
@@ -1778,12 +1785,14 @@ while answer_check is False:
 typed_print(
     """
 
-"You're not usually followed by other birds like that are you?"
 
-"Setting asside that reference to me as 'a bird,'" Lavender said, 
+Jane turns to Lavender and asks, "You are not usually followed 
+by other birds like that are you?"
+
+"Setting asside that reference to me as 'a bird,'" Lavender says, 
 sweeping her hand to the side, "I think that was something I did by accident. 
 Something new. Maybe useful?
-That is a very weird fire. What are you burning?"
+That is a very weird fire you have there. What are you burning?"
 
 "Those bits of frozen...birds."
 
@@ -1795,7 +1804,7 @@ That is a very weird fire. What are you burning?"
 
 "Oh...right."
 
-"By the way, Old John sends his thanks." 
+"By the way," says Lavender, "Old John sends his thanks." 
 """
 )
 
