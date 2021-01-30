@@ -1,4 +1,4 @@
-# version 006
+# version 007
 # Scene_07
 # Here Is A Notebook
 #  _____           _ _____
@@ -1440,7 +1440,7 @@ A_Notebook = {
         "id": "Njw_1w-B7vGv"
       },
       "source": [
-        "spells = \"Pr4p2rt6 4f P3n6 H3lls Un3v2rs3t6\"\r\n",
+        "spells = \"Pr4p2rt6 4f P3n6 H3lls Un3v2rs3t36\"\r\n",
         "\r\n",
         "# make a dictionary\r\n",
         "vowel_change_dict = {\"1\": \"a\", \"2\": \"e\", \"3\": \"i\", \"4\": \"o\", \"5\": \"u\", \"6\": \"y\"} \r\n",
@@ -1611,7 +1611,7 @@ clear_terminal()
 typed_print("""
 
 "It's a Code Notebook!" says Franklin, gesturing generously with both hand. 
-"I can't believe this. Try and opening it!
+"I can't believe this. Try and open it!
 Let's run it and see what it says at the end. Maybe we can find out
 where it came from. Open it up and let's see!"
 
@@ -1654,7 +1654,7 @@ input("\n  ...Press enter to continue...  \n")
 steady_print("""
 
 Once you are set up, using a virtual environment can be as simple as running 
-these two commands in your terminal:
+these two commands in your terminal (in your project folder(directory)):
     $ pipenv install jupyterlab
     $ pipenv run jupyter lab
 
@@ -1775,7 +1775,7 @@ while answer_check is False:
     answer = input('\n"What does that last line say?"\n')
     answer = answer.lower()
     # boolean check
-    answer_check = ("property" in answer) or ("hill" in answer) or ("piny" in answer)
+    answer_check = ("property" in answer) or ("hill" in answer) or ("piney" in answer)
     if answer_check is False:
         typed_print(f'"{random.choice(responses)}"')
 
@@ -1784,6 +1784,8 @@ while answer_check is False:
 # Second Dialogue
 typed_print(
     """
+"Piney Hills University?" asks Franklin perplexedly, 
+"What are they doing with Notebooks?"
 
 
 Jane turns to Lavender and asks, "You are not usually followed 
