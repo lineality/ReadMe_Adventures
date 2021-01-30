@@ -1631,12 +1631,12 @@ Goal: Open a Jupyter Notebook File in a Virtual Environment
 Virtual environments can be tricky to set up at first, 
 (or they may be already set up and ready to use easily)
 but virtual environments are very important and useful.
+
 Rules of thumb: 
 1. Do NOT pip install anything outside of a virtual environment.
 2. Always make a new folder(directory) and use a virtual environment inside.
-
 (Of course you may need to pip install the virtual environment package
-in your hope directory to start with.) 
+in your home directory to start with.) 
 
 What do you have installed?
 Start by seeing what your current setup is:
@@ -1647,15 +1647,13 @@ Start by seeing what your current setup is:
 Ideally you should be able to use both/either, 
 pipenv and/or venv depending on the task
 (e.g. AWS projects may require venv).
-
-
 """)
 # Press Enter to Continue
 input("\n  ...Press enter to continue...  \n")
 # ...Challenge
 steady_print("""
 
-Once you are set up, using a virtual environment can be a simple as running 
+Once you are set up, using a virtual environment can be as simple as running 
 these two commands in your terminal:
     $ pipenv install jupyterlab
     $ pipenv run jupyter lab
