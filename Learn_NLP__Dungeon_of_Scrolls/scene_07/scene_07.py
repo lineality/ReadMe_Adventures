@@ -1,4 +1,4 @@
-# version 007
+# version 008
 # Scene_07
 # Here Is A Notebook
 #  _____           _ _____
@@ -1625,12 +1625,32 @@ clear_terminal()
 
 # Challenge
 steady_print("""
-
 Goal: Open a Jupyter Notebook File in a Virtual Environment
+
+Once you are set up, using a virtual environment can be as simple as running 
+these two commands in your terminal (in your project folder(directory)):
+    $ pipenv install jupyterlab
+    $ pipenv run jupyter lab
 
 Virtual environments can be tricky to set up at first, 
 (or they may be already set up and ready to use easily)
 but virtual environments are very important and useful.
+
+What do you have installed?
+Start by seeing what your current setup is:
+- Do you have pip? (pip is a general python package system you will need)
+- Do you have pipenv?
+- Do you have venv / virtualenv?
+
+Ideally you should be able to use both/either, 
+pipenv and/or venv depending on the task
+(e.g. AWS projects may require venv).
+
+""")
+# Press Enter to Continue
+input("\n  ...Press enter to continue...  \n")
+# ...Challenge
+steady_print("""
 
 Rules of thumb: 
 1. Do NOT pip install anything outside of a virtual environment.
@@ -1638,25 +1658,18 @@ Rules of thumb:
 (Of course you may need to pip install the virtual environment package
 in your home directory to start with.) 
 
-What do you have installed?
-Start by seeing what your current setup is:
-- Do you have pip?
-- Do you have pipenv?
-- Do you have venv / virtualenv?
+Check for pip:
+$ pip --version
 
-Ideally you should be able to use both/either, 
-pipenv and/or venv depending on the task
-(e.g. AWS projects may require venv).
+If you don't have it yet:
+$sudo apt update
+$sudo apt install python3-pip
+
 """)
 # Press Enter to Continue
 input("\n  ...Press enter to continue...  \n")
 # ...Challenge
 steady_print("""
-
-Once you are set up, using a virtual environment can be as simple as running 
-these two commands in your terminal (in your project folder(directory)):
-    $ pipenv install jupyterlab
-    $ pipenv run jupyter lab
 
 Step 1. Check to see if you have pipenv or venv installed already:
     $ pipenv --version
@@ -1674,14 +1687,21 @@ steady_print("""
 
 Step 2: Install (if you do not already have pipenv or venv)
 
-If you do have either, you can move ahead. If you do not, then you will 
+If you have either, you can move ahead. If you do NOT, then you will 
 need to install one. 
 
-For pipenv:  
-  $ pip install pipenv
+Open a terminal in your home directory:
 
-Read more here:
-https://pypi.org/project/pipenv/
+For pipenv:  
+$ sudo pip install pipenv
+
+Add "pipenv" to paths (so that it works in the command line)
+$ export PATH="$PATH:$HOME/.local/bin"
+
+? Save the change:
+$ source ~/. bash_profile
+
+Read more here: https://pypi.org/project/pipenv/
 
 """)
 # Press Enter to Continue
@@ -1811,27 +1831,11 @@ That is a very weird fire you have there. What are you burning?"
 )
 
 
-# answer_check = False
-
-# while answer_check is False:
-#     answer = input('\n"Ok", says Franklin, "What word does that make?"\n')
-#     answer = answer.lower()
-#     # boolean check
-#     answer_check = "sleep" in answer
-#     if answer_check is False:
-#         typed_print(f'"{random.choice(responses)}"')
-
-# clear_terminal()
-
-
-# typed_print(
-#     """
-
 # If no pip on debian/ubuntu etc:
 # $ sudo apt install python3-pip
 
 # If no pip on RPM (fedora, redhat, centos, etc.)
-# $ sudo install python3-pip
+# $ sudo dnf install python3-pip
 
 # Install pipenv:
 # $ pip install --user pipenv
@@ -1842,8 +1846,7 @@ That is a very weird fire you have there. What are you burning?"
 # Save the change:
 # $ source ~/. bash_profile
 
-# """
-# )
+
 # Press Enter to Continue
 input("\n  ...Press enter to continue...  \n")
 
